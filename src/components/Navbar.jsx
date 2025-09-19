@@ -1,0 +1,295 @@
+import React, { useState, useRef, useContext } from "react";
+import { Link } from 'react-router-dom';
+import { CartContext } from "../context/CartContext";
+
+export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
+  const closeTimeout = useRef(null);
+  const { cart } = useContext(CartContext);
+
+   return (
+    <nav className="bg-white shadow-md fixed w-full z-20">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <img src="/logo.png" alt="Logo Chabeve" className="h-10 w-auto" />
+          <span className="text-2xl font-semibold text-gray-800">Chabeve</span>
+        </div>
+
+        {/* Desktop Menu */}
+        
+        <ul className="hidden md:flex space-x-8 font-medium text-gray-700">
+          <li>
+            <Link to ="/" className="hover:text-green-600 cursor-pointer">Inicio</Link>
+          </li>
+            
+            
+  {/* Catálogo */}
+  <li 
+    className="relative cursor-pointer"
+    onMouseEnter={() => {
+    if (closeTimeout.current) { 
+      clearTimeout(closeTimeout.current); 
+      closeTimeout.current = null; 
+    }
+    setDropdownOpen("catalogo");
+  }}
+    onMouseLeave={() => {
+      closeTimeout.current = setTimeout(() => setDropdownOpen(null), 250);
+  }}
+>
+  Catálogo
+  <ul  
+    className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded transition-opacity duration-200 ${
+      dropdownOpen === "catalogo" ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+      <li className="px-4 py-2 hover:bg-green-50"> 
+          <Link to="/catalogos/macetas-medianas" className="hover:text-green-600 cursor-pointer" >
+          Macetas Medianas
+        </Link>
+      </li>
+      <li className="px-4 py-2 hover:bg-green-50"> 
+          <Link to="/catalogos/macetas-grandes" className="hover:text-green-600 cursor-pointer" >
+          Macetas Grandes
+        </Link>
+      </li>
+      <li className="px-4 py-2 hover:bg-green-50"> 
+        <Link to="/catalogos/set-de-macetas" className="hover:text-green-600 cursor-pointer" >
+          Set de Macetas
+        </Link>
+      </li>
+      <li className= "px-4 py-2 hover:bg-green-50">
+        <Link to="/catalogos/Macetas con Plantas" className="hover:text-green-600 cursor-pointer" >
+        Macetas con Plantas
+      </Link>
+    </li>
+        <li className= "px-4 py-2 hover:bg-green-50">
+        <Link to="/catalogos/Sistemas-de-Goteo" className="hover:text-green-600 cursor-pointer" >
+        Sistemas de Goteo
+      </Link>
+    </li>
+       <li className= "px-4 py-2 hover:bg-green-50">
+        <Link to="/catalogos/Composteras" className="hover:text-green-600 cursor-pointer" >
+        Composteras
+      </Link>
+    </li> 
+        <li className= "px-4 py-2 hover:bg-green-50">
+        <Link to="/catalogos/Accesorios" className="hover:text-green-600 cursor-pointer" >
+        Accesorios
+      
+      </Link>
+    </li>
+  </ul>
+</li>
+
+         <li>
+  <Link to="/sembremos-en-casa" className="hover:text-green-600 cursor-pointer">
+    Sembremos en Casa
+  </Link>
+</li>
+
+<li>
+  <Link to="/sobre-nosotros" className="hover:text-green-600 cursor-pointer">
+    Sobre Nosotros
+  </Link>
+</li>
+           
+
+             {/* Inspiración */}
+          <li
+            className="relative cursor-pointer"
+            onMouseEnter={() => {
+              if (closeTimeout.current) { clearTimeout(closeTimeout.current); closeTimeout.current = null; }
+              setDropdownOpen("inspiracion");
+            }}
+            onMouseLeave={() => { closeTimeout.current = setTimeout(() => setDropdownOpen(null), 250); }}
+          >
+            Inspiración
+           <ul 
+  className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded transition-opacity duration-200 ${
+    dropdownOpen === "inspiracion" ? "opacity-100 visible" : "opacity-0 invisible"
+  }`}
+>
+  <li className="px-4 py-2 hover:bg-green-50">
+    <Link to="/inspiracion/ideas-decoracion" className="hover:text-green-600">
+      Ideas de Decoración
+    </Link>
+  </li>
+  <li className="px-4 py-2 hover:bg-green-50">
+    <Link to="/inspiracion/cuidado-plantas" className="hover:text-green-600">
+      Cuidado de Plantas
+    </Link>
+  </li>
+</ul>
+          </li>
+
+          {/* Servicios */}
+<li
+  className="relative cursor-pointer"
+  onMouseEnter={() => {
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);
+      closeTimeout.current = null;
+    }
+    setDropdownOpen("servicios");
+  }}
+  onMouseLeave={() => {
+    closeTimeout.current = setTimeout(() => setDropdownOpen(null), 250);
+  }}
+>
+  Servicios
+  <ul
+    className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded transition-opacity duration-200 ${
+      dropdownOpen === "servicios" ? "opacity-100 visible" : "opacity-0 invisible"
+    }`}
+  >
+    <li className="px-4 py-2 hover:bg-green-50">
+      <Link to="/servicios/envios-y-garantias" className="hover:text-green-600 cursor-pointer">
+        Envíos y Garantías
+      </Link>
+    </li>
+  </ul>
+</li>
+
+          <li>
+            <Link to="/contacto" className="hover:text-green-600 cursor-pointer">
+            Contacto
+            </Link>
+          </li> 
+          
+          {/* Carrito estilizado */}
+<li>
+  <Link
+    to="/carrito"
+    className="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition"
+  >
+    🛒 Carrito {cart.length > 0 ? `(${cart.length})` : ""}
+  </Link>
+</li>
+        </ul>
+        
+        {/* Mobile menu button */}
+        <button 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {mobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+            )}
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+{mobileMenuOpen && (
+  <div className="md:hidden bg-white shadow-md">
+    <ul className="flex flex-col space-y-2 p-4 font-medium text-gray-700">
+      <li>
+        <Link to="/" className="hover:text-green-600 cursor-pointer">Inicio</Link>
+      </li>
+
+         {/* Mobile Catálogo */}
+      <li>
+        <button
+          onClick={() => setDropdownOpen(dropdownOpen === "catalogo" ? null : "catalogo")}
+          className="flex justify-between w-full focus:outline-none"
+        >
+          Catálogo <span>{dropdownOpen === "catalogo" ? "▲" : "▼"}</span>
+        </button>
+        {dropdownOpen === "catalogo" && (
+          <ul className="pl-4 mt-2 space-y-1">
+            <li><Link to="/catalogos/macetas-medianas" className="hover:text-green-600 cursor-pointer">Macetas Medianas</Link></li>
+            <li><Link to="/catalogos/macetas-grandes" className="hover:text-green-600 cursor-pointer">Macetas Grandes</Link></li>
+            <li><Link to="/catalogos/set-de-macetas" className="hover:text-green-600 cursor-pointer">Set de Macetas</Link></li>
+            <li><Link to="/catalogos/Macetas con Plantas" className="hover:text-green-600 cursor-pointer">Macetas con Plantas</Link></li>
+            <li><Link to="/catalogos/Sistemas-de-Goteo" className="hover:text-green-600 cursor-pointer">Sistemas de Goteo</Link></li>
+            <li><Link to="/catalogos/Composteras" className="hover:text-green-600 cursor-pointer">Composteras</Link></li>
+            <li><Link to="/catalogos/Accesorios" className="hover:text-green-600 cursor-pointer">Accesorios</Link></li>          
+          </ul>
+        )}
+      </li>
+
+      {/* Mobile Inspiración */}
+      <li>
+        <button
+          onClick={() => setDropdownOpen(dropdownOpen === "inspiracion" ? null : "inspiracion")}
+          className="flex justify-between w-full focus:outline-none"
+        >
+          Inspiración <span>{dropdownOpen === "inspiracion" ? "▲" : "▼"}</span>
+        </button>
+        {dropdownOpen === "inspiracion" && (
+  <ul className="pl-4 mt-2 space-y-1">
+    <li>
+      <Link to="/inspiracion/ideas-decoracion" className="hover:text-green-600 cursor-pointer">
+        Ideas de Decoración
+      </Link>
+    </li>
+    <li>Cuidado de Plantas</li>
+  </ul>
+)}
+      </li>
+
+      <li>
+  <Link to="/sobre-nosotros" className="hover:text-green-600 cursor-pointer">
+    Sobre Nosotros
+  </Link>
+</li>
+
+     {/* Servicios */}
+<li
+  className="relative cursor-pointer"
+  onMouseEnter={() => {
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);
+      closeTimeout.current = null;
+    }
+    setDropdownOpen("servicios");
+  }}
+  onMouseLeave={() => {
+    closeTimeout.current = setTimeout(() => setDropdownOpen(null), 250);
+  }}
+>
+  Servicios
+  <ul
+    className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded transition-opacity duration-200 ${
+      dropdownOpen === "servicios" ? "opacity-100 visible" : "opacity-0 invisible"
+    }`}
+  >
+    <li className="px-4 py-2 hover:bg-green-50">
+      <Link to="/servicios/envios-y-garantias" className="hover:text-green-600 cursor-pointer">
+        Envíos y Garantías
+      </Link>
+    </li>
+  </ul>
+</li>
+
+      <li>Contacto</li>
+
+      {/* Mobile Carrito */} 
+      <li>
+        <Link to="/carrito" className="hover:text-green-600 cursor-pointer">
+          🛒 Carrito {cart.length > 0 ? `(${cart.length})` : ""}
+        </Link>
+      </li>
+
+      {/* Mobile Carrito estilizado */}
+<li>
+  <Link
+    to="/carrito"
+    className="block text-center w-full bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition"
+  >
+    🛒 Carrito {cart.length > 0 ? `(${cart.length})` : ""}
+  </Link>
+</li>
+    </ul>
+  </div>
+)}
+ </nav>
+  );
+}

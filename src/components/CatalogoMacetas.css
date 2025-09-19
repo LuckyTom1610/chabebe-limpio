@@ -1,0 +1,18 @@
+.catalogo-viewport {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.catalogo-principal {
+  max-width: 90%;
+  max-height: 60vh;
+  object-fit: contain;
+  display: block;
+}

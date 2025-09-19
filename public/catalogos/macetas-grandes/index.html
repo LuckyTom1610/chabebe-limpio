@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo Macetas Grandes – Chabeve</title>
+  <style>
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/backgrounds/palm-shadow.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #2d3e3f;
+  }
+
+  .catalogo {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .catalogo::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background-image: url('images/backgrounds/palm-shadow.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .catalogo > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .maceta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+
+  .maceta img {
+    width: 260px;
+    height: 260px;
+    object-fit: contain;
+    filter: brightness(1);
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    border: 2px solid #ddd;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .maceta:hover img {
+    transform: scale(1.05);
+  }
+
+  .info {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .info strong {
+    display: inline-block;
+    width: 100px;
+  }
+
+  .color {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+
+  .color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background: #808080;
+    margin-right: 8px;
+  }
+
+  .btn-contact {
+    display: block;
+    text-align: center;
+    margin: 12px auto 0;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 200px;
+    background: #2e7d32;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background .2s ease;
+  }
+
+  .btn-contact:hover {
+    background: #27642a;
+  }
+  </style>
+</head>
+<body>
+  <h1>Catálogo de Macetas Medianas</h1>
+
+  <div class="catalogo">
+
+    <div class="maceta">
+      <img
+        src="images/macetas-medianas/DKB240-422U.jpg"
+        alt="Maceta DKB240-422U"
+      />
+      <div class="info">
+        <p><strong>Modelo:</strong> DKB240-422U</p>
+        <p><strong>Colección:</strong> Beton Bowl</p>
+        <p><strong>Dimensiones:</strong> Ø 238 mm × 161 mm</p>
+        <p><strong>Capacidad:</strong> 2.3 L</p>
+        <div class="
+
