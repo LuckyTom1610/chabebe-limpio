@@ -7,21 +7,36 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependencias
+node_modules/
 
-# Editor directories and files
+# Builds
+dist/
+dist-ssr/
+
+# Cachés
+.cache/
+
+# Archivos de entorno
+*.local
+.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.env
+
+# Videos grandes (se manejan con Cloudinary)
+public/videos/
+
+# Archivos de Vercel
 .vercel
-public/images/
