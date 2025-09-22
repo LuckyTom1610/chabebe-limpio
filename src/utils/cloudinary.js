@@ -1,10 +1,16 @@
-const cloudName = "dslmjt9nd";
+const CLOUDINARY_BASE_URL = process.env.CLOUDINARY_BASE_URL || "";
 
-// 👇 Opcional: este "v1758310210" es la versión de tus assets.
-// Lo puedes dejar fijo o quitarlo si no quieres que cambie con cada subida.
-const version = "v1758310210";
-
-// 🔹 Función para generar URLs de imágenes
+/**
+ * Genera la URL de una imagen en Cloudinary
+ * @param {string} path - Nombre del archivo (ejemplo: "Metal_Hanger_bjfed2.jpg")
+ * @returns {string} URL completa lista para usar
+ */
 export function getImage(path) {
-  return `https://res.cloudinary.com/${cloudName}/image/upload/${version}/${path}`;
+  if (!CLOUDINARY_BASE_URL) {
+    console.warn("⚠️ CLOUDINARY_BASE_URL no está configurado");
+    return path; // fallback al nombre del archivo
+  }
+
+  // Evita dobles barras
+  return `${CLOUDINARY_BASE_URL.replace(/\/$/, "")}/${path}`;
 }

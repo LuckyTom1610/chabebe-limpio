@@ -1,7 +1,6 @@
-import { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import CatalogoMacetas from "./CatalogoMacetas";
 import { CartContext } from "../context/CartContext";
-import { getImage } from "../utils/cloudinary";
 
 const MacetaCard = ({ maceta, onClick }) => {
   const { addToCart } = useContext(CartContext);
@@ -53,45 +52,46 @@ const MacetaCard = ({ maceta, onClick }) => {
 
 const macetasPrincipales = [ 
 {
-    id: "MAZECAP",
-    modelo: "MAZECAP",
-    imagen: getImage("MAZE_CAP_shf5m2.jpg"),
-  },
-  {
-    id: "GIRAFFE",
-    modelo: "GIRAFFE",
-    imagen: getImage("Giraffe_jtapzu.jpg"),
-  },
-  {
-    id: "BASEWOODY",
-    modelo: "BASE WOODY",
-    imagen: getImage("BASE_WOODY_wre0rq.jpg"),
-  },
-  {
-    id: "BIRDYFEEDSQUARE",
-    modelo: "BIRDYFEED SQUARE",
-    imagen: getImage("BIRDYFEED_SQUARE_pldgtx.jpg"),
-  },
-  {
-    id: "BIRDYFEEDROUND",
-    modelo: "BIRDYFEED ROUND",
-    imagen: getImage("BIRDYFEED_ROUND_hextyr.jpg"),
-  },
-  {
-    id: "METALHANGER",
-    modelo: "METAL HANGER",
-    imagen: getImage("Metal_Hanger_bjfed2.jpg"),
-  },
-  {
-    id: "WHEELS",
-    modelo: "WHEELS",
-    imagen: getImage("WHEELS_roufmq.png"),
-  },
-  {
-    id: "INSERT",
-    modelo: "INSERT",
-    imagen: getImage("Insert1_xbh4cl.jpg"),
-  },
+   id: "MAZECAP",
+   modelo: "MAZECAP",
+   imagen: "/images/Accesorios/MAZE CAP.jpg",
+},
+{
+  id: "GIRAFFE",
+   modelo: "GIRAFFE",
+   imagen: "/images/Accesorios/Giraffe.jpg",
+   },
+{
+  id: "BASEWOODY",
+   modelo: "BASE WOODY",
+   imagen: "/images/Accesorios/BASE WOODY.jpg",
+   },
+{
+  id: "BIRDYFEEDSQUARE",
+   modelo: "BIRDYFEED SQUARE",
+   imagen: "/images/Accesorios/BIRDYFEED SQUARE.jpg",
+   },
+   {
+  id: "BIRDYFEEDROUND",
+   modelo: "BIRDYFEED ROUND",
+   imagen: "/images/Accesorios/BIRDYFEED ROUND.jpg",
+   },
+{
+  id: "METALHANGER",
+   modelo: "METAL HANGER",
+   imagen: "/images/Accesorios/Metal Hanger.jpg",
+   },
+{
+  id: "WHEELS",
+   modelo: "WHEELS",
+   imagen: "/images/Accesorios/WHEELS.jpg",
+   },
+{
+  id: "INSERT",
+   modelo: "INSERT",
+   imagen: "/images/Accesorios/Insert1.jpg",
+   },
+
 ];
 const catalogosData = {
   
@@ -100,11 +100,11 @@ const catalogosData = {
     medidas: "Dimensiones: 593 mm x 192 mm",
     Disponibilidad: "20 und",
     Precio: 18.30,
-    imagenesCatalogo: [getImage("IPDM600_fpvgkp.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/IPDM600.jpg",],
     colores: [
-        { nombre: "gris", codigo: "S443", imagen: getImage("S443_szary_iraskt.jpg") },
-        { nombre: "color ladrillo", codigo: "R736", imagen: getImage("R736_cegla_qyqayz.jpg") },
-        { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy_v4vzlc.jpg") },
+        { nombre: "gris", codigo: "S443", imagen:"/images/colores-macetas/S443_szary.jpg"},
+        { nombre: "color ladrillo", codigo: "R736", imagen:"/images/colores-macetas/R736_cegla.jpg"},
+        { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
           ]
 },
 
@@ -113,11 +113,11 @@ GIRAFFE: {
     medidas: "Dimensiones: 334 x mm 140 mm x 326 mm",
     Disponibilidad: "120 und",
     Precio: 2,
-    imagenesCatalogo: [getImage("IKW2_zzet6t.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/IKW2.jpg",],
     colores: [
-        { nombre: "crema", codigo: "CY728", imagen: getImage("CY728_krem_vq3aay.jpg") },
-        { nombre: "verde grisáceo", codigo: "623U", imagen: getImage("623U_szalwia_r8rlel.jpg") },
-        { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy_v4vzlc.jpg") },
+        { nombre: "crema", codigo: "CY728", imagen:"/images/colores-macetas/CY728_krem.jpg"},
+        { nombre: "verde grisáceo", codigo: "623U", imagen:"/images/colores-macetas/623U_szalwia.jpg"},
+        { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
           ]
 },
 
@@ -126,13 +126,13 @@ BASEWOODY: {
     medidas: "Dimensiones: 756 mm x 756 mm x 250 mm",
     Disponibilidad: "10 und",
     Precio: 27.75,
-    imagenesCatalogo: [getImage("IBWS_wkjwrh.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/IBWS.jpg",],
      
 
 colores: [
-     { nombre: "ladrillo rústico", codigo: "7587U", imagen: getImage("7587U_rustykalna_cegla_hqvs2f.jpg") },
-      { nombre: "natural ECO", codigo: "4665W", imagen: getImage("4665W_naturo_ECO_gfqlrn.jpg") },
-      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy_v4vzlc.jpg") },
+     { nombre: "ladrillo rústico", codigo: "7587U", imagen:"/images/colores-macetas/7587U_rustykalna_cegla.jpg"},
+      { nombre: "natural ECO", codigo: "4665W", imagen:"/images/colores-macetas/4665W_naturo_ECO.jpg"},
+      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
       ]
 
      },
@@ -141,10 +141,10 @@ colores: [
     medidas: "Dimensiones: 248 mm x 182 mm x 174 mm",
     Disponibilidad: "15 und",
     Precio: 11.68,
-    imagenesCatalogo: [getImage("IBFS_i4k9uz.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/IBFS.jpg",],
     colores: [
-       { nombre: "gris piedra", codigo: "405U", imagen: getImage("405U_szary_kamienny_zzpwil.jpg") },
-       { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy_v4vzlc.jpg") },
+       { nombre: "gris piedra", codigo: "405U", imagen:"/images/colores-macetas/405U_szary_kamienny.jpg"},
+       { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"},
          ]
 
      },
@@ -154,9 +154,9 @@ BIRDYFEEDROUND: {
     medidas: "Dimensiones: 294 mm x 258 mm x 122 mm",
     Disponibilidad: "10 und",
     Precio: 9.50,
-    imagenesCatalogo: [getImage("IBFR_ukcwqc.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/IBFR.jpg",],
     colores: [
-       { nombre: "gris piedra", codigo: "405U", imagen: getImage("405U_szary_kamienny_zzpwil.jpg") },
+       { nombre: "gris piedra", codigo: "405U", imagen:"/images/colores-macetas/405U_szary_kamienny.jpg"},
       ]
     
      },
@@ -165,9 +165,9 @@ BIRDYFEEDROUND: {
     medidas: "Dimensiones: 90 mm x 130 mm x 7 mm",
     Disponibilidad: "100 und",
     Precio: 4.08,
-    imagenesCatalogo: [getImage("IWS_sqz3dn.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/IWS.jpg",],
     colores: [
-      { nombre: "METAL", codigo: "METAL", imagen: getImage("443U_jasny_szary_avww7i.jpg") },
+      { nombre: "METAL", codigo: "METAL", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
             ]
 
      },
@@ -178,13 +178,13 @@ BIRDYFEEDROUND: {
     medidas: "Dimensiones: 235 mm X 280 mm",
     Disponibilidad: "20 und",
     Precio: 8.78,
-    imagenesCatalogo: [getImage("TSW4_kbufjr.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/TSW4.jpg",],
     },
     {descripcion: "TSW6",
     medidas: "Dimensiones: 235 mm X 425 mm",
     Disponibilidad: "20 und",
     Precio: 10.50,
-    imagenesCatalogo: [getImage("TSW6_eldgvh.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/TSW6.jpg",],
     },
     ],
     },
@@ -198,7 +198,7 @@ BIRDYFEEDROUND: {
     Capacidad: "11",
     Disponibilidad: "400 und",
     Precio: 2.98,
-    imagenesCatalogo: [getImage("IWKO325_alga3k.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/IWKO325.jpg",],
         
      },
      {descripcion: "IWKO355",
@@ -206,19 +206,19 @@ BIRDYFEEDROUND: {
     Capacidad: "18",
     Disponibilidad: "400 und",
     Precio: 3.75,
-    imagenesCatalogo: [getImage("IWKO355_otnue3.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/IWKO355.jpg",],
           },
           {descripcion: "IWKO460",
     medidas: "Dimensiones: 460 mm x 290 mm",
     Capacidad: "40",
     Disponibilidad: "400 und",
     Precio: 7.35,
-    imagenesCatalogo: [getImage("IWKO460_i19kro.jpg")],
+    imagenesCatalogo: ["/images/Accesorios/IWKO460.jpg",],
           },
      ],
 
 colores: [
-      { nombre: "NEGRO", codigo: "S411", imagen: getImage("S411_czarny_p4ruxg.jpg") },
+      { nombre: "NEGRO", codigo: "S411", imagen:"/images/colores-macetas/S411_czarny.jpg"},
          ]
 
      },
@@ -229,20 +229,11 @@ colores: [
   const [varianteIndex, setVarianteIndex] = useState(0);
   const [selectedColor, setSelectedColor] = useState(null);
   const { addToCart } = useContext(CartContext);
-  
   const macetaSeleccionada = catalogoVisible ? catalogosData[catalogoVisible] : null;
   const varianteActual = macetaSeleccionada?.variantes
   ? macetaSeleccionada.variantes[varianteIndex]
   : macetaSeleccionada;
   const principal = macetasPrincipales.find(m => m.id === catalogoVisible);
-
-  useEffect(() => {
-    if (macetaSeleccionada?.colores?.length > 0) {
-      setSelectedColor(macetaSeleccionada.colores[0]);
-    } else {
-      setSelectedColor(null);
-    }
-  }, [catalogoVisible]);
 
   return (
     <div style={{ maxWidth: '95vw', margin: '10px auto 0', textAlign: 'center' }}>
@@ -278,20 +269,17 @@ colores: [
                           }}
           >
           <button
-            onClick={() => {
-                setCatalogoVisible(null);
-                setSelectedColor(null); // 👈 Reinicia color al cerrar
-              }}
-              style={{
-                marginBottom: 0,
-                padding: "8px 16px",
-                background: "#2e7d32",
-                color: "white",
-                border: "none",
-                borderRadius: 6,
-                cursor: "pointer",
-              }}
-            >
+            onClick={() => setCatalogoVisible(null)}
+            style={{
+              marginBottom: 0,
+              padding: "8px 16px",
+              background: "#2e7d32",
+              color: "white",
+              border: "none",
+              borderRadius: 6,
+              cursor: "pointer",
+            }}
+          >
             Volver a imágenes principales
           </button>
           
@@ -612,15 +600,7 @@ colores: [
           }}
         >
           {macetasPrincipales.map((m) => (
-             <MacetaCard
-              key={m.id} 
-              maceta={m} 
-              onClick={() => {
-                  setCatalogoVisible(m.id);
-                  setVarianteIndex(0);     // 👈 Reinicia variante
-                  setSelectedColor(null);  // 👈 Reinicia color
-                }}
-              />
+             <MacetaCard key={m.id} maceta={m} onClick={() => setCatalogoVisible(m.id)} />
             ))}
             </div>
         <p style={{ marginTop: 20, fontStyle: "italic", color: "#666" }}>
