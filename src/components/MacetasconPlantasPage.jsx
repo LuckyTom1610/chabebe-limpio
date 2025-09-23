@@ -9,7 +9,7 @@ import { catalogoMacetasGrandes } from "./MacetasGrandesPage";
 
 // Usa tu helper actual para aplanar (id = key-index, modelo, medidas, Precio, imagen)
 import { flattenMacetas } from "../utils/flattenMacetas";
-
+import { getImage } from "../utils/cloudinary";
 /**
  * NUEVO:
  * Mapa de overrides de imagen por variante.
@@ -22,123 +22,123 @@ import { flattenMacetas } from "../utils/flattenMacetas";
 const macetaComboImages = {
   
   betonBowl: [
-    "/images/Macetas-con-Plantas/Beton_Bowl_DKB_150_422U.jpg", // variante 0
-    "/images/Macetas-con-Plantas/Beton_Bowl_DKB_290_422U_m.jpg",  // variante 1 (ajusta si tu nombre real difiere)
-    "/images/Macetas-con-Plantas/Beton_Bowl_DKB_370_422U_m.jpg",  // variante 2
+    getImage("Beton_Bowl_DKB_150_422U_ex2hb0.png"), // variante 0
+    getImage("Beton_Bowl_DKB_290_422U_m_yxcosw.png"),  // variante 1 (ajusta si tu nombre real difiere)
+    getImage("Beton_Bowl_DKB_370_422U_m_ukkkrf.png"),  // variante 2
   ],
-  GRACIASQUAREBETONEFFECT: "/images/Macetas-con-Plantas/Gracia_Square_Beton_Effect_DGQL400E_422U.jpg",
-  GraciaLowBetonEffect: "/images/Macetas-con-Plantas/Gracia_Low_Beton Effect_DGRL400LE_422U.jpg",
-  GraciaLow: "/images/Macetas-con-Plantas/Gracia_Low_DGRL400L_S433.jpg",
-  GRACIALOWECOWOOD: "/images/Macetas-con-Plantas/Gracia_Low_ECO_Wood_DGRL400LW_4665W_naturo.jpg",
-  GRACIATUBUSSLIMECOWOOD: "/images/Macetas-con-Plantas/Gracia_Tubus_Slim_ECO_Wood_DGTL240W_4665W.jpg",
-  GRACIASQUAREECOWOOD: "/images/Macetas-con-Plantas/Gracia_Square_ECO_Wood_DGQL400W_4665W.jpg",
+  GRACIASQUAREBETONEFFECT: getImage("Gracia_Square_Beton_Effect_DGQL400E_422U_bx3bev.png"),
+  GraciaLowBetonEffect: getImage("Gracia_Low_Beton_Effect_DGRL400LE_422U_jg0q13.jpg"),
+  GraciaLow: getImage("Gracia_Low_DGRL400L_S433_wlwcqv.jpg"),
+  GRACIALOWECOWOOD: getImage("Gracia_Low_ECO_Wood_DGRL400LW_4665W_naturo_bvruye.jpg"),
+  GRACIATUBUSSLIMECOWOOD: getImage("Gracia_Tubus_Slim_ECO_Wood_DGTL240W_4665W_rrbf1f.jpg"),
+  GRACIASQUAREECOWOOD: getImage("Gracia_Square_ECO_Wood_DGQL400W_4665W_cznqep.jpg"),
 
   // TUBOPM tiene 3 variantes -> array
   TUBOPM: [
-    "/images/Macetas-con-Plantas/Tubo_PM_DPOD240_2411U.jpg", // 0
-    "/images/Macetas-con-Plantas/Tubo_PM_DPOD350_2411U.jpg", // 1 (ajústalo al nombre real si difiere)
-    "/images/Macetas-con-Plantas/Tubo_PM_DPOD400_2411U.jpg", // 2
+    getImage("Tubo_PM_DPOD240_2411U_klof57.jpg"), // 0
+    getImage("Tubo_PM_DPOD350_2411U_nknmy3.jpg"), // 1 (ajústalo al nombre real si difiere)
+    getImage("Tubo_PM_DPOD400_2411U_f7qu4i.jpg"), // 2
   ],
 
-  GRACIASQUARE: "/images/Macetas-con-Plantas/Gracia_square_DGQL400_S433.jpg",
-  GRACIATUBUSSLIM: "/images/Macetas-con-Plantas/Gracia_Tubus_Slim_DGTL240_S433.jpg",
+  GRACIASQUARE: getImage("Gracia_square_DGQL400_S433_qqmua9.png"),
+  GRACIATUBUSSLIM: getImage("Gracia_Tubus_Slim_DGTL240_S433_g286xo.png"),
 
   // MILLY tiene casos con y sin variantes; si quieres específico por variante, usa array
-  MILLYROUNDA: "/images/Macetas-con-Plantas/Milly_DMIG190_4985U_m.jpg",
+  MILLYROUNDA: getImage("Milly_DMIG190_4985U_m_bfkdlm.png"),
   MILLYROUND: [
-    "/images/Macetas-con-Plantas/Milly_Round_DMIL220_4985U.jpg", // 0
-    "/images/Macetas-con-Plantas/Milly_DMIN170_4985U.jpg", // 1
+    getImage("Milly_Round_DMIL220_4985U_vjydi3.png"), // 0
+    getImage("Milly_DMIN170_4985U_mbf6zf.png"), // 1
   ],
 
   SPLOFYBOWL: [
-    "/images/Macetas-con-Plantas/DKSP180_7529U SPLOFY.jpg", // 0
-    "/images/Macetas-con-Plantas/DKSP290_7529U SPLOFY.jpg", // 1
-    "/images/Macetas-con-Plantas/DKSP370_7529U SPLOFY.jpg", // 2
+    getImage("DKSP180_7529U_SPLOFY_ikbfg9.png"), // 0
+    getImage("DKSP290_7529U_SPLOFY_a50usw.jpg"), // 1
+    getImage("DKSP370-7529U_SPLOFY_xrqwi6.png"), // 2
   ],
 
   RATOLLARallingSquare: [
-    "/images/Macetas-con-Plantas/DRLB280_S433 RATOLLA.jpg", // 0
-    "/images/Macetas-con-Plantas/DRLB400_S433 RATOLLA.jpg", // 1
+    getImage("DRLB280_S433_RATOLLA_wkhbu1.png"), // 0
+    getImage("DRLB400_S433_RATOLLA_nnibfp.png"), // 1
   ],
 
   HEOS: [
-    "/images/Macetas-con-Plantas/Heos_DLHEN400_S433.jpg",
-    "/images/Macetas-con-Plantas/Heos_DBHEN470_S433_m.jpg",
-    "/images/Macetas-con-Plantas/Heos_DBHER_S433.jpg",
+    getImage("Heos_DLHEN400_S433_jeejfb.png"),
+    getImage("Heos_DBHEN470_S433_m_tsohyw.png"),
+    getImage("Heos_DBHER_S433_hembyk.jpg"),
     ],
 
   PLANTI: [
-    "/images/Macetas-con-Plantas/Planti_DMLR190_S429.jpg",
-    "/images/Macetas-con-Plantas/Planti_DMLR230_S429.jpg",
+    getImage("Planti_DMLR190_S429_w720vz.png"),
+    getImage("Planti_DMLR230_S429_fq2nob.png"),
     ],
   GROWER: [
-    "/images/Macetas-con-Plantas/Grower_DOGR180_S449.jpg",
-    "/images/Macetas-con-Plantas/Grower_DOGR200_S449.jpg",
-    "/images/Macetas-con-Plantas/Grower_DOGR240_S449.jpg",
+    getImage("Grower_DOGR180_S449_jspx7w.png"),
+    getImage("Grower_DOGR200_S449_f99w1w.png"),
+    getImage("Grower_DOGR240_S449_z6psgi.jpg"),
     ],
 
-  RESPANARALLING: "/images/Macetas-con-Plantas/DREB290_S433 RESPANA.jpg",
-  MillyWall: "/images/Macetas-con-Plantas/Milly_Wall_DMIW150_2411U_m.jpg",
-  ARIAOVAL: "/images/Macetas-con-Plantas/Aria_Oval_TAO60_101GR_sand_m.jpg",
+  RESPANARALLING: getImage("DREB290_S433_RESPANA_fqjxhe.png"),
+  MillyWall: getImage("Milly_Wall_DMIW150_2411U_m_fmu2hv.png"),
+  ARIAOVAL: getImage("Aria_Oval_TAO60_101GR_sand_m_qwww9w.png"),
 
   CORObowl: [
-    "/images/Macetas-con-Plantas/Coro_Bowl_High_TCB40H_101GR.jpg", // 0
-    "/images/Macetas-con-Plantas/Coro_Bowl_TCB48_101GR.jpg",  // 1
+    getImage("Coro_Bowl_High_TCB40H_101GR_yo4tkz.jpg"), // 0
+    getImage("Coro_Bowl_TCB48_101GR_yv4mgt.jpg"),  // 1
   ],
 
   MOLTAsquarefoot: [
-    "/images/Macetas-con-Plantas/Molta_Square_Foot_TMSF40_101GR.jpg", // 0
-    "/images/Macetas-con-Plantas/Molta_Square_Foot_TMSF48_101GR.jpg", // 1
+     getImage("Molta_Square_Foot_TMSF40_101GR_ckej7k.jpg"),// 0
+     getImage("Molta_Square_Foot_TMSF48_101GR_ae17cp.jpg"), // 1
   ],
 
   DUALAroundslim: [
-    "/images/Macetas-con-Plantas/Duala_Round_Slim_TDR30S_107GR.jpg", // 0
-    "/images/Macetas-con-Plantas/Duala_Round_Slim_TDR40S_107GR_m.jpg", // 1
+    getImage("Duala_Round_Slim_TDR30S_107GR_urbqe8.jpg"), // 0
+    getImage("Duala_Round_Slim_TDR40S_107GR_m_bdcusv.png"), // 1
   ],
 
   // ===== GRANDES =====
   ORO: [
-    "/images/Macetas-con-Plantas/Oro_DBOE600_443U_m.jpg", // 0
-    "/images/Macetas-con-Plantas/Oro_DHOE600_443U_m.jpg", // 1
+    getImage("Oro_DBOE600_443U_m_rktgfb.png"), // 0
+    getImage("Oro_DHOE600_443U_m_gubwss.png"), // 1
   ],
-  LEXOROUND: "/images/Macetas-con-Plantas/DLR_S449 LEXO.jpg",
-  GRACIACASEBETONEFFECT: "/images/Macetas-con-Plantas/Gracia_Case_Beton_Effect_DGCL600E_422U.jpg",
-  GRACIACASEECOWOOD: "/images/Macetas-con-Plantas/Gracia_Case_ECO_Wood_DGCL600W_4665W.jpg",
-  GRACIACASE: "/images/Macetas-con-Plantas/Gracia_Case_DGCL400_443U_m.jpg",
-  CASCADEGRADENWALL: "/images/Macetas-con-Plantas/Garden_Long_Wall_IO3W800_2 modulowy_S433.jpg",
-  BLOMA:"/images/Macetas-con-Plantas/DBLO600.jpg",
-  URBICASEBETOMEFFECT: "/images/Macetas-con-Plantas/Urbi_Case_Beton_Effect_DUC600TE_425U.jpg",
-  RESPANAPLANTERWOODHIGHSET: "/images/Macetas-con-Plantas/ISEW780H.jpg",
+  LEXOROUND: getImage("DLR_S449_LEXO_k3qit0.png"),
+  GRACIACASEBETONEFFECT: getImage("Gracia_Case_Beton_Effect_DGCL600E_422U_sx0llu.jpg"),
+  GRACIACASEECOWOOD: getImage("Gracia_Case_ECO_Wood_DGCL600W_4665W_d5ho7c.jpg"),
+  GRACIACASE: getImage("Gracia_Case_DGCL400_443U_m_lifpyt.png"),
+  CASCADEGRADENWALL: getImage("Garden_Long_Wall_IO3W800_2_modulowy_S433_xvdlok.png"),
+  BLOMA: getImage("DBLO600_k5el7j.png"),
+  URBICASEBETOMEFFECT: getImage("Urbi_Case_Beton_Effect_DUC600TE_425U_e0scvk.png"),
+  RESPANAPLANTERWOODHIGHSET: getImage("ISEW780H_t2t0sa.png"),
   CORObowlhigh: [
-    "/images/Macetas-con-Plantas/Coro_Bowl_High_TCB40H_101GR.jpg", // 0
-    "/images/Macetas-con-Plantas/Coro_Bowl_TCB48_101GR.jpg",  // 1
+    getImage("Coro_Bowl_High_TCB40H_101GR_yo4tkz.jpg"), // 0
+    getImage("Coro_Bowl_TCB48_101GR_yv4mgt.jpg"),  // 1
   ],
 
-  EVOLIA: "/images/Macetas-con-Plantas/Evolia_TEV60_101GR_sand.jpg",
-  YEKE: "/images/Macetas-con-Plantas/Yeke_TY50_101GR_sand_m.jpg",
-  MOLTA: "/images/Macetas-con-Plantas/Molta_Round_Foot_TMRF60_101GR.jpg",
+  EVOLIA: getImage("Evolia_TEV60_101GR_sand_iretdx.jpg"),
+  YEKE: getImage("Yeke_TY50_101GR_sand_m_zhwph8.png"),
+  MOLTA: getImage("Molta_Round_Foot_TMRF60_101GR_m_duwosc.png"),
 };
 
 // plantas
 const plantas = [
   // 🌱 Interiores
-  { id: "p1", nombre: "Calatea", precio: 1.0, imagen: "/images/Plantas/Calatea.jpg", categoria: "interior" },
-  { id: "p2", nombre: "Cheflera", precio: 1.0, imagen: "/images/Plantas/Cheflera.jpg", categoria: "interior" },
-  { id: "p4", nombre: "Costilla de Adán", precio: 1, imagen: "/images/Plantas/Costilla de Adán.jpg", categoria: "interior" },
-  { id: "p6", nombre: "Drácena", precio: 1, imagen: "/images/Plantas/Drácena.jpg", categoria: "interior" },
-  { id: "p7", nombre: "Ficus caucho", precio: 1, imagen: "/images/Plantas/Ficus caucho.jpg", categoria: "interior" },
-  { id: "p8", nombre: "Ficus lira o violín", precio: 1, imagen: "/images/Plantas/Ficus lira o violín.jpg", categoria: "interior" },
-  { id: "p9", nombre: "Filodendro hoja grande", precio: 1, imagen: "/images/Plantas/Filodendro hoja grande.jpg", categoria: "interior" },
-  { id: "p11", nombre: "Mini calatea", precio: 1, imagen: "/images/Plantas/Mini calatea.jpg", categoria: "interior" },
-  { id: "p13", nombre: "Peperomia", precio: 1, imagen: "/images/Plantas/Peperomia.jpg", categoria: "interior" },
-  { id: "p14", nombre: "Planta china del dinero", precio: 1, imagen: "/images/Plantas/Planta china del dinero.jpg", categoria: "interior" },
+  { id: "p1", nombre: "Calatea", precio: 1.0, imagen: getImage("Calatea_aybq5v.png"), categoria: "interior" },
+  { id: "p2", nombre: "Cheflera", precio: 1.0, imagen: getImage("Cheflera_mrk9l3.png"), categoria: "interior" },
+  { id: "p4", nombre: "Costilla de Adán", precio: 1, imagen: getImage("Costilla_de_Adán_mbbjel.png"), categoria: "interior" },
+  { id: "p6", nombre: "Drácena", precio: 1, imagen: getImage("Drácena_ghxx8z.png"), categoria: "interior" },
+  { id: "p7", nombre: "Ficus caucho", precio: 1, imagen: getImage("Ficus_caucho_p3jubh.png"), categoria: "interior" },
+  { id: "p8", nombre: "Ficus lira o violín", precio: 1, imagen: getImage("Ficus_lira_o_violín_w7qn7t.png"), categoria: "interior" },
+  { id: "p9", nombre: "Filodendro hoja grande", precio: 1, imagen: getImage("Filodendro_hoja_grande_we1ruu.png"), categoria: "interior" },
+  { id: "p11", nombre: "Mini calatea", precio: 1, imagen: getImage("Mini_calatea_hjhdi7.png"), categoria: "interior" },
+  { id: "p13", nombre: "Peperomia", precio: 1, imagen: getImage("Peperomia_jzi2y5.png"), categoria: "interior" },
+  { id: "p14", nombre: "Planta china del dinero", precio: 1, imagen: getImage("Planta_china_del_dinero_mhicvh.png"), categoria: "interior" },
 
   // 🌿 Exteriores
-  { id: "p3", nombre: "Clavelón--Marigold", precio: 1, imagen: "/images/Plantas/Clavelón--Marigold.jpg", categoria: "exterior" },
-  { id: "p5", nombre: "Croto", precio: 1, imagen: "/images/Plantas/Croto.jpg", categoria: "exterior" },
-  { id: "p10", nombre: "Lavanda", precio: 1, imagen: "/images/Plantas/Lavanda.jpg", categoria: "exterior" },
-  { id: "p12", nombre: "Palma cica", precio: 1, imagen: "/images/Plantas/Palma cica.jpg", categoria: "exterior" },
-  { id: "p15", nombre: "Trébol morado", precio: 1, imagen: "/images/Plantas/Trébol morado.jpg", categoria: "exterior" },
+  { id: "p3", nombre: "Clavelón--Marigold", precio: 1, imagen: getImage("Clavelón--Marigold_fhdxuf.png"), categoria: "exterior" },
+  { id: "p5", nombre: "Croto", precio: 1, imagen: getImage("Croto_xecmto.png"), categoria: "exterior" },
+  { id: "p10", nombre: "Lavanda", precio: 1, imagen: getImage("Lavanda_qgxrua.png"), categoria: "exterior" },
+  { id: "p12", nombre: "Palma cica", precio: 1, imagen: getImage("Palma_cica_ok8fde.png"), categoria: "exterior" },
+  { id: "p15", nombre: "Trébol morado", precio: 1, imagen: getImage("Trébol_morado_zosxka.png"), categoria: "exterior" },
 ];
 
 function safeSrc(path) {
@@ -181,12 +181,12 @@ function getComboImageForVariant(item /* { id: 'key-index', imagen: fallback } *
 
   const override = macetaComboImages[baseKey];
   if (Array.isArray(override)) {
-    return override[varIndex] || item?.imagen || "/images/placeholder.jpg";
+    return override[varIndex] || item?.imagen || getImage("images/placeholder.jpg")
   }
   if (typeof override === "string") {
     return override;
   }
-  return item?.imagen || "/images/placeholder.jpg";
+  return item?.imagen || getImage("images/placeholder.jpg");
 }
 
 export default function MacetasconPlantasPage() {
@@ -521,7 +521,7 @@ if (macetaConfirmada && macetaSeleccionada?.id !== m.id) {
     [m.id]: {
       codigo,
       imagen: img,
-      imagenMiniatura: `/images/colores/${codigo}.jpg`,
+      imagenMiniatura: getImage(`images/colores-macetas/${codigo}.jpg`),
     },
   }));
   setMacetaSeleccionada(m);
@@ -566,7 +566,7 @@ if (macetaConfirmada && macetaSeleccionada?.id !== m.id) {
     [m.id]: {
       codigo,
       imagen: img,
-      imagenMiniatura: `/images/colores/${codigo}.jpg`,
+      imagenMiniatura: getImage(`images/colores-macetas/${codigo}.jpg`),
     },
   }));
   setMacetaSeleccionada(m);
