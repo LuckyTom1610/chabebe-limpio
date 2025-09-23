@@ -54,17 +54,17 @@ const macetasPrincipales = [
 {
    id: "COMBIOLIQ",
    modelo: "IBFT55",
-   imagen: "/images/Composteras/compost IBFT55.jpg",
-},
+   imagen: getImage("compost_IBFT55_zsv5it.jpg"),
+  },
 {
   id: "COMBIOSOIL",
    modelo: "IKUGL",
-   imagen: "/images/Composteras/compost IKUGL.jpg",
+   imagen: getImage("compost_IKUGL_s8de5e.jpg"),
    },
 {
   id: "COMPOGREEN",
    modelo: "IKST380C",
-   imagen: "/images/Composteras/compost IKST.jpg",
+   imagen: getImage("compost_IKST_kzbvyd.jpg"),
    },
 ];
 const catalogosData = {
@@ -76,7 +76,7 @@ const catalogosData = {
     Capacidad:"55",
     Disponibilidad: "5 und",
     Precio: 34.33,
-    imagenesCatalogo: ["/images/Composteras/IBFT55.jpg",],
+    imagenesCatalogo: [getImage("IBFT55_qn0rlw.jpg")],
          },
    
    COMBIOSOIL: 
@@ -86,7 +86,7 @@ const catalogosData = {
     Capacidad:"11",
     Disponibilidad: "45 und",
     Precio: 8.63,    
-    imagenesCatalogo: ["/images/Composteras/IKUGL.jpg",],
+    imagenesCatalogo: [getImage("IKUGL_ascf2m.jpg")],
     
      },
     COMPOGREEN: 
@@ -96,7 +96,7 @@ const catalogosData = {
     Capacidad:"380",
     Disponibilidad: "50 und",
     Precio: 42.23,    
-    imagenesCatalogo: ["/images/Composteras/IKST380C.jpg",],
+    imagenesCatalogo: [getImage("IKST380C_z3yki5.jpg")],
     
      },
      
