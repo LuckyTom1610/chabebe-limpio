@@ -1,4 +1,6 @@
-const CLOUDINARY_BASE_URL = process.env.CLOUDINARY_BASE_URL || "";
+const CLOUDINARY_BASE_URL = process.env.REACT_APP_CLOUDINARY_BASE_URL || "";
+
+console.log("🌐 URL Cloudinary:", CLOUDINARY_BASE_URL);
 
 /**
  * Genera la URL de una imagen en Cloudinary
