@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import CatalogoMacetas from "./CatalogoMacetas";
 import { CartContext } from "../context/CartContext";
+import { getImage } from "../utils/cloudinary";
 
 const MacetaCard = ({ maceta, onClick }) => {
   const { addToCart } = useContext(CartContext);
