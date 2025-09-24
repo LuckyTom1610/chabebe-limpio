@@ -314,7 +314,7 @@ const macetasPrincipales = [
 {
   id: "EVOLIA",
   modelo: "EVOLIA",
-  imagen: getImage("images/macetas-grandes/Evolia.jpg"),
+  imagen: getImage("Evolia.jpg"),
 },
 {
   id: "YEKE",
@@ -449,7 +449,7 @@ const catalogosData = {
   Capacidad: "27/100",
   Disponibilidad: "30 und",
   Precio: 77.33,
-  imagenesCatalogo: [getImage("macetas-grandes/DUC800TE.jpg")],
+  imagenesCatalogo: [getImage("DUC800TE.jpg")],
   Accesorios: [
     {
       nombre: "estabilizadores plásticos",
