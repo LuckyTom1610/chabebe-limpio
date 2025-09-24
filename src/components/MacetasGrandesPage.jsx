@@ -20,119 +20,119 @@ function buildColorImagePath({ baseId, varianteDesc, colorCode }) {
   const b = (baseId || "").trim();
 
     return [
-    getImage(`Macetas-con-Plantas/${b}-${v}-${c}.jpg`),
-    getImage(`Macetas-con-Plantas/${b}-${c}.jpg`),
-    getImage(`Macetas-con-Plantas/${b}_${c}.jpg`),
-    getImage(`Macetas-con-Plantas/${b}${v ? "-" + v : ""}_${c}.jpg`),
+    getImage(`${b}-${v}-${c}.jpg`),
+    getImage(`${b}-${c}.jpg`),
+    getImage(`${b}_${c}.jpg`),
+    getImage(`${b}${v ? "-" + v : ""}_${c}.jpg`),
   ];
 }
 
 const macetaColorImages = {
   
    ORO: {
-    "S449": getImage("Macetas-con-Plantas/Oro_DBOE600_S449.jpg"),
-    "443U": getImage("Macetas-con-Plantas/Oro_DBOE600_443U_m.jpg"),
-    "2411U": getImage("Macetas-con-Plantas/Oro_DBOE600_2411U.jpg"),
-    "419U": getImage("Macetas-con-Plantas/Oro_DBOE600_419U.jpg"),
+    "S449": getImage("Oro_DBOE600_S449.jpg"),
+    "443U": getImage("Oro_DBOE600_443U_m.jpg"),
+    "2411U": getImage("Oro_DBOE600_2411U.jpg"),
+    "419U": getImage("Oro_DBOE600_419U.jpg"),
   },
   LEXOROUND: {
-    "S449": getImage("Macetas-con-Plantas/DLR_S449 LEXO.jpg"),
+    "S449": getImage("DLR_S449 LEXO.jpg"),
   },
 
   GRACIACASEBETONEFFECT: {
-    "422U": getImage("Macetas-con-Plantas/Gracia_Case_Beton_Effect_DGCL600E_422U.jpg"),
-    "CY700": getImage("Macetas-con-Plantas/Gracia_Case_Beton_Effect_DGCL600E_CY700.jpg"),
-    "S433": getImage("Macetas-con-Plantas/Gracia_Case_Beton_Effect_DGCL600E_S433.jpg"),
+    "422U": getImage("Gracia_Case_Beton_Effect_DGCL600E_422U.jpg"),
+    "CY700": getImage("Gracia_Case_Beton_Effect_DGCL600E_CY700.jpg"),
+    "S433": getImage("Gracia_Case_Beton_Effect_DGCL600E_S433.jpg"),
   },
 
       GRACIACASEECOWOOD: {
-     "S449W": getImage("Macetas-con-Plantas/Gracia_Case_ECO_Wood_DGCL600W_S449W.jpg"),
-      "4665W": getImage("Macetas-con-Plantas/Gracia_Case_ECO_Wood_DGCL600W_4665W.jpg"),
-      "S433W": getImage("Macetas-con-Plantas/Gracia_Case_ECO_Wood_DGCL600W_S433W.jpg"),
-      "4625W": getImage("Macetas-con-Plantas/Gracia_Case_ECO_Wood_DGCL600W_4625W.jpg"),
+     "S449W": getImage("Gracia_Case_ECO_Wood_DGCL600W_S449W.jpg"),
+      "4665W": getImage("Gracia_Case_ECO_Wood_DGCL600W_4665W.jpg"),
+      "S433W": getImage("Gracia_Case_ECO_Wood_DGCL600W_S433W.jpg"),
+      "4625W": getImage("Gracia_Case_ECO_Wood_DGCL600W_4625W.jpg"),
   },
       GRACIACASE: {
-    "S449": getImage("Macetas-con-Plantas/Gracia_Case_DGCL400_S449.jpg"),
-    "443U": getImage("Macetas-con-Plantas/Gracia_Case_DGCL400_443U_m.jpg"),
-    "5615C": getImage("Macetas-con-Plantas/Gracia_Case_DGCL400_5615C.jpg"),
-    "S433": getImage("Macetas-con-Plantas/Gracia_Case_DGCL400_S433_m.jpg"),
+    "S449": getImage("Gracia_Case_DGCL400_S449.jpg"),
+    "443U": getImage("Gracia_Case_DGCL400_443U_m.jpg"),
+    "5615C": getImage("Gracia_Case_DGCL400_5615C.jpg"),
+    "S433": getImage("Gracia_Case_DGCL400_S433_m.jpg"),
   },
   CASCADEGRADENWALL: {
-     "S433": getImage("Macetas-con-Plantas/Garden_Long_Wall_IO3W800_2 modulowy_S433.jpg"),
+     "S433": getImage("Garden_Long_Wall_IO3W800_2 modulowy_S433.jpg"),
   },
      BLOMA: {
-     "405U": getImage("Macetas-con-Plantas/DBLO600.jpg"),
+     "405U": getImage("DBLO600.jpg"),
   },
 
     URBICASEBETOMEFFECT: {
-     "422U": getImage("Macetas-con-Plantas/Urbi_Case_Beton_Effect_DUC800TE_wklad_separator_422U.jpg"),
-  "CY700": getImage("Macetas-con-Plantas/Urbi_Case_Beton_Effect_DUC800TE_wklad_separator_CY700.jpg"),
-  "S433": getImage("Macetas-con-Plantas/Urbi_Case_Beton_Effect_DUC800TE_wklad_separator_S433.jpg"),
+     "422U": getImage("Urbi_Case_Beton_Effect_DUC800TE_wklad_separator_422U.jpg"),
+  "CY700": getImage("Urbi_Case_Beton_Effect_DUC800TE_wklad_separator_CY700.jpg"),
+  "S433": getImage("Urbi_Case_Beton_Effect_DUC800TE_wklad_separator_S433.jpg"),
   },
 
      HEOS: {
     variantes: {
       DLHEN470: {
-         S449: getImage("Macetas-con-Plantas/Heos_DLHEN470_S449.jpg"),
-         S433: getImage("Macetas-con-Plantas/Heos_DLHEN400_S433.jpg"),
+         S449: getImage("Heos_DLHEN470_S449.jpg"),
+         S433: getImage("Heos_DLHEN400_S433.jpg"),
       },
       DBHEN470: {
-        S449: getImage("Macetas-con-Plantas/Heos_DBHEN470_S449.jpg"),
-        S433: getImage("Macetas-con-Plantas/Heos_DBHEN470_S433_m.jpg"),
+        S449: getImage("Heos_DBHEN470_S449.jpg"),
+        S433: getImage("Heos_DBHEN470_S433_m.jpg"),
       },
       DBHER470: {
-        S449: getImage("Macetas-con-Plantas/Heos_DBHER_S449.jpg"),
-        S433: getImage("Macetas-con-Plantas/Heos_DBHER_S433.jpg"),
+        S449: getImage("Heos_DBHER_S449.jpg"),
+        S433: getImage("Heos_DBHER_S433.jpg"),
       },
     },
   },
       RESPANAPLANTERWOODHIGHSET: {
-    "405U": getImage("Macetas-con-Plantas/ISEW780H.jpg"),
+    "405U": getImage("ISEW780H.jpg"),
   },
       ARIAOVAL: {
     variantes: {
       TAO40: {
-         "7529U": getImage("Macetas-con-Plantas/Aria_Oval_TAO40_101GR_sand_m.jpg"),
-         "443U": getImage("Macetas-con-Plantas/Aria_Oval_TAO40_105GR_tiny_granite.jpg"),
-         "405U": getImage("Macetas-con-Plantas/Aria_Oval_TAO40_107GR_graphite.jpg"),
+         "7529U": getImage("Aria_Oval_TAO40_101GR_sand_m.jpg"),
+         "443U": getImage("Aria_Oval_TAO40_105GR_tiny_granite.jpg"),
+         "405U": getImage("Aria_Oval_TAO40_107GR_graphite.jpg"),
       },
       TAO60: {
-         "7529U": getImage("Macetas-con-Plantas/Aria_Oval_TAO60_101GR_sand_m.jpg"),
-         "443U": getImage("Macetas-con-Plantas/Aria_Oval_TAO60_105GR.jpg"),
-         "405U": getImage("Macetas-con-Plantas/Aria_Oval_TAO60_107GR_graphite.jpg"),
+         "7529U": getImage("Aria_Oval_TAO60_101GR_sand_m.jpg"),
+         "443U": getImage("Aria_Oval_TAO60_105GR.jpg"),
+         "405U": getImage("Aria_Oval_TAO60_107GR_graphite.jpg"),
       },
       },
   },    
         CORObowlhigh: {
       variantes: {
         TCB40H: {
-         "7529U": getImage("Macetas-con-Plantas/Coro_Bowl_High_TCB40H_101GR.jpg"),
-         "443U": getImage("Macetas-con-Plantas/Coro_Bowl_High_TCB40H_107GR_graphite.jpg"),
-         "405U": getImage("Macetas-con-Plantas/Coro_Bowl_High_TCB40H_109GR_m.jpg"),
+         "7529U": getImage("Coro_Bowl_High_TCB40H_101GR.jpg"),
+         "443U": getImage("Coro_Bowl_High_TCB40H_107GR_graphite.jpg"),
+         "405U": getImage("Coro_Bowl_High_TCB40H_109GR_m.jpg"),
       },
         TCB48: {
-        "7529U": getImage("Macetas-con-Plantas/Coro_Bowl_TCB48_101GR.jpg"),
-        "443U": getImage("Macetas-con-Plantas/Coro_Bowl_TCB48_107GR_graphite.jpg"),
-        "405U": getImage("Macetas-con-Plantas/Coro_Bowl_TCB48_109GR.jpg"),
+        "7529U": getImage("Coro_Bowl_TCB48_101GR.jpg"),
+        "443U": getImage("Coro_Bowl_TCB48_107GR_graphite.jpg"),
+        "405U": getImage("Coro_Bowl_TCB48_109GR.jpg"),
       },
       },
       },
           EVOLIA: {
-         "7529U": getImage("Macetas-con-Plantas/Evolia_TEV60_101GR_sand.jpg"),
-         "443U": getImage("Macetas-con-Plantas/Evolia_TEV60_105GR.jpg"),
-         "405U": getImage("Macetas-con-Plantas/Evolia_TEV60_107GR_graphite.jpg"),
+         "7529U": getImage("Evolia_TEV60_101GR_sand.jpg"),
+         "443U": getImage("Evolia_TEV60_105GR.jpg"),
+         "405U": getImage("Evolia_TEV60_107GR_graphite.jpg"),
           },
 
           YEKE: {
-         "7529U": getImage("Macetas-con-Plantas/Yeke_TY50_101GR_sand_m.jpg"),
-         "443U": getImage("Macetas-con-Plantas/Yeke_TY50_105GR_tiny_granite.jpg"),
-         "405U": getImage("Macetas-con-Plantas/Yeke_TY50_107GR_graphite.jpg"),
+         "7529U": getImage("Yeke_TY50_101GR_sand_m.jpg"),
+         "443U": getImage("Yeke_TY50_105GR_tiny_granite.jpg"),
+         "405U": getImage("Yeke_TY50_107GR_graphite.jpg"),
            },
 
            MOLTA: {
-        "7529U": getImage("Macetas-con-Plantas/Molta_Round_Foot_TMRF60_101GR.jpg"),
-        "443U": getImage("Macetas-con-Plantas/Molta_Round_Foot_TMRF60_105GR.jpg"),
-        "405U": getImage("Macetas-con-Plantas/Molta_Round_Foot_TMRF60_107GR.jpg"),
+        "7529U": getImage("Molta_Round_Foot_TMRF60_101GR.jpg"),
+        "443U": getImage("Molta_Round_Foot_TMRF60_105GR.jpg"),
+        "405U": getImage("Molta_Round_Foot_TMRF60_107GR.jpg"),
             },
 
 
@@ -264,7 +264,7 @@ const macetasPrincipales = [
 {
   id: "GRACIACASEBETONEFFECT",
   modelo: "GRACIA CASE BETON EFFECT",
-  imagen: getImage("Gracia_Case_Beton_Effec.jpg"),
+  imagen: getImage("Gracia_Case_Beton_Effect.jpg"),
 },
 {
   id: "GRACIACASEECOWOOD",
@@ -274,7 +274,7 @@ const macetasPrincipales = [
 {
   id: "GRACIACASE",
   modelo: "GRACIA CASE",
-  imagen: getImage("Gracia_Case_Beton_Effect.jpg"),
+  imagen: getImage("Gracia_Case_ECO_Wood.jpg"),
 },
 {
   id: "CASCADEGRADENWALL",
