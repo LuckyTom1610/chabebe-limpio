@@ -254,62 +254,62 @@ const macetasPrincipales = [
 {
    id: "ORO",
   modelo: "ORO",
-  imagen: getImage("images/macetas-grandes/Oro Oval.jpg"),
+  imagen: getImage("Oro Oval.jpg"),
 },
 {
   id: "LEXOROUND",
   modelo: "LEXO ROUND",
-  imagen: getImage("images/macetas-grandes/round_Lexo.jpg"),
+  imagen: getImage("round_Lexo.jpg"),
 },
 {
   id: "GRACIACASEBETONEFFECT",
   modelo: "GRACIA CASE BETON EFFECT",
-  imagen: getImage("images/macetas-grandes/Gracia_Case_Beton_Effec.jpg"),
+  imagen: getImage("Gracia_Case_Beton_Effec.jpg"),
 },
 {
   id: "GRACIACASEECOWOOD",
   modelo: "GRACIA LOW",
-  imagen: getImage("images/macetas-grandes/Gracia_Case_ECO_Wood.jpg"),
+  imagen: getImage("Gracia_Case_ECO_Wood.jpg"),
 },
 {
   id: "GRACIACASE",
   modelo: "GRACIA CASE",
-  imagen: getImage("images/macetas-grandes/Gracia_Case_Beton_Effect.jpg"),
+  imagen: getImage("Gracia_Case_Beton_Effect.jpg"),
 },
 {
   id: "CASCADEGRADENWALL",
   modelo: "CASCADE GRADEN WALL",
-  imagen: getImage("images/macetas-grandes/Cascade Garden Wall.jpg"),
+  imagen: getImage("Cascade Garden Wall.jpg"),
 },
 {
   id: "BLOMA",
   modelo: "BLOMA",
-  imagen: getImage("images/macetas-grandes/Bloma.jpg"),
+  imagen: getImage("Bloma.jpg"),
 },
 {
   id: "URBICASEBETOMEFFECT",
   modelo: "URBI CASE BETOM EFFECT",
-  imagen: getImage("images/macetas-grandes/Urbi_Case_DUC.jpg"),
+  imagen: getImage("Urbi_Case_DUC.jpg"),
 },
 {
   id: "HEOS",
   modelo: "HEOS",
-  imagen: getImage("images/macetas-grandes/Heos_DBHEN.jpg"),
+  imagen: getImage("Heos_DBHEN.jpg"),
 },
 {
   id: "RESPANAPLANTERWOODHIGHSET",
   modelo: "RESPANA PLANTER WOOD HIGH SET",
-  imagen: getImage("images/macetas-grandes/Respana Planter Wood.jpg"),
+  imagen: getImage("Respana Planter Wood.jpg"),
 },
 {
   id: "ARIAOVAL",
   modelo: "ARIA OVAL",
-  imagen: getImage("images/macetas-grandes/Aria_Oval.jpg"),
+  imagen: getImage("Aria_Oval.jpg"),
 },
 {
   id: "CORObowlhigh",
   modelo: "CORO BOWL HIGH",
-  imagen: getImage("images/macetas-grandes/Coro_Bowl_Hig.jpg"),
+  imagen: getImage("Coro_Bowl_Hig.jpg"),
 },
 {
   id: "EVOLIA",
@@ -319,12 +319,12 @@ const macetasPrincipales = [
 {
   id: "YEKE",
   modelo: "YEKE",
-  imagen: getImage("images/macetas-grandes/Yeke.jpg"),
+  imagen: getImage("Yeke.jpg"),
 },
 {
   id: "MOLTA",
   modelo: "MOLTA",
-  imagen: getImage("images/macetas-grandes/Molta_Round.jpg"),
+  imagen: getImage("Molta_Round.jpg"),
 },
 ];
 const catalogosData = {
@@ -336,7 +336,7 @@ const catalogosData = {
       Capacidad: "2.3",
       Disponibilidad: "20 und",
       Precio: 21,
-      imagenesCatalogo: [getImage("macetas-grandes/DBOE600.jpg")],
+      imagenesCatalogo: [getImage("DBOE600.jpg")],
     },
     {
       descripcion: "DHOE600",
@@ -344,14 +344,14 @@ const catalogosData = {
       Capacidad: "3.9",
       Disponibilidad: "20 und",
       Precio: 23.63,
-      imagenesCatalogo: [getImage("macetas-grandes/DHOE600.jpg")],
+      imagenesCatalogo: [getImage("DHOE600.jpg")],
     },
   ],
   colores: [
-    {nombre: "Blanco", codigo: "S449", imagen: getImage("colores-macetas/S449_bialy.jpg"),},
-    {nombre: "gris claro", codigo: "443U", imagen: getImage("colores-macetas/443U_jasny_szary.jpg"),},
-    {nombre: "pino verde", codigo: "2411U",imagen: getImage("colores-macetas/2411U_zielona_pinia.jpg"),},
-    {nombre: "gris medio oscuro", codigo: "419U", imagen: getImage("colores-macetas/419U_ciemny_szary.jpg"),},
+    {nombre: "Blanco", codigo: "S449", imagen: getImage("S449_bialy.jpg"),},
+    {nombre: "gris claro", codigo: "443U", imagen: getImage("443U_jasny_szary.jpg"),},
+    {nombre: "pino verde", codigo: "2411U",imagen: getImage("2411U_zielona_pinia.jpg"),},
+    {nombre: "gris medio oscuro", codigo: "419U", imagen: getImage("419U_ciemny_szary.jpg"),},
   ],
 },
 
@@ -361,9 +361,9 @@ const catalogosData = {
     Capacidad: "430",
     Disponibilidad: "1 und",
     Precio: 296.25,
-    imagenesCatalogo: [getImage("macetas-grandes/DLR1000.jpg")],
+    imagenesCatalogo: [getImage("DLR1000.jpg")],
     colores: [
-      { nombre: "Blanco", codigo: "S449", imagen: getImage("colores-macetas/S449_bialy.jpg") }
+      { nombre: "Blanco", codigo: "S449", imagen: getImage("S449_bialy.jpg") }
     ]
   },
 
@@ -373,14 +373,14 @@ const catalogosData = {
     Capacidad: "19.5",
     Disponibilidad: "75 und",
     Precio: 14.53,
-    imagenesCatalogo: [getImage("macetas-grandes/DGCL600E.jpg")],
+    imagenesCatalogo: [getImage("DGCL600E.jpg")],
     Accesorios: [
-      { nombre: "base de drenaje interno", imagen: [getImage("accesorios/base de drenaje interno1.jpg")] }
+      { nombre: "base de drenaje interno", imagen: [getImage("base de drenaje interno1.jpg")] }
     ],
     colores: [
-      { nombre: "concreto / hormigón", codigo: "422U", imagen: getImage("colores-macetas/422U_beton.jpg") },
-      { nombre: "crema", codigo: "CY700", imagen: getImage("colores-macetas/CY700_kremowy.jpg") },
-      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("colores-macetas/S433_antracytowy.jpg") }
+      { nombre: "concreto / hormigón", codigo: "422U", imagen: getImage("422U_beton.jpg") },
+      { nombre: "crema", codigo: "CY700", imagen: getImage("CY700_kremowy.jpg") },
+      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy.jpg") }
     ]
   },
 
@@ -390,15 +390,15 @@ const catalogosData = {
     Capacidad: "19.5",
     Disponibilidad: "100 und",
     Precio: 13.48,
-    imagenesCatalogo: [getImage("macetas-grandes/DGCL600w.jpg")],
+    imagenesCatalogo: [getImage("DGCL600w.jpg")],
     Accesorios: [
-      { nombre: "base de drenaje interno", imagen: [getImage("accesorios/base de drenaje interno1.jpg")] }
+      { nombre: "base de drenaje interno", imagen: [getImage("base de drenaje interno1.jpg")] }
     ],
     colores: [
-      { nombre: "blanco ECO", codigo: "S449W", imagen: getImage("colores-macetas/S449W_bialy_ECO.jpg") },
-      { nombre: "natural ECO", codigo: "4665W", imagen: getImage("colores-macetas/4665W_naturo_ECO.jpg") },
-      { nombre: "gris oscuro ECO", codigo: "S433W", imagen: getImage("colores-macetas/S433W_antracytowy_ECO.jpg") },
-      { nombre: "café ECO", codigo: "4625W", imagen: getImage("colores-macetas/4625W_kawa_ECO.jpg") }
+      { nombre: "blanco ECO", codigo: "S449W", imagen: getImage("S449W_bialy_ECO.jpg") },
+      { nombre: "natural ECO", codigo: "4665W", imagen: getImage("4665W_naturo_ECO.jpg") },
+      { nombre: "gris oscuro ECO", codigo: "S433W", imagen: getImage("S433W_antracytowy_ECO.jpg") },
+      { nombre: "café ECO", codigo: "4625W", imagen: getImage("4625W_kawa_ECO.jpg") }
     ]
   },
 
@@ -408,15 +408,15 @@ const catalogosData = {
     Capacidad: "19.5",
     Disponibilidad: "100 und",
     Precio: 12.85,
-    imagenesCatalogo: [getImage("macetas-grandes/DGCL600.jpg")],
+    imagenesCatalogo: [getImage("DGCL600.jpg")],
     Accesorios: [
-      { nombre: "base de drenaje interno", imagen: [getImage("accesorios/base de drenaje interno1.jpg")] }
+      { nombre: "base de drenaje interno", imagen: [getImage("base de drenaje interno1.jpg")] }
     ],
     colores: [
-      { nombre: "blanco", codigo: "S449", imagen: getImage("colores-macetas/S449_bialy.jpg") },
-      { nombre: "gris claro", codigo: "443U", imagen: getImage("colores-macetas/443U_jasny_szary.jpg") },
-      { nombre: "verde terroso", codigo: "5615C", imagen: getImage("colores-macetas/5615C_ziemisty_zielony.jpg") },
-      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("colores-macetas/S433_antracytowy.jpg") }
+      { nombre: "blanco", codigo: "S449", imagen: getImage("S449_bialy.jpg") },
+      { nombre: "gris claro", codigo: "443U", imagen: getImage("443U_jasny_szary.jpg") },
+      { nombre: "verde terroso", codigo: "5615C", imagen: getImage("5615C_ziemisty_zielony.jpg") },
+      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy.jpg") }
     ]
   },
 
@@ -426,9 +426,9 @@ const catalogosData = {
     Capacidad: "2 x 12L",
     Disponibilidad: "10 und",
     Precio: 22.55,
-    imagenesCatalogo: [getImage("macetas-grandes/IO3W800.jpg")],
+    imagenesCatalogo: [getImage("IO3W800.jpg")],
     colores: [
-      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("colores-macetas/S433_antracytowy.jpg") }
+      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy.jpg") }
     ]
   },
 
@@ -438,9 +438,9 @@ const catalogosData = {
     Capacidad: "-",
     Disponibilidad: "8 und",
     Precio: 18,
-    imagenesCatalogo: [getImage("macetas-grandes/DBLO600.jpg")],
+    imagenesCatalogo: [getImage("DBLO600.jpg")],
     colores: [
-      { nombre: "gris piedra", codigo: "405U", imagen: getImage("colores-macetas/405U_szary_kamienny.jpg") }
+      { nombre: "gris piedra", codigo: "405U", imagen: getImage("405U_szary_kamienny.jpg") }
     ]
   },
     URBICASEBETOMEFFECT: {
@@ -453,13 +453,13 @@ const catalogosData = {
   Accesorios: [
     {
       nombre: "estabilizadores plásticos",
-      imagen: [getImage("accesorios/estabilizadores plásticos.jpg")],
+      imagen: [getImage("estabilizadores plásticos.jpg")],
     }
   ],
   colores: [
-    { nombre: "concreto / hormigón", codigo: "422U", imagen: getImage("colores-macetas/422U_beton.jpg") },
-    { nombre: "crema", codigo: "CY700", imagen: getImage("colores-macetas/CY700_kremowy.jpg") },
-    { nombre: "gris oscuro", codigo: "S433", imagen: getImage("colores-macetas/S433_antracytowy.jpg") }
+    { nombre: "concreto / hormigón", codigo: "422U", imagen: getImage("422U_beton.jpg") },
+    { nombre: "crema", codigo: "CY700", imagen: getImage("CY700_kremowy.jpg") },
+    { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy.jpg") }
   ],
 },
 
@@ -471,7 +471,7 @@ HEOS: {
       Capacidad: "31/45",
       Disponibilidad: "20 und",
       Precio: 18.38,
-      imagenesCatalogo: [getImage("macetas-grandes/DLHEN470.jpg")],
+      imagenesCatalogo: [getImage("DLHEN470.jpg")],
     },
     {
       descripcion: "DBHEN470",
@@ -479,7 +479,7 @@ HEOS: {
       Capacidad: "31/69",
       Disponibilidad: "12 und",
       Precio: 22.28,
-      imagenesCatalogo: [getImage("macetas-grandes/DBHEN470.jpg")],
+      imagenesCatalogo: [getImage("DBHEN470.jpg")],
     },
     {
       descripcion: "DBHER470",
@@ -487,12 +487,12 @@ HEOS: {
       Capacidad: "31/74",
       Disponibilidad: "20 und",
       Precio: 22.28,
-      imagenesCatalogo: [getImage("macetas-grandes/DBHER470.jpg")],
+      imagenesCatalogo: [getImage("DBHER470.jpg")],
     },
   ],
   colores: [
-    { nombre: "blanco", codigo: "S449", imagen: getImage("colores-macetas/S449_bialy.jpg") },
-    { nombre: "gris oscuro", codigo: "S433", imagen: getImage("colores-macetas/S433_antracytowy.jpg") }
+    { nombre: "blanco", codigo: "S449", imagen: getImage("S449_bialy.jpg") },
+    { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy.jpg") }
   ]
 },
 
@@ -502,9 +502,9 @@ RESPANAPLANTERWOODHIGHSET: {
   Capacidad: "55",
   Disponibilidad: "35 und",
   Precio: 70.50,
-  imagenesCatalogo: [getImage("macetas-grandes/ISEW780H.jpg")],
+  imagenesCatalogo: [getImage("ISEW780H.jpg")],
   colores: [
-    { nombre: "gris piedra", codigo: "405U", imagen: getImage("colores-macetas/405U_szary_kamienny.jpg") }
+    { nombre: "gris piedra", codigo: "405U", imagen: getImage("405U_szary_kamienny.jpg") }
   ]
 },
 
@@ -516,7 +516,7 @@ ARIAOVAL: {
       Capacidad: "5",
       Disponibilidad: "12 und",
       Precio: 24.63,
-      imagenesCatalogo: [getImage("macetas-grandes/TAO40.jpg")],
+      imagenesCatalogo: [getImage("TAO40.jpg")],
     },
     {
       descripcion: "TAO60",
@@ -524,13 +524,13 @@ ARIAOVAL: {
       Capacidad: "16",
       Disponibilidad: "15 und",
       Precio: 38.38,
-      imagenesCatalogo: [getImage("macetas-grandes/TAO60.jpg")],
+      imagenesCatalogo: [getImage("TAO60.jpg")],
     }
   ],
   colores: [
-    { nombre: "moca", codigo: "7529U", imagen: getImage("colores-macetas/7529U_mocca.jpg") },
-    { nombre: "gris claro", codigo: "443U", imagen: getImage("colores-macetas/443U_jasny_szary.jpg") },
-    { nombre: "gris piedra", codigo: "405U", imagen: getImage("colores-macetas/405U_szary_kamienny.jpg") }
+    { nombre: "moca", codigo: "7529U", imagen: getImage("7529U_mocca.jpg") },
+    { nombre: "gris claro", codigo: "443U", imagen: getImage("443U_jasny_szary.jpg") },
+    { nombre: "gris piedra", codigo: "405U", imagen: getImage("405U_szary_kamienny.jpg") }
   ]
 },
 
@@ -542,7 +542,7 @@ CORObowlhigh: {
       Capacidad: "9",
       Disponibilidad: "9 und",
       Precio: 79.63,
-      imagenesCatalogo: [getImage("macetas-grandes/TCB40H.jpg")],
+      imagenesCatalogo: [getImage("TCB40H.jpg")],
     },
     {
       descripcion: "TCB48",
@@ -550,13 +550,13 @@ CORObowlhigh: {
       Capacidad: "22",
       Disponibilidad: "9 und",
       Precio: 92.90,
-      imagenesCatalogo: [getImage("macetas-grandes/TCB48.jpg")],
+      imagenesCatalogo: [getImage("TCB48.jpg")],
     }
   ],
   colores: [
-    { nombre: "moca", codigo: "7529U", imagen: getImage("colores-macetas/7529U_mocca.jpg") },
-    { nombre: "gris claro", codigo: "443U", imagen: getImage("colores-macetas/443U_jasny_szary.jpg") },
-    { nombre: "gris piedra", codigo: "405U", imagen: getImage("colores-macetas/405U_szary_kamienny.jpg") }
+    { nombre: "moca", codigo: "7529U", imagen: getImage("7529U_mocca.jpg") },
+    { nombre: "gris claro", codigo: "443U", imagen: getImage("443U_jasny_szary.jpg") },
+    { nombre: "gris piedra", codigo: "405U", imagen: getImage("405U_szary_kamienny.jpg") }
   ]
 },
 
@@ -566,11 +566,11 @@ EVOLIA: {
   Capacidad: "23",
   Disponibilidad: "15 und",
   Precio: 92.90,
-  imagenesCatalogo: [getImage("macetas-grandes/TEV60.jpg")],
+  imagenesCatalogo: [getImage("TEV60.jpg")],
   colores: [
-    { nombre: "moca", codigo: "7529U", imagen: getImage("colores-macetas/7529U_mocca.jpg") },
-    { nombre: "gris claro", codigo: "443U", imagen: getImage("colores-macetas/443U_jasny_szary.jpg") },
-    { nombre: "gris piedra", codigo: "405U", imagen: getImage("colores-macetas/405U_szary_kamienny.jpg") }
+    { nombre: "moca", codigo: "7529U", imagen: getImage("7529U_mocca.jpg") },
+    { nombre: "gris claro", codigo: "443U", imagen: getImage("443U_jasny_szary.jpg") },
+    { nombre: "gris piedra", codigo: "405U", imagen: getImage("405U_szary_kamienny.jpg") }
   ]
 },
 
@@ -580,11 +580,11 @@ YEKE: {
   Capacidad: "8",
   Disponibilidad: "15 und",
   Precio: 53.08,
-  imagenesCatalogo: [getImage("macetas-grandes/TY50.jpg")],
+  imagenesCatalogo: [getImage("TY50.jpg")],
   colores: [
-    { nombre: "moca", codigo: "7529U", imagen: getImage("colores-macetas/7529U_mocca.jpg") },
-    { nombre: "gris claro", codigo: "443U", imagen: getImage("colores-macetas/443U_jasny_szary.jpg") },
-    { nombre: "gris piedra", codigo: "405U", imagen: getImage("colores-macetas/405U_szary_kamienny.jpg") }
+    { nombre: "moca", codigo: "7529U", imagen: getImage("7529U_mocca.jpg") },
+    { nombre: "gris claro", codigo: "443U", imagen: getImage("443U_jasny_szary.jpg") },
+    { nombre: "gris piedra", codigo: "405U", imagen: getImage("405U_szary_kamienny.jpg") }
   ]
 },
 
@@ -594,11 +594,11 @@ MOLTA: {
   Capacidad: "45",
   Disponibilidad: "4 und",
   Precio: 125.23,
-  imagenesCatalogo: [getImage("macetas-grandes/TMRF60.jpg")],
+  imagenesCatalogo: [getImage("TMRF60.jpg")],
   colores: [
-    { nombre: "moca", codigo: "7529U", imagen: getImage("colores-macetas/7529U_mocca.jpg") },
-    { nombre: "gris claro", codigo: "443U", imagen: getImage("colores-macetas/443U_jasny_szary.jpg") },
-    { nombre: "gris piedra", codigo: "405U", imagen: getImage("colores-macetas/405U_szary_kamienny.jpg") },
+    { nombre: "moca", codigo: "7529U", imagen: getImage("7529U_mocca.jpg") },
+    { nombre: "gris claro", codigo: "443U", imagen: getImage("443U_jasny_szary.jpg") },
+    { nombre: "gris piedra", codigo: "405U", imagen: getImage("405U_szary_kamienny.jpg") },
   ]
 }
 };
