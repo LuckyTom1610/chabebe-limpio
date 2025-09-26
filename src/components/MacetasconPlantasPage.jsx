@@ -124,21 +124,21 @@ const plantas = [
   // 🌱 Interiores
   { id: "p1", nombre: "Calatea", precio: 1.0, imagen: getImage("Calatea.png"), categoria: "interior" },
   { id: "p2", nombre: "Cheflera", precio: 1.0, imagen: getImage("Cheflera.png"), categoria: "interior" },
-  { id: "p4", nombre: "Costilla de Adán", precio: 1, imagen: getImage("Costilla_de_Adán.png"), categoria: "interior" },
+  { id: "p4", nombre: "Costilla de Adán", precio: 1, imagen: getImage("Costilla de Adán.png"), categoria: "interior" },
   { id: "p6", nombre: "Drácena", precio: 1, imagen: getImage("Drácena.png"), categoria: "interior" },
-  { id: "p7", nombre: "Ficus caucho", precio: 1, imagen: getImage("Ficus_caucho.png"), categoria: "interior" },
-  { id: "p8", nombre: "Ficus lira o violín", precio: 1, imagen: getImage("Ficus_lira_o_violín.png"), categoria: "interior" },
-  { id: "p9", nombre: "Filodendro hoja grande", precio: 1, imagen: getImage("Filodendro_hoja_grande.png"), categoria: "interior" },
-  { id: "p11", nombre: "Mini calatea", precio: 1, imagen: getImage("Mini_calatea.png"), categoria: "interior" },
+  { id: "p7", nombre: "Ficus caucho", precio: 1, imagen: getImage("Ficus caucho.png"), categoria: "interior" },
+  { id: "p8", nombre: "Ficus lira o violín", precio: 1, imagen: getImage("Ficus lira o violín.png"), categoria: "interior" },
+  { id: "p9", nombre: "Filodendro hoja grande", precio: 1, imagen: getImage("Filodendro hoja grande.png"), categoria: "interior" },
+  { id: "p11", nombre: "Mini calatea", precio: 1, imagen: getImage("Mini calatea.png"), categoria: "interior" },
   { id: "p13", nombre: "Peperomia", precio: 1, imagen: getImage("Peperomia.png"), categoria: "interior" },
-  { id: "p14", nombre: "Planta china del dinero", precio: 1, imagen: getImage("Planta_china_del_dinero.png"), categoria: "interior" },
+  { id: "p14", nombre: "Planta china del dinero", precio: 1, imagen: getImage("Planta china del dinero.png"), categoria: "interior" },
 
   // 🌿 Exteriores
   { id: "p3", nombre: "Clavelón--Marigold", precio: 1, imagen: getImage("Clavelón--Marigold.png"), categoria: "exterior" },
   { id: "p5", nombre: "Croto", precio: 1, imagen: getImage("Croto.png"), categoria: "exterior" },
   { id: "p10", nombre: "Lavanda", precio: 1, imagen: getImage("Lavanda.png"), categoria: "exterior" },
-  { id: "p12", nombre: "Palma cica", precio: 1, imagen: getImage("Palma_cica.png"), categoria: "exterior" },
-  { id: "p15", nombre: "Trébol morado", precio: 1, imagen: getImage("Trébol_morado.png"), categoria: "exterior" },
+  { id: "p12", nombre: "Palma cica", precio: 1, imagen: getImage("Palma cica.png"), categoria: "exterior" },
+  { id: "p15", nombre: "Trébol morado", precio: 1, imagen: getImage("Trébol morado.png"), categoria: "exterior" },
 ];
 
 function safeSrc(path) {
