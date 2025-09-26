@@ -101,14 +101,14 @@ const macetaComboImages = {
     getImage("Oro_DBOE600_443U_m.png"), // 0
     getImage("Oro_DHOE600_443U_m.png"), // 1
   ],
-  LEXOROUND: getImage("DLR_S449_LEXO.png"),
+  LEXOROUND: getImage("DLR_S449 LEXO.png"),
   GRACIACASEBETONEFFECT: getImage("Gracia_Case_Beton_Effect_DGCL600E_422U.jpg"),
   GRACIACASEECOWOOD: getImage("Gracia_Case_ECO_Wood_DGCL600W_4665W.jpg"),
   GRACIACASE: getImage("Gracia_Case_DGCL400_443U_m.png"),
-  CASCADEGRADENWALL: getImage("Garden_Long_Wall_IO3W800_2_modulowy_S433.png"),
-  BLOMA: getImage("DBLO600_k5el7j.png"),
-  URBICASEBETOMEFFECT: getImage("Urbi_Case_Beton_Effect_DUC600TE_425.png"),
-  RESPANAPLANTERWOODHIGHSET: getImage("ISEW780H.png"),
+  CASCADEGRADENWALL: getImage("Garden_Long_Wall_IO3W800_2 modulowy_S433.jpg"),
+  BLOMA: getImage("DBLO600.png"),
+  URBICASEBETOMEFFECT: getImage("Urbi_Case_Beton_Effect_DUC600TE_425U.png"),
+  RESPANAPLANTERWOODHIGHSET: getImage("ISEW780H_1.png"),
   CORObowlhigh: [
     getImage("Coro_Bowl_High_TCB40H_101GR.jpg"), // 0
     getImage("Coro_Bowl_TCB48_101GR.jpg"),  // 1
