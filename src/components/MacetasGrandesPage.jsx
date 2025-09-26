@@ -61,7 +61,7 @@ const macetaColorImages = {
      "S433": getImage("Garden_Long_Wall_IO3W800_2 modulowy_S433.jpg"),
   },
      BLOMA: {
-     "405U": getImage("DBLO600.jpg"),
+     "405U": getImage("DBLO600_1.jpg"),
   },
 
     URBICASEBETOMEFFECT: {
@@ -87,7 +87,7 @@ const macetaColorImages = {
     },
   },
       RESPANAPLANTERWOODHIGHSET: {
-    "405U": getImage("ISEW780H.jpg"),
+    "405U": getImage("ISEW780H_1.jpg"),
   },
       ARIAOVAL: {
     variantes: {
