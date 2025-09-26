@@ -106,7 +106,7 @@ const macetaComboImages = {
   GRACIACASEECOWOOD: getImage("Gracia_Case_ECO_Wood_DGCL600W_4665W.jpg"),
   GRACIACASE: getImage("Gracia_Case_DGCL400_443U_m.png"),
   CASCADEGRADENWALL: getImage("Garden_Long_Wall_IO3W800_2 modulowy_S433.jpg"),
-  BLOMA: getImage("DBLO600.png"),
+  BLOMA: getImage("DBLO600_1.png"),
   URBICASEBETOMEFFECT: getImage("Urbi_Case_Beton_Effect_DUC600TE_425U.png"),
   RESPANAPLANTERWOODHIGHSET: getImage("ISEW780H_1.png"),
   CORObowlhigh: [
