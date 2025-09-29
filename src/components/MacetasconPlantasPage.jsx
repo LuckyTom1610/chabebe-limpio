@@ -36,8 +36,8 @@ const macetaComboImages = {
   // TUBOPM tiene 3 variantes -> array
   TUBOPM: [
     getImage("Tubo_PM_DPOD240_2411U.jpg"), // 0
-    getImage("Tubo_PM_DPOD350_2411U.jpg"), // 1 (ajústalo al nombre real si difiere)
-    getImage("Tubo_PM_DPOD400_2411U.jpg"), // 2
+    getImage("Tubo_PM_DPOD350_2411U.png"), // 1 (ajústalo al nombre real si difiere)
+    getImage("Tubo_PM_DPOD400_2411U.png"), // 2
   ],
 
   GRACIASQUARE: getImage("Gracia_square_DGQL400_S433.png"),
