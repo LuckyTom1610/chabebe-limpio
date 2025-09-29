@@ -27,7 +27,7 @@ const macetaComboImages = {
     getImage("Beton_Bowl_DKB_370_422U_m.png"),  // variante 2
   ],
   GRACIASQUAREBETONEFFECT: getImage("Gracia_Square_Beton_Effect_DGQL400E_422U.png"),
-  GraciaLowBetonEffect: getImage("Gracia_Low_Beton_Effect_DGRL400LE_422U.jpg"),
+  GraciaLowBetonEffect: getImage("Gracia_Low_Beton Effect_DGRL400LE_422U.jpg"),
   GraciaLow: getImage("Gracia_Low_DGRL400L_S433.jpg"),
   GRACIALOWECOWOOD: getImage("Gracia_Low_ECO_Wood_DGRL400LW_4665W_naturo.jpg"),
   GRACIATUBUSSLIMECOWOOD: getImage("Gracia_Tubus_Slim_ECO_Wood_DGTL240W_4665W.jpg"),
@@ -44,16 +44,16 @@ const macetaComboImages = {
   GRACIATUBUSSLIM: getImage("Gracia_Tubus_Slim_DGTL240_S433.png"),
 
   // MILLY tiene casos con y sin variantes; si quieres específico por variante, usa array
-  MILLYROUNDA: getImage("Milly_DMIG190_4985U_m_bfkdlm.png"),
+  MILLYROUNDA: getImage("Milly_DMIG190_4985U_m.png"),
   MILLYROUND: [
     getImage("Milly_Round_DMIL220_4985U.png"), // 0
     getImage("Milly_DMIN170_4985U.png"), // 1
   ],
 
   SPLOFYBOWL: [
-    getImage("DKSP180_7529U_SPLOFY.png"), // 0
-    getImage("DKSP290_7529U_SPLOFY.jpg"), // 1
-    getImage("DKSP370-7529U_SPLOFY.png"), // 2
+    getImage("DKSP180_7529U SPLOFY.png"), // 0
+    getImage("DKSP290_7529U SPLOFY.jpg"), // 1
+    getImage("DKSP370-7529U SPLOFY.png"), // 2
   ],
 
   RATOLLARallingSquare: [
