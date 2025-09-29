@@ -1,4 +1,6 @@
+import { getImage } from "../utils/cloudinary";
 export const macetaColorImages = {
+
 
   betonBowl: {
     variantes: {
