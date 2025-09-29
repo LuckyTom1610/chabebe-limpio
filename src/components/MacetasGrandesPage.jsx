@@ -5,7 +5,7 @@ import { getImage } from "../utils/cloudinary";
 
 // ========== Helpers ==========
 function safeSrc(path) {
-  if (!path) return getImage("images/placeholder.jpg");
+  if (!path) return getImage("placeholder.jpg");
   try {
     return encodeURI(path);
   } catch {

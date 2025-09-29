@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CatalogoMacetas from "./CatalogoMacetas";
 import { CartContext } from "../context/CartContext";
+import { getImage } from "../utils/cloudinary";
 
 // === Helpers para normalizar descripción y obtener imágenes por color ===
 
@@ -36,7 +37,7 @@ function getMacetaColorImage(macetaId, selectedColor, varianteActual) {
    Helpers generales
    ========================= */
 function safeSrc(path) {
-  if (!path) return "/images/placeholder.jpg";
+  if (!path) return getImage("placeholder.jpg");
   try {
     return encodeURI(path);
   } catch {
@@ -51,10 +52,10 @@ function buildColorImagePath({ baseId, varianteDesc, colorCode }) {
   const b = (baseId || "").trim();
 
   return [
-    `/images/Macetas-con-Plantas/${b}-${v}-${c}.jpg`,
-    `/images/Macetas-con-Plantas/${b}-${c}.jpg`,
-    `/images/Macetas-con-Plantas/${b}_${c}.jpg`,
-    `/images/Macetas-con-Plantas/${b}${v ? "-" + v : ""}_${c}.jpg`,
+    getImage(`${b}-${v}-${c}.jpg`),
+    getImage(`${b}-${c}.jpg`),
+    getImage(`${b}_${c}.jpg`),
+    getImage(`${b}${v ? "-" + v : ""}_${c}.jpg`),
   ];
 }
 
@@ -66,7 +67,7 @@ function getDisplayImage({ principal, varianteActual, selectedColor }) {
   const baseSrc =
     varianteActual?.imagenesCatalogo?.[0] ??
     principal?.imagen ??
-    "/images/placeholder.jpg";
+    getImage("placeholder.jpg");
 
   // Si el color trae una imagen directa de maceta
   if (selectedColor?.imagenMaceta) {
@@ -94,7 +95,7 @@ function getDisplayImage({ principal, varianteActual, selectedColor }) {
     }
   }
 
-  return { src: baseSrc, fallback: "/images/placeholder.jpg" };
+  return { src: baseSrc, fallback: getImage("placeholder.jpg") };
 }
 
 /* =========================
@@ -158,118 +159,118 @@ const macetasPrincipales = [
 {
    id: "betonBowl",
    modelo: "Beton Bowl",
-   imagen: "/images/macetas-medianas/Beton_Bowl.jpg",
+   imagen: getImage("Beton_Bowl.png"),
 },
 {
   id: "GRACIASQUAREBETONEFFECT",
    modelo: "GRACIA SQUARE BETON EFFECT",
-   imagen: "/images/macetas-medianas/Gracia_Square_Beton_Effect.jpg",
+   imagen: getImage("Gracia_Square_Beton_Effect.jpg"),
    },
 {
   id: "GraciaLowBetonEffect",
    modelo: "Gracia Low Beton Effect",
-   imagen: "/images/macetas-medianas/Gracia_Low_Beton_Effect.jpg",
+   imagen: getImage("Gracia_Low_Beton_Effect.png"),
    },
 {
   id: "GraciaLow",
    modelo: "GRACIA LOW",
-   imagen: "/images/macetas-medianas/Gracia_low.jpg",
+   imagen: getImage("Gracia_low.png"),
    },
    {
   id: "GRACIALOWECOWOOD",
    modelo: "GRACIA LOW ECO WOOD",
-   imagen: "/images/macetas-medianas/Gracia_ECO_Wood.jpg",
+   imagen: getImage("Gracia_ECO_Wood.png"),
    },
 {
   id: "GRACIATUBUSSLIMECOWOOD",
    modelo: "GRACIA TUBUS SLIM ECO WOOD",
-   imagen: "/images/macetas-medianas/Gracia_Tubus_Slim_ECO_Wood.jpg",
+   imagen: getImage("Gracia_Tubus_Slim_ECO_Wood.png"),
    },
 {
   id: "GRACIASQUAREECOWOOD",
    modelo: "GRACIA SQUARE ECO WOOD",
-   imagen: "/images/macetas-medianas/Gracia_SquareECO_Wood.jpg",
+   imagen: getImage("Gracia_SquareECO_Wood.jpg"),
    },
 {
   id: "TUBOPM",
    modelo: "TUBOPM",
-   imagen: "/images/macetas-medianas/Tubo_PM_.jpg",
+   imagen: getImage("Tubo_PM_.jpg"),
    },
 {
   id: "GRACIASQUARE",
    modelo: "GRACIA SQUARE",
-   imagen: "/images/macetas-medianas/Gracia_Square.jpg",
+   imagen: getImage("Gracia_Square.png"),
    },
 {
   id: "GRACIATUBUSSLIM",
    modelo: "GRACIA TUBUS SLIM",
-   imagen: "/images/macetas-medianas/Gracia_Tubus_Slim.jpg",
+   imagen: getImage("Gracia_Tubus_Slim.png"),
    },
    {
   id: "MILLYROUNDA",
    modelo: "MILLY ROUND",
-   imagen: "/images/macetas-medianas/Milly_Round DMIL.jpg",
+   imagen: getImage("Milly_Round DMIL.png"),
    },
    {
   id: "MILLYROUND",
    modelo: "MILLY ROUND",
-   imagen: "/images/macetas-medianas/Milly_Round DMIN.jpg",
+   imagen: getImage("Milly_Round DMIN.png"),
    },
  
 {
   id: "SPLOFYBOWL",
    modelo: "SPLOFY BOWL",
-   imagen: "/images/macetas-medianas/Splofy_Bowl.jpg",
+   imagen: getImage("Splofy_Bowl.jpg"),
    },
    {
   id: "RATOLLARallingSquare",
    modelo: "RATOLLA Ralling Square",
-   imagen: "/images/macetas-medianas/ratolla-raling.jpg",
+   imagen: getImage("ratolla-raling.jpg"),
    },
    {
   id: "HEOS",
    modelo: "HEOS",
-   imagen: "/images/macetas-medianas/Heos_DBHEN.jpg",
+   imagen: getImage("Heos_DBHEN.jpg"),
    },
  {
   id: "PLANTI",
    modelo: "PLANTI",
-   imagen: "/images/macetas-medianas/Planti.jpg",
+   imagen: getImage("Planti.jpg"),
    },
  {
   id: "GROWER",
    modelo: "GROWER",
-   imagen: "/images/macetas-medianas/Grower.jpg",
+   imagen: getImage("Grower.png"),
    },
  {
   id: "RESPANARALLING",
    modelo: "RESPANA RALLING",
-   imagen: "/images/macetas-medianas/respana_railing.JPG",
+   imagen: getImage("respana_railing.jpg"),
    },
  {
   id: "MillyWall",
    modelo: "Milly Wall",
-   imagen: "/images/macetas-medianas/Milly_Wall.jpg",
+   imagen: getImage("Milly_Wall.png"),
    },
 {
   id: "ARIAOVAL",
    modelo: "ARIA OVAL",
-   imagen: "/images/macetas-medianas/Aria_Oval.jpg",
+   imagen: getImage("Aria_Oval.jpg"),
    },
 {
   id: "CORObowl",
    modelo: "CORObowl",
-   imagen: "/images/macetas-medianas/Coro_Bowl_Hig.jpg",
+   imagen: getImage("Coro_Bowl_Hig.jpg"),
    },
 {
   id: "MOLTAsquarefoot",
    modelo: "MOLTA square foot",
-   imagen:"/images/macetas-medianas/Molta_Square_Foot.jpg",
+   imagen:getImage("Molta_Square_Foot.jpg"),
    },
 {
   id: "DUALAroundslim",
    modelo: "DUALA round slim",
-   imagen: "/images/macetas-medianas/Duala.jpg",
+   imagen: getImage("Duala.jpg"),
    },
 ];
 const catalogosData = {
@@ -281,11 +282,11 @@ const catalogosData = {
     Capacidad: "2.3",
     Disponibilidad: "20 und",
     Precio: 8.63,
-    imagenesCatalogo: ["/images/macetas-medianas/DKB240-422U.jpg",],
+    imagenesCatalogo: [getImage("DKB240-422U.jpg")],
     Accesorios: [
       {
         nombre: "Insert",
-        imagen:  ["/images/accesorios/insert.jpg"],
+        imagen:  [getImage("insert.jpg")],
  }
  ]
      },
@@ -295,11 +296,11 @@ const catalogosData = {
     Capacidad: "3.9",
     Disponibilidad: "20 und",
     Precio: 11.68,
-    imagenesCatalogo: ["/images/macetas-medianas/DKB290-422U.jpg",],
+    imagenesCatalogo: [getImage("DKB290-422U.jpg")],
      Accesorios: [
       {
         nombre: "Insert",
-        imagen:  ["/images/accesorios/insert.jpg"],
+        imagen:  [getImage("insert.jpg")],
  }
  ],
      },
@@ -309,17 +310,17 @@ const catalogosData = {
     Capacidad: "9",
     Disponibilidad: "20 und",
     Precio: 18.45,
-    imagenesCatalogo: ["/images/macetas-medianas/DKB370-422U.jpg",],
+    imagenesCatalogo: [getImage("DKB370-422U.jpg")],
      Accesorios: [
       {
         nombre: "Insert",
-        imagen:  ["/images/accesorios/insert.jpg"],
+        imagen:  [getImage("insert.jpg")],
  }
  ],
      },
   ],
 colores: [
-        { nombre: "concreto / hormigón", codigo: "422U", imagen:"/images/colores-macetas/422U_beton.jpg"},
+        { nombre: "concreto / hormigón", codigo: "422U", imagen: getImage("422U_beton.jpg")},
           ]
 
 },
@@ -330,18 +331,18 @@ colores: [
     Capacidad: "25",
     Disponibilidad: "75 und",
     Precio: 16.53,
-    imagenesCatalogo: ["/images/macetas-medianas/DGQL400E-422U.jpg",],
+    imagenesCatalogo: [getImage("DGQL400E-422U.jpg")],
      Accesorios: [
       {
         nombre: "base de drenaje interno",
-        imagen:  ["/images/accesorios/base de drenaje interno.jpg"],
+        imagen:  [getImage("base de drenaje interno.jpg")],
  }
  ],
 
      colores: [
-      { nombre: "concreto / hormigón", codigo: "422U", imagen:"/images/colores-macetas/422U_beton.jpg"},
-      { nombre: "crema", codigo: "CY700", imagen:"/images/colores-macetas/CY700_kremowy.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
+      { nombre: "concreto / hormigón", codigo: "422U", imagen: getImage("422U_beton.jpg")},
+      { nombre: "crema", codigo: "CY700", imagen:getImage("CY700_kremowy.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen:getImage("S433_antracytowy.jpg")}
       ]
      },
 GraciaLowBetonEffect: {
@@ -350,18 +351,18 @@ GraciaLowBetonEffect: {
     Capacidad: "14.3",
     Disponibilidad: "75 und",
     Precio: 13.05,
-    imagenesCatalogo: ["/images/macetas-medianas/DGRL400LE-CY700.jpg",],
+    imagenesCatalogo: [getImage("DGRL400LE-CY700.jpg"),],
      Accesorios: [
       {
         nombre: "base de drenaje interno",
-        imagen:  ["/images/accesorios/base de drenaje interno2.jpg"],
+        imagen:  [getImage("base de drenaje interno2.jpg")],
  }
  ],
 
 colores: [
-     { nombre: "concreto / hormigón", codigo: "422U", imagen:"/images/colores-macetas/422U_beton.jpg"},
-      { nombre: "crema", codigo: "CY700", imagen:"/images/colores-macetas/CY700_kremowy.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
+     { nombre: "concreto / hormigón", codigo: "422U", imagen: getImage("422U_beton.jpg")},
+      { nombre: "crema", codigo: "CY700", imagen: getImage("CY700_kremowy.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy.jpg")}
       ]
 
      },
@@ -371,19 +372,19 @@ colores: [
     Capacidad: "14.3",
     Disponibilidad: "100 und",
     Precio: 11.55,
-    imagenesCatalogo: ["/images/macetas-medianas/DGRL400L-S449.jpg",],
+    imagenesCatalogo: [getImage("DGRL400L-S449.jpg")],
      Accesorios: [
       {
         nombre: "base de drenaje interno",
-        imagen:  ["/images/accesorios/base de drenaje interno2.jpg"],
+        imagen:  [getImage("base de drenaje interno2.jpg")],
  }
  ],
 
 colores: [
-      { nombre: "Blanco", codigo: "S449", imagen: "/images/colores-macetas/S449_bialy.jpg"},
-      { nombre: "gris claro", codigo: "443U", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"},
-      { nombre: "verde terroso", codigo: "5615C", imagen:"/images/colores-macetas/5615C_ziemisty_zielony.jpg"}
+      { nombre: "Blanco", codigo: "S449", imagen: getImage("S449_bialy.jpg")},
+      { nombre: "gris claro", codigo: "443U", imagen: getImage("443U_jasny_szary.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy.jpg")},
+      { nombre: "verde terroso", codigo: "5615C", imagen: getImage("5615C_ziemisty_zielony.jpg")}
       ]
 
      },
@@ -393,19 +394,19 @@ GRACIALOWECOWOOD: {
     Capacidad: "14.3",
     Disponibilidad: "100 und",
     Precio: 12.13,
-    imagenesCatalogo: ["/images/macetas-medianas/DGRL400LW-S449W.jpg",],
+    imagenesCatalogo: [getImage("DGRL400LW-S449W.jpg")],
      Accesorios: [
       {
         nombre: "base de drenaje interno",
-        imagen:  ["/images/accesorios/base de drenaje interno2.jpg"],
+        imagen:  [getImage("base de drenaje interno2.jpg")],
  }
  ],
 
 colores: [
-      { nombre: "blanco ECO", codigo: "S449W", imagen:"/images/colores-macetas/S449W_bialy_ECO.jpg"},
-      { nombre: "natural ECO", codigo: "4665W", imagen:"/images/colores-macetas/4665W_naturo_ECO.jpg"},
-      { nombre: "gris oscuro ECO", codigo: "S433W", imagen:"/images/colores-macetas/S433W_antracytowy_ECO.jpg"},
-      { nombre: "café ECO", codigo: "4625W", imagen: "/images/colores-macetas/4625W_kawa_ECO.jpg"}
+      { nombre: "blanco ECO", codigo: "S449W", imagen: getImage("S449W_bialy_ECO.jpg")},
+      { nombre: "natural ECO", codigo: "4665W", imagen: getImage("4665W_naturo_ECO.jpg")},
+      { nombre: "gris oscuro ECO", codigo: "S433W", imagen: getImage("S433W_antracytowy_ECO.jpg")},
+      { nombre: "café ECO", codigo: "4625W", imagen: getImage("4625W_kawa_ECO.jpg")}
       ]
     
      },
@@ -415,19 +416,19 @@ colores: [
     Capacidad: "14.5",
     Disponibilidad: "100 und",
     Precio: 10.85,
-    imagenesCatalogo: ["/images/macetas-medianas/DGTL240W-4665W.jpg",],
+    imagenesCatalogo: [getImage("DGTL240W-4665W.jpg")],
      Accesorios: [
       {
         nombre: "base de drenaje interno",
-        imagen:  ["/images/accesorios/base de drenaje interno3.jpg"],
+        imagen:  [getImage("base de drenaje interno3.jpg")],
  }
  ],
 
 colores: [
-      { nombre: "blanco ECO", codigo: "S449W", imagen:"/images/colores-macetas/S449W_bialy_ECO.jpg"},
-      { nombre: "natural ECO", codigo: "4665W", imagen:"/images/colores-macetas/4665W_naturo_ECO.jpg"},
-      { nombre: "gris oscuro ECO", codigo: "S433W", imagen:"/images/colores-macetas/S433W_antracytowy_ECO.jpg"},
-      { nombre: "café ECO", codigo: "4625W", imagen:"/images/colores-macetas/4625W_kawa_ECO.jpg"}
+      { nombre: "blanco ECO", codigo: "S449W", imagen: getImage("S449W_bialy_ECO.jpg")},
+      { nombre: "natural ECO", codigo: "4665W", imagen: getImage("4665W_naturo_ECO.jpg")},
+      { nombre: "gris oscuro ECO", codigo: "S433W", imagen: getImage("S433W_antracytowy_ECO.jpg")},
+      { nombre: "café ECO", codigo: "4625W", imagen: getImage("4625W_kawa_ECO.jpg")},
       ]
 
      },
@@ -437,19 +438,19 @@ colores: [
     Capacidad: "25",
     Disponibilidad: "100 und",
     Precio: 15.35,
-    imagenesCatalogo: ["/images/macetas-medianas/DGQL400W-4665W.jpg",],
+    imagenesCatalogo: [getImage("DGQL400W-4665W.jpg"),],
      Accesorios: [
       {
         nombre: "base de drenaje interno",
-        imagen:  ["/images/accesorios/base de drenaje interno.jpg"],
+        imagen:  [getImage("base de drenaje interno.jpg")],
  }
  ],
 
 colores: [
-      { nombre: "blanco ECO", codigo: "S449W", imagen:"/images/colores-macetas/S449W_bialy_ECO.jpg"},
-      { nombre: "natural ECO", codigo: "4665W", imagen:"/images/colores-macetas/4665W_naturo_ECO.jpg"},
-      { nombre: "gris oscuro ECO", codigo: "S433W", imagen:"/images/colores-macetas/S433W_antracytowy_ECO.jpg"},
-      { nombre: "café ECO", codigo: "4625W", imagen:"/images/colores-macetas/4625W_kawa_ECO.jpg"}
+      { nombre: "blanco ECO", codigo: "S449W", imagen: getImage("S449W_bialy_ECO.jpg")},
+      { nombre: "natural ECO", codigo: "4665W", imagen: getImage("4665W_naturo_ECO.jpg")},
+      { nombre: "gris oscuro ECO", codigo: "S433W", imagen: getImage("S433W_antracytowy_ECO.jpg")},
+      { nombre: "café ECO", codigo: "4625W", imagen: getImage("4625W_kawa_ECO.jpg")}
       ]
 
      },
@@ -462,11 +463,11 @@ colores: [
     Capacidad: "8",
     Disponibilidad: "75 und",
     Precio: 6.20,
-    imagenesCatalogo: ["/images/macetas-medianas/DPOD240-S433.jpg",],
+    imagenesCatalogo: [getImage("DPOD240-S433.jpg")],
      Accesorios: [
       {
         nombre: "Platillo",
-        imagen:  ["/images/accesorios/PLATILLO TUBOPM.jpg"],
+        imagen:  [getImage("PLATILLO TUBOPM.jpg")],
  }
  ]
      },
@@ -476,11 +477,11 @@ colores: [
     Capacidad: "22.5",
     Disponibilidad: "75 und",
     Precio: 10.88,
-    imagenesCatalogo: ["/images/macetas-medianas/DPOD350-S433.jpg",],
+    imagenesCatalogo: [getImage("DPOD350-S433.jpg")],
      Accesorios: [
       {
         nombre: "Platillo",
-        imagen:  ["/images/accesorios/PLATILLO TUBOPM.jpg"],
+        imagen:  [getImage("PLATILLO TUBOPM.jpg")],
  }
  ]
      },
@@ -490,20 +491,20 @@ colores: [
     Capacidad: "35",
     Disponibilidad: "75 und",
     Precio: 16.78,
-    imagenesCatalogo: ["/images/macetas-medianas/DPOD400-S433.jpg",],
+    imagenesCatalogo: [getImage("DPOD400-S433.jpg")],
      Accesorios: [
       {
         nombre: "Platillo",
-        imagen:  ["/images/accesorios/PLATILLO TUBOPM.jpg"],
+        imagen:  [getImage("PLATILLO TUBOPM.jpg")],
  }
  ]
      },
   ],
 
 colores: [
-      { nombre: "blanco", codigo: "S449", imagen:"/images/colores-macetas/S449_bialy.jpg"},
-      { nombre: "pino verde", codigo: "2411U", imagen:"/images/colores-macetas/2411U_zielona_pinia.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
+      { nombre: "blanco", codigo: "S449", imagen: getImage("S449_bialy.jpg")},
+      { nombre: "pino verde", codigo: "2411U", imagen: getImage("2411U_zielona_pinia.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy.jpg")}
       
       ]
 
@@ -514,19 +515,19 @@ colores: [
     Capacidad: "25",
     Disponibilidad: "100 und",
     Precio: 14.63,
-    imagenesCatalogo: ["/images/macetas-medianas/DGQL400-S449.jpg",],
+    imagenesCatalogo: [getImage("DGQL400-S449.jpg")],
      Accesorios: [
       {
         nombre: "base de drenaje interno",
-        imagen:  ["/images/accesorios/base de drenaje interno.jpg"],
+        imagen:  [getImage("base de drenaje interno.jpg")],
  }
  ],
 
 colores: [
-      { nombre: "blanco", codigo: "S449", imagen:"/images/colores-macetas/S449_bialy.jpg"},
-      { nombre: "gris claro", codigo: "443U", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
-      { nombre: "verde terroso", codigo: "5615C", imagen:"/images/colores-macetas/5615C_ziemisty_zielony.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
+      { nombre: "blanco", codigo: "S449", imagen: getImage("S449_bialy.jpg")},
+      { nombre: "gris claro", codigo: "443U", imagen: getImage("443U_jasny_szary.jpg")},
+      { nombre: "verde terroso", codigo: "5615C", imagen: getImage("5615C_ziemisty_zielony.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen: getImage("S433_antracytowy.jpg")}
       
       ]
     
@@ -537,19 +538,19 @@ colores: [
     Capacidad: "14.5",
     Disponibilidad: "100 und",
     Precio: 10.33,
-    imagenesCatalogo: ["/images/macetas-medianas/DGTL240-S449.jpg",],
+    imagenesCatalogo: [getImage("DGTL240-S449.jpg"),],
      Accesorios: [
       {
         nombre: "base de drenaje interno",
-        imagen:  ["/images/accesorios/base de drenaje interno3.jpg"],
+        imagen:  [getImage("base de drenaje interno3.jpg")],
  }
  ],
 
 colores: [
-      { nombre: "blanco", codigo: "S449", imagen:"/images/colores-macetas/S449_bialy.jpg"},
-      { nombre: "gris claro", codigo: "443U", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
-      { nombre: "verde terroso", codigo: "5615C", imagen:"/images/colores-macetas/5615C_ziemisty_zielony.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
+      { nombre: "blanco", codigo: "S449", imagen:getImage("S449_bialy.jpg")},
+      { nombre: "gris claro", codigo: "443U", imagen:getImage("443U_jasny_szary.jpg")},
+      { nombre: "verde terroso", codigo: "5615C", imagen:getImage("5615C_ziemisty_zielony.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen:getImage("S433_antracytowy.jpg")},
       
       ]
 
@@ -560,18 +561,18 @@ colores: [
     Capacidad: "3.7",
     Disponibilidad: "30 und",
     Precio: 2.83,
-    imagenesCatalogo: ["/images/macetas-medianas/DMIG190-4985U.jpg",],
+    imagenesCatalogo: [getImage("DMIG190-4985U.jpg")],
      Accesorios: [
       
  ],
 
 colores: [
-      { nombre: "rojo oscuro", codigo: "4985U", imagen:"/images/colores-macetas/4985U_marsala.jpg"},
-      { nombre: "blanco", codigo: "S449", imagen:"/images/colores-macetas/S449_bialy.jpg"},
-      { nombre: "gris claro", codigo: "443U", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
-      { nombre: "pino verde", codigo: "2411U", imagen:"/images/colores-macetas/2411U_zielona_pinia.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"},
-      { nombre: "carbón", codigo: "446U", imagen:"/images/colores-macetas/446U_wegiel.jpg"}
+      { nombre: "rojo oscuro", codigo: "4985U", imagen:getImage("4985U_marsala.jpg")},
+      { nombre: "blanco", codigo: "S449", imagen:getImage("S449_bialy.jpg")},
+      { nombre: "gris claro", codigo: "443U", imagen:getImage("443U_jasny_szary.jpg")},
+      { nombre: "pino verde", codigo: "2411U", imagen:getImage("2411U_zielona_pinia.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen:getImage("S433_antracytowy.jpg")},
+      { nombre: "carbón", codigo: "446U", imagen:getImage("446U_wegiel.jpg")}
       
       ]
 
@@ -585,7 +586,7 @@ colores: [
     Capacidad: "5.7",
     Disponibilidad: "30 und",
     Precio: 4.98,
-    imagenesCatalogo: ["/images/macetas-medianas/DMIL220-4985U.jpg",],
+    imagenesCatalogo: [getImage("DMIL220-4985U.jpg")],
      Accesorios: [
       
  ]
@@ -596,7 +597,7 @@ colores: [
     Capacidad: "5.20",
     Disponibilidad: "48 und",
     Precio: 2.53,
-    imagenesCatalogo: ["/images/macetas-medianas/DMIN200-4985U.jpg",],
+    imagenesCatalogo: [getImage("DMIN200-4985U.jpg")],
      Accesorios: [
      
  ]
@@ -604,12 +605,12 @@ colores: [
      ],
 
 colores: [
-      { nombre: "rojo oscuro", codigo: "4985U", imagen:"/images/colores-macetas/4985U_marsala.jpg"},
-      { nombre: "blanco", codigo: "S449", imagen:"/images/colores-macetas/S449_bialy.jpg"},
-      { nombre: "gris claro", codigo: "443U", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
-      { nombre: "pino verde", codigo: "2411U", imagen:"/images/colores-macetas/2411U_zielona_pinia.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"},
-      { nombre: "carbón", codigo: "446U", imagen:"/images/colores-macetas/446U_wegiel.jpg"}
+      { nombre: "rojo oscuro", codigo: "4985U", imagen:getImage("4985U_marsala.jpg")},
+      { nombre: "blanco", codigo: "S449", imagen:getImage("S449_bialy.jpg")},
+      { nombre: "gris claro", codigo: "443U", imagen:getImage("443U_jasny_szary.jpg")},
+      { nombre: "pino verde", codigo: "2411U", imagen:getImage("2411U_zielona_pinia.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen:getImage("S433_antracytowy.jpg")},
+      { nombre: "carbón", codigo: "446U", imagen:getImage("446U_wegiel.jpg")}
       
       ]
 
@@ -623,7 +624,7 @@ colores: [
     Capacidad: "2.3",
     Disponibilidad: "60 und",
     Precio: 8.63,
-    imagenesCatalogo: ["/images/macetas-medianas/DKSP240-7529U.jpg",],
+    imagenesCatalogo: [getImage("DKSP240-7529U.jpg")],
      
      },
      {descripcion: "DKSP290",
@@ -631,7 +632,7 @@ colores: [
     Capacidad: "3.9",
     Disponibilidad: "60 und",
     Precio: 11.68,
-    imagenesCatalogo: ["/images/macetas-medianas/DKSP290-7529U.jpg",],
+    imagenesCatalogo: [getImage("DKSP290-7529U.jpg")],
      
      },
       {descripcion: "DKSP370",
@@ -639,15 +640,15 @@ colores: [
     Capacidad: "9",
     Disponibilidad: "60 und",
     Precio: 18.45,
-    imagenesCatalogo: ["/images/macetas-medianas/DKSP370-7529U.jpg",],
+    imagenesCatalogo: [getImage("DKSP370-7529U.jpg")],
      
      },
      ],
 
 colores: [
-      { nombre: "moca", codigo: "7529U", imagen:"/images/colores-macetas/7529U_mocca.jpg"},
-      { nombre: "blanco", codigo: "S449", imagen:"/images/colores-macetas/S449_bialy.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
+      { nombre: "moca", codigo: "7529U", imagen:getImage("7529U_mocca.jpg")},
+      { nombre: "blanco", codigo: "S449", imagen:getImage("S449_bialy.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen:getImage("S433_antracytowy.jpg")}
          ]
 
      },
@@ -660,7 +661,7 @@ colores: [
     Capacidad: "8.5",
     Disponibilidad: "30 und",
     Precio: 5.58,
-    imagenesCatalogo: ["/images/macetas-medianas/DRLB280-7529U.jpg",],
+    imagenesCatalogo: [getImage("DRLB280-7529U.jpg")],
      
      },
      {descripcion: "DRLB400",
@@ -668,15 +669,15 @@ colores: [
     Capacidad: "13",
     Disponibilidad: "30 und",
     Precio: 8.45,
-    imagenesCatalogo: ["/images/macetas-medianas/DRLB400-7529U.jpg",],
+    imagenesCatalogo: [getImage("DRLB400-7529U.jpg")],
      
      },
       ],
 
 colores: [
-      { nombre: "moca", codigo: "7529U", imagen:"/images/colores-macetas/7529U_mocca.jpg"},
-      { nombre: "sombra", codigo: "440U", imagen:"/images/colores-macetas/440U_umbra.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
+      { nombre: "moca", codigo: "7529U", imagen:getImage("7529U_mocca.jpg")},
+      { nombre: "sombra", codigo: "440U", imagen:getImage("440U_umbra.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen:getImage("S433_antracytowy.jpg")}
          ]
 
      },
@@ -689,7 +690,7 @@ colores: [
     Capacidad: "31/45",
     Disponibilidad: "20 und",
     Precio: 18.38,
-    imagenesCatalogo: ["/images/macetas-medianas/DLHEN470-S433.jpg",],
+    imagenesCatalogo: [getImage("DLHEN470-S433.jpg")],
      
      },
      {descripcion: "DBHEN470",
@@ -697,7 +698,7 @@ colores: [
     Capacidad: "31/69",
     Disponibilidad: "20 und",
     Precio: 22.28,
-    imagenesCatalogo: ["/images/macetas-medianas/DBHEN470-S433.jpg",],
+    imagenesCatalogo: [getImage("DBHEN470-S433.jpg")],
     
      },
       {descripcion: "DBHER470",
@@ -705,14 +706,14 @@ colores: [
     Capacidad: "31/74",
     Disponibilidad: "12 und",
     Precio: 22.28,
-    imagenesCatalogo: ["/images/macetas-medianas/DBHER470-S433.jpg",],
+    imagenesCatalogo: [getImage("DBHER470-S433.jpg")],
     
      },
      ],
 
 colores: [
-      { nombre: "blanco", codigo: "S449", imagen:"/images/colores-macetas/S449_bialy.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
+      { nombre: "blanco", codigo: "S449", imagen:getImage("S449_bialy.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen:getImage("S433_antracytowy.jpg")}
          ]
 
      },
@@ -725,7 +726,7 @@ colores: [
     Capacidad: "3.1",
     Disponibilidad: "100 und",
     Precio: 0.83,
-    imagenesCatalogo: ["/images/macetas-medianas/DMLR190.jpg",],
+    imagenesCatalogo: [getImage("DMLR190.jpg")],
      
      },
      {descripcion: "DMLR230",
@@ -733,13 +734,13 @@ colores: [
     Capacidad: "5.4",
     Disponibilidad: "100 und",
     Precio: 1.25,
-    imagenesCatalogo: ["/images/macetas-medianas/DMLR230.jpg",],
+    imagenesCatalogo: [getImage("DMLR230.jpg")],
      
      },
       ],
 
 colores: [
-      { nombre: "transparente", codigo: "S429", imagen:"/images/colores-macetas/S449_bialy.jpg"},
+      { nombre: "transparente", codigo: "S429", imagen:getImage("S449_bialy.jpg")},
                ]
 
      },
@@ -752,7 +753,7 @@ colores: [
     Capacidad: "3",
     Disponibilidad: "100 und",
     Precio: 0.95,
-    imagenesCatalogo: ["/images/macetas-medianas/DOGR180.jpg",],
+    imagenesCatalogo: [getImage("DOGR180.jpg")],
      
      },
      {descripcion: "DOGR200",
@@ -760,7 +761,7 @@ colores: [
     Capacidad: "4",
     Disponibilidad: "100 und",
     Precio: 1.13,
-    imagenesCatalogo: ["/images/macetas-medianas/DOGR200.jpg",],
+    imagenesCatalogo: [getImage("DOGR200.jpg")],
      
      },
       {descripcion: "DOGR240",
@@ -768,13 +769,13 @@ colores: [
     Capacidad: "6.5",
     Disponibilidad: "100 und",
     Precio: 1.50,
-    imagenesCatalogo: ["/images/macetas-medianas/DOGR240.jpg",],
+    imagenesCatalogo: [getImage("DOGR240.jpg")],
      
      },
      ],
 
 colores: [
-      { nombre: "blanco", codigo: "S449", imagen:"/images/colores-macetas/S449_bialy.jpg"},
+      { nombre: "blanco", codigo: "S449", imagen:getImage("S449_bialy.jpg")},
                ]
 
      },
@@ -784,11 +785,11 @@ colores: [
     Capacidad: "9",
     Disponibilidad: "20 und",
     Precio: 3.63,
-    imagenesCatalogo: ["/images/macetas-medianas/DREB290-S433.jpg",],
+    imagenesCatalogo: [getImage("DREB290-S433.jpg")],
      
 
 colores: [
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
+      { nombre: "gris oscuro", codigo: "S433", imagen:getImage("S433_antracytowy.jpg")}
          ]
 
      },
@@ -798,15 +799,15 @@ colores: [
     Capacidad: "2.1",
     Disponibilidad: "120 und",
     Precio: 2.40,
-    imagenesCatalogo: ["/images/macetas-medianas/DMIW150.jpg",],
+    imagenesCatalogo: [getImage("DMIW150.jpg")],
      
 colores: [
-      { nombre: "blanco", codigo: "S449", imagen:"/images/colores-macetas/S449_bialy.jpg"},
-      { nombre: "gris claro", codigo: "443U", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
-      { nombre: "pino verde", codigo: "2411U", imagen:"/images/colores-macetas/2411U_zielona_pinia.jpg"},
-      { nombre: "rojo oscuro", codigo: "4985U", imagen:"/images/colores-macetas/4985U_marsala.jpg"},
-      { nombre: "carbón", codigo: "446U", imagen:"/images/colores-macetas/446U_wegiel.jpg"},
-      { nombre: "gris oscuro", codigo: "S433", imagen:"/images/colores-macetas/S433_antracytowy.jpg"}
+      { nombre: "blanco", codigo: "S449", imagen:getImage("S449_bialy.jpg")},
+      { nombre: "gris claro", codigo: "443U", imagen:getImage("443U_jasny_szary.jpg")},
+      { nombre: "pino verde", codigo: "2411U", imagen:getImage("2411U_zielona_pinia.jpg")},
+      { nombre: "rojo oscuro", codigo: "4985U", imagen:getImage("4985U_marsala.jpg")},
+      { nombre: "carbón", codigo: "446U", imagen:getImage("446U_wegiel.jpg")},
+      { nombre: "gris oscuro", codigo: "S433", imagen:getImage("S433_antracytowy.jpg")}
       
       ]
 
@@ -817,12 +818,12 @@ colores: [
     Capacidad: "5",
     Disponibilidad: "12 und",
     Precio: 24.63,
-    imagenesCatalogo: ["/images/macetas-medianas/TAO40.jpg",],
+    imagenesCatalogo: [getImage("TAO40.jpg")],
      
 colores: [
-      { nombre: "moca", codigo: "7529U", imagen:"/images/colores-macetas/7529U_mocca.jpg"},
-      { nombre: "gris claro", codigo: "443U", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
-      { nombre: "gris piedra", codigo: "405U", imagen:"/images/colores-macetas/405U_szary_kamienny.jpg"}
+      { nombre: "moca", codigo: "7529U", imagen:getImage("7529U_mocca.jpg")},
+      { nombre: "gris claro", codigo: "443U", imagen:getImage("443U_jasny_szary.jpg")},
+      { nombre: "gris piedra", codigo: "405U", imagen:getImage("405U_szary_kamienny.jpg")}
       
       ]
      },
@@ -835,7 +836,7 @@ colores: [
     Capacidad: "9",
     Disponibilidad: "9 und",
     Precio: 79.63,
-    imagenesCatalogo: ["/images/macetas-medianas/TCB40H.jpg",],
+    imagenesCatalogo: [getImage("TCB40H.jpg")],
     
      },
      {descripcion: "TCB48",
@@ -843,14 +844,14 @@ colores: [
     Capacidad: "22",
     Disponibilidad: "9 und",
     Precio: 92.90,
-    imagenesCatalogo: ["/images/macetas-medianas/TCB48.jpg",],
+    imagenesCatalogo: [getImage("TCB48.jpg")],
      
      },
      ],
 colores: [
-      { nombre: "moca", codigo: "7529U", imagen:"/images/colores-macetas/7529U_mocca.jpg"},
-      { nombre: "gris claro", codigo: "443U", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
-      { nombre: "gris piedra", codigo: "405U", imagen:"/images/colores-macetas/405U_szary_kamienny.jpg"},
+      { nombre: "moca", codigo: "7529U", imagen:getImage("7529U_mocca.jpg")},
+      { nombre: "gris claro", codigo: "443U", imagen:getImage("443U_jasny_szary.jpg")},
+      { nombre: "gris piedra", codigo: "405U", imagen:getImage("405U_szary_kamienny.jpg")},
       
       ]
 
@@ -864,7 +865,7 @@ colores: [
     Capacidad: "19",
     Disponibilidad: "6 und",
     Precio: 73.00,
-    imagenesCatalogo: ["/images/macetas-medianas/TMSF40.jpg",],
+    imagenesCatalogo: [getImage("TMSF40.jpg"),],
     
      },
      {descripcion: "TMSF48",
@@ -872,13 +873,13 @@ colores: [
     Capacidad: "32",
     Disponibilidad: "4 und",
     Precio: 92.90,
-    imagenesCatalogo: ["/images/macetas-medianas/TMSF48.jpg",],
+    imagenesCatalogo: [getImage("TMSF48.jpg"),],
      
      },
      ],
 colores: [
-      { nombre: "moca", codigo: "7529U", imagen:"/images/colores-macetas/7529U_mocca.jpg"},
-      { nombre: "gris claro", codigo: "443U", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
+      { nombre: "moca", codigo: "7529U", imagen:getImage("7529U_mocca.jpg")},
+      { nombre: "gris claro", codigo: "443U", imagen:getImage("443U_jasny_szary.jpg")},
      
       
       ]
@@ -893,7 +894,7 @@ colores: [
     Capacidad: " 8 y 5 L",
     Disponibilidad: "4 und",
     Precio: 73.98,
-    imagenesCatalogo: ["/images/macetas-medianas/TDS30.jpg",],
+    imagenesCatalogo: [getImage("TDS30.jpg")],
     
      },
      {descripcion: "TDS40",
@@ -901,13 +902,13 @@ colores: [
     Capacidad: "17 y 12",
     Disponibilidad: "4 und",
     Precio: 103.60,
-    imagenesCatalogo: ["/images/macetas-medianas/TDS40.jpg",],
+    imagenesCatalogo: [getImage("TDS40.jpg"),],
      
      },
      ],
 colores: [
-      { nombre: "moca", codigo: "7529U", imagen:"/images/colores-macetas/7529U_mocca.jpg"},
-      { nombre: "gris claro", codigo: "443U", imagen:"/images/colores-macetas/443U_jasny_szary.jpg"},
+      { nombre: "moca", codigo: "7529U", imagen:getImage("7529U_mocca.jpg")},
+      { nombre: "gris claro", codigo: "443U", imagen:getImage("443U_jasny_szary.jpg")},
      ],
     },
   };
@@ -916,100 +917,100 @@ colores: [
    betonBowl: {
     variantes: {
     DKB240:{
-      "422U": "/images/Macetas-con-Plantas/Beton_Bowl_DKB_150_422U.jpg",
+      "422U": getImage("Beton_Bowl_DKB_150_422U.jpg"),
   },
         DKB290: {
-      "422U": "/images/Macetas-con-Plantas/Beton_Bowl_DKB_290_422U_m.jpg",
+      "422U": getImage("Beton_Bowl_DKB_290_422U_m.jpg"),
       },
 
       DKB370: {
-        "422U": "/images/Macetas-con-Plantas/Beton_Bowl_DKB_370_422U_m.jpg",
+        "422U": getImage("Beton_Bowl_DKB_370_422U_m.jpg"),
       },
     },
   },
   GRACIASQUAREBETONEFFECT: {
-    "422U": "/images/Macetas-con-Plantas/Gracia_Square_Beton_Effect_DGQL400E_422U.jpg",
-    "CY700": "/images/Macetas-con-Plantas/Gracia_Square_Beton_Effect_DGQL400E_CY700.jpg",
-    "S433": "/images/Macetas-con-Plantas/Gracia_Square_Beton_Effect_DGQL400E_S433.jpg",
+    "422U": getImage("Gracia_Square_Beton_Effect_DGQL400E_422U.jpg"),
+    "CY700": getImage("Gracia_Square_Beton_Effect_DGQL400E_CY700.jpg"),
+    "S433": getImage("Gracia_Square_Beton_Effect_DGQL400E_S433.jpg"),
   },
 
 GraciaLowBetonEffect: {
-    "422U": "/images/Macetas-con-Plantas/Gracia_Low_Beton Effect_DGRL400LE_422U.jpg",
-    "CY700": "/images/Macetas-con-Plantas/Gracia_Low_Beton Effect_DGRL400LE_CY700.jpg",
-    "S433": "/images/Macetas-con-Plantas/Gracia_Low_Beton Effect_DGRL400LE_S433.jpg",
+    "422U": getImage("Gracia_Low_Beton Effect_DGRL400LE_422U.jpg"),
+    "CY700": getImage("Gracia_Low_Beton Effect_DGRL400LE_CY700.jpg"),
+    "S433": getImage("Gracia_Low_Beton Effect_DGRL400LE_S433.jpg"),
   },
   
       GraciaLow: {
-        "S449": "/images/Macetas-con-Plantas/Gracia_Low_DGRL400L_S449.jpg",
-        "443U": "/images/Macetas-con-Plantas/Gracia_Low_DGRL400L_443U.jpg",
-        "S433": "/images/Macetas-con-Plantas/Gracia_Low_DGRL400L_S433.jpg",
-        "5615C": "/images/Macetas-con-Plantas/Gracia_Low_DGRL400L_5615C.jpg",
+        "S449": getImage("Gracia_Low_DGRL400L_S449.jpg"),
+        "443U": getImage("Gracia_Low_DGRL400L_443U.jpg"),
+        "S433": getImage("Gracia_Low_DGRL400L_S433.jpg"),
+        "5615C": getImage("Gracia_Low_DGRL400L_5615C.jpg"),
   },
 
       GRACIALOWECOWOOD: {
-        "S449W": "/images/Macetas-con-Plantas/Gracia_Low_ECO_Wood_DGRL400LW_S449W_m.jpg",
-        "4665W": "/images/Macetas-con-Plantas/Gracia_Low_ECO_Wood_DGRL400LW_4665W_naturo.jpg",
-        "S433W": "/images/Macetas-con-Plantas/Gracia_Low_ECO_Wood_DGRL400LW_S433W.jpg",
-        "4625W": "/images/Macetas-con-Plantas/Gracia_Low_Eco_Wood_DGRL400LW_4625W.jpg",
+        "S449W": getImage("Gracia_Low_ECO_Wood_DGRL400LW_S449W_m.jpg"),
+        "4665W": getImage("Gracia_Low_ECO_Wood_DGRL400LW_4665W_naturo.jpg"),
+        "S433W": getImage("Gracia_Low_ECO_Wood_DGRL400LW_S433W.jpg"),
+        "4625W": getImage("Gracia_Low_Eco_Wood_DGRL400LW_4625W.jpg"),
 },
       GRACIATUBUSSLIMECOWOOD: {
-        "S449W": "/images/Macetas-con-Plantas/Gracia_Tubus_Slim_ECO_Wood_DGTL240W_S449W_m.jpg",
-        "4665W": "/images/Macetas-con-Plantas/Gracia_Tubus_Slim_ECO_Wood_DGTL240W_4665W.jpg",
-        "S433W": "/images/Macetas-con-Plantas/Gracia_Tubus_Slim_ECO_Wood_DGTL240W_S433W.jpg",
-        "4625W": "/images/Macetas-con-Plantas/Gracia_Tubus_Slim_ECO_Wood_DGTL240W_4625W.jpg",
+        "S449W": getImage("Gracia_Tubus_Slim_ECO_Wood_DGTL240W_S449W_m.jpg"),
+        "4665W": getImage("Gracia_Tubus_Slim_ECO_Wood_DGTL240W_4665W.jpg"),
+        "S433W": getImage("Gracia_Tubus_Slim_ECO_Wood_DGTL240W_S433W.jpg"),
+        "4625W": getImage("Gracia_Tubus_Slim_ECO_Wood_DGTL240W_4625W.jpg"),
   },
       GRACIASQUAREECOWOOD: {
-        "S449W": "/images/Macetas-con-Plantas/Gracia_Square_ECO_Wood_DGQL400W_S449W.jpg",
-        "4665W": "/images/Macetas-con-Plantas/Gracia_Square_ECO_Wood_DGQL400W_4665W.jpg",
-        "S433W": "/images/Macetas-con-Plantas/Gracia_Square_ECO_Wood_DGQL400W_S433W.jpg",
-        "4625W": "/images/Macetas-con-Plantas/Gracia_Square_ECO_Wood_DGQL400W_4625W.jpg",
+        "S449W": getImage("Gracia_Square_ECO_Wood_DGQL400W_S449W.jpg"),
+        "4665W": getImage("Gracia_Square_ECO_Wood_DGQL400W_4665W.jpg"),
+        "S433W": getImage("Gracia_Square_ECO_Wood_DGQL400W_S433W.jpg"),
+        "4625W": getImage("Gracia_Square_ECO_Wood_DGQL400W_4625W.jpg"),
   },
 
           TUBOPM: {
-        "S449": "/images/Macetas-con-Plantas/Tubo_PM_DPOD_S449.jpg",
-        "2411U": "/images/Macetas-con-Plantas/Tubo_PM_DPOD400_2411U.jpg",
-        "S433": "/images/Macetas-con-Plantas/Tubo_PM_DPOD_443U.jpg",
+        "S449": getImage("Tubo_PM_DPOD_S449.jpg"),
+        "2411U": getImage("Tubo_PM_DPOD400_2411U.jpg"),
+        "S433": getImage("Tubo_PM_DPOD_443U.jpg"),
           },
            GRACIASQUARE: {
-        "S449": "/images/Macetas-con-Plantas/Gracia_square_DGQL400_S449.jpg",
-        "443U": "/images/Macetas-con-Plantas/Gracia_square_DGQL400_443U.jpg",
-        "5615C": "/images/Macetas-con-Plantas/Gracia_square_DGQL400_5615C.jpg",
-        "S433": "/images/Macetas-con-Plantas/Gracia_square_DGQL400_S433.jpg",
+        "S449": getImage("Gracia_square_DGQL400_S449.jpg"),
+        "443U": getImage("Gracia_square_DGQL400_443U.jpg"),
+        "5615C": getImage("Gracia_square_DGQL400_5615C.jpg"),
+        "S433": getImage("Gracia_square_DGQL400_S433.jpg"),
           },
 
          GRACIATUBUSSLIM: {
-        "S449": "/images/Macetas-con-Plantas/Gracia_Tubus_Slim_DGTL240_S449.jpg",
-        "443U": "/images/Macetas-con-Plantas/Gracia_Tubus_Slim_DGTL240_S443U.jpg",
-        "5615C": "/images/Macetas-con-Plantas/Gracia_Tubus_Slim_DGTL240_5615C.jpg",
-        "S433": "/images/Macetas-con-Plantas/Gracia_Tubus_Slim_DGTL240_S433.jpg",
+        "S449": getImage("Gracia_Tubus_Slim_DGTL240_S449.jpg"),
+        "443U": getImage("Gracia_Tubus_Slim_DGTL240_S443U.jpg"),
+        "5615C": getImage("Gracia_Tubus_Slim_DGTL240_5615C.jpg"),
+        "S433": getImage("Gracia_Tubus_Slim_DGTL240_S433.jpg"),
           },
 
           MILLYROUNDA: {
-            "4985U": "/images/Macetas-con-Plantas/Milly_DMIG190_4985U_m.jpg",
-            "S449": "/images/Macetas-con-Plantas/Milly_DMIG190_S449.jpg",
-            "443U": "/images/Macetas-con-Plantas/Milly_DMIG190_443U_m.jpg",
-            "2411U": "/images/Macetas-con-Plantas/Milly_DMIG190_2411U.jpg",
-            "S433": "/images/Macetas-con-Plantas/Milly_DMIG190_S433_m.jpg",
-            "446U": "/images/Macetas-con-Plantas/Milly_DMIG190_446U.jpg",
+            "4985U": getImage("Milly_DMIG190_4985U_m.jpg"),
+            "S449": getImage("Milly_DMIG190_S449.jpg"),
+            "443U": getImage("Milly_DMIG190_443U_m.jpg"),
+            "2411U": getImage("Milly_DMIG190_2411U.jpg"),
+            "S433": getImage("Milly_DMIG190_S433_m.jpg"),
+            "446U": getImage("Milly_DMIG190_446U.jpg"),
             },
 
           MILLYROUND: {
             variantes: {
               DMIL220: {
-            "4985U": "/images/Macetas-con-Plantas/Milly_Round_DMIL220_4985U.jpg",
-            "S449": "/images/Macetas-con-Plantas/Milly_Round_DMIL220_S449_m.jpg",
-            "443U": "/images/Macetas-con-Plantas/Milly_Round_DMIL220_443U_m.jpg",
-            "2411U": "/images/Macetas-con-Plantas/Milly_Round_DMIL220_2411U.jpg",
-            "S433": "/images/Macetas-con-Plantas/Milly_DMIL220_S433_m.jpg",
-            "446U": "/images/Macetas-con-Plantas/Milly_DMIL220_446U_m.jpg",
+            "4985U": getImage("Milly_Round_DMIL220_4985U.jpg"),
+            "S449": getImage("Milly_Round_DMIL220_S449_m.jpg"),
+            "443U": getImage("Milly_Round_DMIL220_443U_m.jpg"),
+            "2411U": getImage("Milly_Round_DMIL220_2411U.jpg"),
+            "S433": getImage("Milly_DMIL220_S433_m.jpg"),
+            "446U": getImage("Milly_DMIL220_446U_m.jpg"),
             },
               DMIN200: {
-            "4985U": "/images/Macetas-con-Plantas/Milly_DMIN200_4985U_m.jpg",
-            "S449": "/images/Macetas-con-Plantas/Milly_Round_DMIN200_S449.jpg",
-            "443U": "/images/Macetas-con-Plantas/Milly_Round_DMIN200_443U.jpg",
-            "2411U": "/images/Macetas-con-Plantas/Milly_Round_DMIN200_2411U.jpg",
-            "S433": "/images/Macetas-con-Plantas/Milly_Round_DMIN200_S433.jpg",
-            "446U": "/images/Macetas-con-Plantas/Milly_Round_DMIN200_446U.jpg",
+            "4985U": getImage("Milly_DMIN200_4985U_m.jpg"),
+            "S449": getImage("Milly_Round_DMIN200_S449.jpg"),
+            "443U": getImage("Milly_Round_DMIN200_443U.jpg"),
+            "2411U": getImage("Milly_Round_DMIN200_2411U.jpg"),
+            "S433": getImage("Milly_Round_DMIN200_S433.jpg"),
+            "446U": getImage("Milly_Round_DMIN200_446U.jpg"),
             },
           },
         },
@@ -1017,19 +1018,19 @@ GraciaLowBetonEffect: {
           SPLOFYBOWL: {
             variantes: {
               DKSP240: {
-            "7529U": "/images/Macetas-con-Plantas/DKSP180_7529U SPLOFY.jpg",
-            "S449": "/images/Macetas-con-Plantas/DKSP180_S449 SPLOFY.jpg",
-            "S433": "/images/Macetas-con-Plantas/DKSP180_S433 SPLOFY.jpg",
+            "7529U": getImage("DKSP180_7529U SPLOFY.jpg"),
+            "S449": getImage("DKSP180_S449 SPLOFY.jpg"),
+            "S433": getImage("DKSP180_S433 SPLOFY.jpg"),
                   },
               DKSP290: {
-            "7529U": "/images/Macetas-con-Plantas/DKSP290_7529U SPLOFY.jpg",
-            "S449": "/images/Macetas-con-Plantas/DKSP290_S449 SPLOFY.jpg",
-            "S433": "/images/Macetas-con-Plantas/DKSP290_S433 SPLOFY.jpg",
+            "7529U": getImage("DKSP290_7529U SPLOFY.jpg"),
+            "S449": getImage("DKSP290_S449 SPLOFY.jpg"),
+            "S433": getImage("DKSP290_S433 SPLOFY.jpg"),
                   },
               DKSP370: {  
-            "7529U": "/images/Macetas-con-Plantas/DKSP370-7529U  SPLOFY.jpg",
-            "S449": "/images/Macetas-con-Plantas/DKSP370_S449 SPLOFY.jpg",
-            "S433": "/images/Macetas-con-Plantas/DKSP370_S433 SPLOFY.jpg",
+            "7529U": getImage("DKSP370-7529U  SPLOFY.jpg"),
+            "S449": getImage("DKSP370_S449 SPLOFY.jpg"),
+            "S433": getImage("DKSP370_S433 SPLOFY.jpg"),
 
             },
           },
@@ -1037,99 +1038,99 @@ GraciaLowBetonEffect: {
          RATOLLARallingSquare: {
            variantes: {
               DRLB280: {
-            "7529U": "/images/Macetas-con-Plantas/DRLB280_7529U RATOLLA.jpg",
-            "440U": "/images/Macetas-con-Plantas/DRLB280_440U RATOLLA.jpg",
-            "S433": "/images/Macetas-con-Plantas/DRLB280_S433 RATOLLA.jpg",
+            "7529U": getImage("DRLB280_7529U RATOLLA.jpg"),
+            "440U": getImage("DRLB280_440U RATOLLA.jpg"),
+            "S433": getImage("DRLB280_S433 RATOLLA.jpg"),
                   },
               DRLB400: {
-            "7529U": "/images/Macetas-con-Plantas/DRLB400_7529U RATOLLA.jpg",
-            "440U": "/images/Macetas-con-Plantas/DRLB400_440U RATOLLA.jpg",
-            "S433": "/images/Macetas-con-Plantas/DRLB400_S433 RATOLLA.jpg",
+            "7529U": getImage("DRLB400_7529U RATOLLA.jpg"),
+            "440U": getImage("DRLB400_440U RATOLLA.jpg"),
+            "S433": getImage("DRLB400_S433 RATOLLA.jpg"),
                   },
                  },
         },
           HEOS: {
             variantes: {
               DLHEN470: {
-            S449: "/images/Macetas-con-Plantas/Heos_DLHEN470_S449.jpg",
-            S433: "/images/Macetas-con-Plantas/Heos_DLHEN470_S433.jpg",
+            S449: getImage("Heos_DLHEN470_S449.jpg"),
+            S433: getImage("Heos_DLHEN470_S433.jpg"),
       },
               DBHEN470: {
-            S449: "/images/Macetas-con-Plantas/Heos_DBHEN470_S449.jpg",
-            S433: "/images/Macetas-con-Plantas/Heos_DBHEN470_S433_m.jpg",
+            S449: getImage("Heos_DBHEN470_S449.jpg"),
+            S433: getImage("Heos_DBHEN470_S433_m.jpg"),
       },
               DBHER470: {
-            S449: "/images/Macetas-con-Plantas/Heos_DBHER_S449.jpg",
-            S433: "/images/Macetas-con-Plantas/Heos_DBHER_S433.jpg",
+            S449: getImage("Heos_DBHER_S449.jpg"),
+            S433: getImage("Heos_DBHER_S433.jpg"),
       },
     },
   },
          PLANTI: {
           variantes: {
               DMLR190: {
-            S429: "/images/Macetas-con-Plantas/Planti_DMLR190_S429.jpg",
+            S429: getImage("Planti_DMLR190_S429.jpg"),
       },
               DMLR230: {
-            S429: "/images/Macetas-con-Plantas/Planti_DMLR230_S429.jpg",
+            S429: getImage("Planti_DMLR230_S429.jpg"),
       },
     },
   },
              GROWER: {
               variantes: {
               DOGR180: {
-            S449: "/images/Macetas-con-Plantas/Grower_DOGR180_S449.jpg",
+            S449: getImage("Grower_DOGR180_S449.jpg"),
       },
               DOGR200: {
-            S449: "/images/Macetas-con-Plantas/Grower_DOGR200_S449.jpg",
+            S449: getImage("Grower_DOGR200_S449.jpg"),
             },
               DOGR240: {
-            S449: "/images/Macetas-con-Plantas/Grower_DOGR240_S449.jpg",
+            S449: getImage("Grower_DOGR240_S449.jpg"),
        },
      },
    },
             RESPANARALLING: {
-             S433: "/images/Macetas-con-Plantas/DREB290_S433 RESPANA.jpg",
+             S433: getImage("DREB290_S433 RESPANA.jpg"),
               },
 
                  MillyWall: {
-            "S449": "/images/Macetas-con-Plantas/Milly_Wall_DMIW150_S449_m.jpg",
-            "443U": "/images/Macetas-con-Plantas/Milly_Wall_DMIW150_443U.jpg",
-            "2411U": "/images/Macetas-con-Plantas/Milly_Wall_DMIW150_2411U_m.jpg",
-            "4985U": "/images/Macetas-con-Plantas/Milly_Wall_DMIW150_4985U_m.jpg",
-            "446U": "/images/Macetas-con-Plantas/Milly_Wall_DMIW150_446U_m.jpg",
-            "S433": "/images/Macetas-con-Plantas/Milly_Wall_DMIW150_S433.jpg",
+            "S449": getImage("Milly_Wall_DMIW150_S449_m.jpg"),
+            "443U": getImage("Milly_Wall_DMIW150_443U.jpg"),
+            "2411U": getImage("Milly_Wall_DMIW150_2411U_m.jpg"),
+            "4985U": getImage("Milly_Wall_DMIW150_4985U_m.jpg"),
+            "446U": getImage("Milly_Wall_DMIW150_446U_m.jpg"),
+            "S433": getImage("Milly_Wall_DMIW150_S433.jpg"),
             },
 
                 ARIAOVAL: {
-            "7529U": "/images/Macetas-con-Plantas/Aria_Oval_TAO40_101GR_sand_m.jpg",
-            "443U": "/images/Macetas-con-Plantas/Aria_Oval_TAO40_105GR_tiny_granite.jpg",
-            "405U": "/images/Macetas-con-Plantas/Aria_Oval_TAO40_107GR_graphite.jpg",
+            "7529U": getImage("Aria_Oval_TAO40_101GR_sand_m.jpg"),
+            "443U": getImage("Aria_Oval_TAO40_105GR_tiny_granite.jpg"),
+            "405U": getImage("Aria_Oval_TAO40_107GR_graphite.jpg"),
                   },
                 
                 CORObowl: {
                  variantes: {
               TCB40H: {
-            "7529U": "/images/Macetas-con-Plantas/Coro_Bowl_High_TCB40H_101GR.jpg",
-            "443U": "/images/Macetas-con-Plantas/Coro_Bowl_High_TCB40H_107GR_graphite.jpg",
-            "405U": "/images/Macetas-con-Plantas/Coro_Bowl_High_TCB40H_109GR_m.jpg",
+            "7529U": getImage("Coro_Bowl_High_TCB40H_101GR.jpg"),
+            "443U": getImage("Coro_Bowl_High_TCB40H_107GR_graphite.jpg"),
+            "405U": getImage("Coro_Bowl_High_TCB40H_109GR_m.jpg"),
                   },
               TCB48: {
-            "7529U": "/images/Macetas-con-Plantas/Coro_Bowl_TCB48_101GR.jpg",
-            "443U": "/images/Macetas-con-Plantas/Coro_Bowl_TCB48_107GR_graphite.jpg",
-            "405U": "/images/Macetas-con-Plantas/Coro_Bowl_TCB48_109GR.jpg",
+            "7529U": getImage("Coro_Bowl_TCB48_101GR.jpg"),
+            "443U": getImage("Coro_Bowl_TCB48_107GR_graphite.jpg"),
+            "405U": getImage("Coro_Bowl_TCB48_109GR.jpg"),
                   },
                  },
         }, 
               MOLTAsquarefoot: {
                  variantes: {
               TMSF40: {
-            "7529U": "/images/Macetas-con-Plantas/Molta_Square_Foot_TMSF40_101GR.jpg",
-            "443U": "/images/Macetas-con-Plantas/Molta_Square_Foot_TMSF40_107GR.jpg",
+            "7529U": getImage("Molta_Square_Foot_TMSF40_101GR.jpg"),
+            "443U": getImage("Molta_Square_Foot_TMSF40_107GR.jpg"),
             
                   },
               TMSF48: {
-            "7529U": "/images/Macetas-con-Plantas/Molta_Square_Foot_TMSF48_101GR.jpg",
-            "443U": "/images/Macetas-con-Plantas/Molta_Square_Foot_TMSF48_107GR.jpg",
+            "7529U": getImage("Molta_Square_Foot_TMSF48_101GR.jpg"),
+            "443U": getImage("Molta_Square_Foot_TMSF48_107GR.jpg"),
                 },
               },
             }, 
@@ -1137,13 +1138,13 @@ GraciaLowBetonEffect: {
              DUALAroundslim: {
                variantes: {
               TDS30: {
-            "7529U": "/images/Macetas-con-Plantas/Duala_Round_Slim_TDR30S_101GR_m.jpg",
-            "443U": "/images/Macetas-con-Plantas/Duala_Round_Slim_TDR30S_107GR.jpg",
+            "7529U": getImage("Duala_Round_Slim_TDR30S_101GR_m.jpg"),
+            "443U": getImage("Duala_Round_Slim_TDR30S_107GR.jpg"),
             
                   },
               TDS40: {
-            "7529U": "/images/Macetas-con-Plantas/Duala_Round_Slim_TDR40S_101GR_m.jpg",
-            "443U": "/images/Macetas-con-Plantas/Duala_Round_Slim_TDR40S_107GR_m.jpg",
+            "7529U": getImage("Duala_Round_Slim_TDR40S_101GR_m.jpg"),
+            "443U": getImage("Duala_Round_Slim_TDR40S_107GR_m.jpg"),
                 },
               },
             }, 
