@@ -936,8 +936,8 @@ colores: [
 
 GraciaLowBetonEffect: {
     "422U": getImage("Gracia_Low_Beton Effect_DGRL400LE_422U.jpg"),
-    "CY700": getImage("Gracia_Low_Beton Effect_DGRL400LE_CY700.jpg"),
-    "S433": getImage("Gracia_Low_Beton Effect_DGRL400LE_S433.jpg"),
+    "CY700": getImage("Gracia_Low_Beton Effect_DGRL400LE_CY700.png"),
+    "S433": getImage("Gracia_Low_Beton Effect_DGRL400LE_S433.png"),
   },
   
       GraciaLow: {
@@ -1043,9 +1043,9 @@ GraciaLowBetonEffect: {
             "S433": getImage("DRLB280_S433 RATOLLA.jpg"),
                   },
               DRLB400: {
-            "7529U": getImage("DRLB400_7529U RATOLLA.jpg"),
-            "440U": getImage("DRLB400_440U RATOLLA.jpg"),
-            "S433": getImage("DRLB400_S433 RATOLLA.jpg"),
+            "7529U": getImage("DRLB400_7529U_RATOLLA.jpg"),
+            "440U": getImage("DRLB400_440U_RATOLLA.jpg"),
+            "S433": getImage("DRLB400_S433_RATOLLA.jpg"),
                   },
                  },
         },
@@ -1089,7 +1089,7 @@ GraciaLowBetonEffect: {
      },
    },
             RESPANARALLING: {
-             S433: getImage("DREB290_S433 RESPANA.jpg"),
+             S433: getImage("DREB290_S433_RESPANA.jpg"),
               },
 
                  MillyWall: {
