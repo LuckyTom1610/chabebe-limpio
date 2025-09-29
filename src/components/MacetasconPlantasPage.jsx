@@ -138,11 +138,11 @@ const plantas = [
   { id: "p5", nombre: "Croto", precio: 1, imagen: getImage("Croto.png"), categoria: "exterior" },
   { id: "p10", nombre: "Lavanda", precio: 1, imagen: getImage("Lavanda.png"), categoria: "exterior" },
   { id: "p12", nombre: "Palma cica", precio: 1, imagen: getImage("Palma cica.png"), categoria: "exterior" },
-  { id: "p15", nombre: "Trébol morado", precio: 1, imagen: getImage("Trébol morado.png"), categoria: "exterior" },
+  { id: "p15", nombre: "Trébol morado", precio: 1, imagen: getImage("Trébol_morado.png"), categoria: "exterior" },
 ];
 
 function safeSrc(path) {
-  if (!path) return "/images/placeholder.jpg";
+  if (!path) return getImage("images/placeholder.jpg");
   try {
     return encodeURI(path);
   } catch {
