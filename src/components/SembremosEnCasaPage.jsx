@@ -358,10 +358,10 @@ const catalogosData = {
 
 const macetaColorImages = {
   BLOMA: {
-    "405U": getImage("DBLO600.jpg"),
+    "405U": getImage("Bloma.jpg"),
   },
   RESPANAPLANTERWOODHIGHSET: {
-    "405U": getImage("ISEW780H.jpg"),
+    "405U": getImage("ISEW780H_1.png"),
   },
   HOMEGROWER: {
     S433: getImage("Home_Grower_DEPO300_S433.jpg"),
