@@ -12,33 +12,39 @@ function normalizeVarDesc(desc) {
 }
 
 function safeSrc(src) {
-  if (!src || typeof src !== "string") return "/images/placeholder.jpg";
+  if (!src || typeof src !== "string") return getImage("placeholder.jpg");
   return src.trim().startsWith("/") ? src : `/${src.trim()}`;
 }
 
-function getMacetaColorImage(macetaId, selectedColor, varianteActual) {
-  if (selectedColor?.imagenMaceta) return selectedColor.imagenMaceta;
-  const byMaceta = macetaColorImages[macetaId];
-  if (!byMaceta) return null;
+function getMacetaColorImage(macetaId, varianteActual, selectedColor) {
+  if (!macetaId || !selectedColor) return null;
 
-  if (byMaceta.variantes && varianteActual?.descripcion) {
-    const varKey = normalizeVarDesc(varianteActual.descripcion);
-    const byVar = byMaceta.variantes[varKey];
-    const hit = byVar?.[selectedColor?.codigo];
-    if (hit) return hit;
+  const modelo = macetaColorImages[macetaId];
+  if (!modelo) return null;
+
+  // Prioridad 1: variante específica
+  if (modelo.variantes && varianteActual?.descripcion) {
+    const varianteKey = normalizeVarDesc(varianteActual.descripcion);
+    const porVariante = modelo.variantes[varianteKey];
+    if (porVariante && porVariante[selectedColor.codigo]) {
+      return porVariante[selectedColor.codigo];
+    }
   }
 
-  const hitDirect = byMaceta[selectedColor?.codigo];
-  if (hitDirect) return hitDirect;
+  // Prioridad 2: acceso directo (modelo plano)
+  if (modelo[selectedColor.codigo]) {
+    return modelo[selectedColor.codigo];
+  }
 
-  return null;
+  // Prioridad 3: imagen definida directamente en el objeto color
+  return selectedColor?.imagenMaceta ?? null;
 }
 
 function getDisplayImage({ principal, varianteActual, selectedColor }) {
   const baseSrc =
     varianteActual?.imagenesCatalogo?.[0] ??
     principal?.imagen ??
-    "/images/placeholder.jpg";
+    getImage("placeholder.jpg");
 
   if (selectedColor?.imagenMaceta) {
     return { src: selectedColor.imagenMaceta, fallback: baseSrc };
@@ -162,17 +168,17 @@ const macetasPrincipales = [
     {
    id: "COMBIOLIQ",
    modelo: "IBFT55",
-   imagen: getImage("compost IBFT55.jpg"),
+   imagen: getImage("compost_IBFT55.jpg"),
 },
 {
   id: "COMBIOSOIL",
    modelo: "IKUGL",
-   imagen: getImage("compost IKUGL.jpg"),
+   imagen: getImage("compost_IKUGL.jpg"),
    },
 {
   id: "COMPOGREEN",
    modelo: "IKST380C",
-   imagen: getImage("compost IKST.jpg"),
+   imagen: getImage("compost_IKST.jpg"),
    },
 ];
 
@@ -724,10 +730,10 @@ function SembremosEnCasaPage() {
 
      {(() => {
       const previewSrc = getMacetaColorImage(
-        principal?.id,
-        selectedColor,
-        varianteActual
-       );
+  principal?.id,
+  varianteActual,
+  selectedColor
+);
        if (!previewSrc) {
         return (
           <div style={{ color: '#6b7280', fontSize: 13 }}>
