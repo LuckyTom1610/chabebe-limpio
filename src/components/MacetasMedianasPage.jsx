@@ -935,9 +935,9 @@ colores: [
   },
 
 GraciaLowBetonEffect: {
-    "422U": getImage("Gracia_Low_Beton Effect_DGRL400LE_422U.jpg"),
-    "CY700": getImage("Gracia_Low_Beton Effect_DGRL400LE_CY700.png"),
-    "S433": getImage("Gracia_Low_Beton Effect_DGRL400LE_S433.png"),
+    "422U": getImage("Gracia_Low_Beton Effect_DGRL400LE_422U.png"),
+    "CY700": getImage("Gracia_Low_Beton_Effect_DGRL400LE_CY700.png"),
+    "S433": getImage("Gracia_Low_Beton_Effect_DGRL400LE_S433.png"),
   },
   
       GraciaLow: {
