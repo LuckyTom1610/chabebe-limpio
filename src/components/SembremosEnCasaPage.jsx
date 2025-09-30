@@ -13,31 +13,18 @@ function normalizeVarDesc(desc) {
 
 function safeSrc(src) {
   if (!src || typeof src !== "string") return getImage("placeholder.jpg");
-  return src.trim().startsWith("/") ? src : `/${src.trim()}`;
+
+  // Si ya es una URL completa de Cloudinary o HTTP, la dejamos como está
+  if (/^(https?:)?\/\/res\.cloudinary\.com\//.test(src)) return src;
+
+  // Si es relativa, asúmela desde public
+  return `/${src.trim()}`;
 }
 
-function getMacetaColorImage(macetaId, varianteActual, selectedColor) {
+function getMacetaColorImage(macetaId, _varianteActual, selectedColor) {
   if (!macetaId || !selectedColor) return null;
-
   const modelo = macetaColorImages[macetaId];
-  if (!modelo) return null;
-
-  // Prioridad 1: variante específica
-  if (modelo.variantes && varianteActual?.descripcion) {
-    const varianteKey = normalizeVarDesc(varianteActual.descripcion);
-    const porVariante = modelo.variantes[varianteKey];
-    if (porVariante && porVariante[selectedColor.codigo]) {
-      return porVariante[selectedColor.codigo];
-    }
-  }
-
-  // Prioridad 2: acceso directo (modelo plano)
-  if (modelo[selectedColor.codigo]) {
-    return modelo[selectedColor.codigo];
-  }
-
-  // Prioridad 3: imagen definida directamente en el objeto color
-  return selectedColor?.imagenMaceta ?? null;
+  return modelo?.[selectedColor.codigo] ?? selectedColor.imagenMaceta ?? null;
 }
 
 function getDisplayImage({ principal, varianteActual, selectedColor }) {
