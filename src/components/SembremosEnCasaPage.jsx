@@ -21,11 +21,7 @@ function safeSrc(src) {
   return `/${src.trim()}`;
 }
 
-function getMacetaColorImage(macetaId, _varianteActual, selectedColor) {
-  if (!macetaId || !selectedColor) return null;
-  const modelo = macetaColorImages[macetaId];
-  return modelo?.[selectedColor.codigo] ?? selectedColor.imagenMaceta ?? null;
-}
+
 
 function getDisplayImage({ principal, varianteActual, selectedColor }) {
   const baseSrc =
@@ -410,6 +406,12 @@ function SembremosEnCasaPage() {
   const [varianteIndex, setVarianteIndex] = useState(0);
   const [selectedColor, setSelectedColor] = useState(null);
   const { addToCart } = useContext(CartContext);
+
+  function getMacetaColorImage(macetaId, _varianteActual, selectedColor) {
+  if (!macetaId || !selectedColor) return null;
+  const modelo = macetaColorImages[macetaId];
+  return modelo?.[selectedColor.codigo] ?? selectedColor.imagenMaceta ?? null;
+}
 
   const macetaSeleccionada = catalogoVisible ? catalogosData[catalogoVisible] : null;
   const varianteActual = macetaSeleccionada?.variantes
