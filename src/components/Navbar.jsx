@@ -7,6 +7,8 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const closeTimeout = useRef(null);
   const { cart } = useContext(CartContext);
+  const handleMobileLinkClick = () => {setMobileMenuOpen(false); setDropdownOpen(null);};
+
 
    return (
     <nav className="bg-white shadow-md fixed w-full z-20">
@@ -190,103 +192,67 @@ export default function Navbar() {
 {mobileMenuOpen && (
   <div className="md:hidden bg-white shadow-md">
     <ul className="flex flex-col space-y-2 p-4 font-medium text-gray-700">
-      <li>
-        <Link to="/" className="hover:text-green-600 cursor-pointer">Inicio</Link>
-      </li>
+      <li><Link to="/" onClick={handleMobileLinkClick} className="hover:text-green-600 cursor-pointer">Inicio</Link></li>
 
-         {/* Mobile Catálogo */}
+      {/* Catálogo */}
       <li>
-        <button
-          onClick={() => setDropdownOpen(dropdownOpen === "catalogo" ? null : "catalogo")}
-          className="flex justify-between w-full focus:outline-none"
-        >
+        <button onClick={() => setDropdownOpen(dropdownOpen === "catalogo" ? null : "catalogo")} className="flex justify-between w-full">
           Catálogo <span>{dropdownOpen === "catalogo" ? "▲" : "▼"}</span>
         </button>
         {dropdownOpen === "catalogo" && (
           <ul className="pl-4 mt-2 space-y-1">
-            <li><Link to="/catalogos/macetas-medianas" className="hover:text-green-600 cursor-pointer">Macetas Medianas</Link></li>
-            <li><Link to="/catalogos/macetas-grandes" className="hover:text-green-600 cursor-pointer">Macetas Grandes</Link></li>
-            <li><Link to="/catalogos/set-de-macetas" className="hover:text-green-600 cursor-pointer">Set de Macetas</Link></li>
-            <li><Link to="/catalogos/Macetas con Plantas" className="hover:text-green-600 cursor-pointer">Macetas con Plantas</Link></li>
-            <li><Link to="/catalogos/Sistemas-de-Goteo" className="hover:text-green-600 cursor-pointer">Sistemas de Goteo</Link></li>
-            <li><Link to="/catalogos/Composteras" className="hover:text-green-600 cursor-pointer">Composteras</Link></li>
-            <li><Link to="/catalogos/Accesorios" className="hover:text-green-600 cursor-pointer">Accesorios</Link></li>          
+            <li><Link to="/catalogos/macetas-medianas" onClick={handleMobileLinkClick}>Macetas Medianas</Link></li>
+            <li><Link to="/catalogos/macetas-grandes" onClick={handleMobileLinkClick}>Macetas Grandes</Link></li>
+            <li><Link to="/catalogos/set-de-macetas" onClick={handleMobileLinkClick}>Set de Macetas</Link></li>
+            <li><Link to="/catalogos/Macetas con Plantas" onClick={handleMobileLinkClick}>Macetas con Plantas</Link></li>
+            <li><Link to="/catalogos/Sistemas-de-Goteo" onClick={handleMobileLinkClick}>Sistemas de Goteo</Link></li>
+            <li><Link to="/catalogos/Composteras" onClick={handleMobileLinkClick}>Composteras</Link></li>
+            <li><Link to="/catalogos/Accesorios" onClick={handleMobileLinkClick}>Accesorios</Link></li>
           </ul>
         )}
       </li>
 
-      {/* Mobile Inspiración */}
+      {/* Sembremos en Casa */}
+      <li><Link to="/sembremos-en-casa" onClick={handleMobileLinkClick}>Sembremos en Casa</Link></li>
+
+      {/* Inspiración */}
       <li>
-        <button
-          onClick={() => setDropdownOpen(dropdownOpen === "inspiracion" ? null : "inspiracion")}
-          className="flex justify-between w-full focus:outline-none"
-        >
+        <button onClick={() => setDropdownOpen(dropdownOpen === "inspiracion" ? null : "inspiracion")} className="flex justify-between w-full">
           Inspiración <span>{dropdownOpen === "inspiracion" ? "▲" : "▼"}</span>
         </button>
         {dropdownOpen === "inspiracion" && (
-  <ul className="pl-4 mt-2 space-y-1">
-    <li>
-      <Link to="/inspiracion/ideas-decoracion" className="hover:text-green-600 cursor-pointer">
-        Ideas de Decoración
-      </Link>
-    </li>
-    <li>Cuidado de Plantas</li>
-  </ul>
-)}
+          <ul className="pl-4 mt-2 space-y-1">
+            <li><Link to="/inspiracion/ideas-decoracion" onClick={handleMobileLinkClick}>Ideas de Decoración</Link></li>
+            <li><Link to="/inspiracion/cuidado-plantas" onClick={handleMobileLinkClick}>Cuidado de Plantas</Link></li>
+          </ul>
+        )}
       </li>
 
+      {/* Sobre Nosotros */}
+      <li><Link to="/sobre-nosotros" onClick={handleMobileLinkClick}>Sobre Nosotros</Link></li>
+
+      {/* Servicios (móvil dropdown corregido) */}
       <li>
-  <Link to="/sobre-nosotros" className="hover:text-green-600 cursor-pointer">
-    Sobre Nosotros
-  </Link>
-</li>
+        <button onClick={() => setDropdownOpen(dropdownOpen === "servicios" ? null : "servicios")} className="flex justify-between w-full">
+          Servicios <span>{dropdownOpen === "servicios" ? "▲" : "▼"}</span>
+        </button>
+        {dropdownOpen === "servicios" && (
+          <ul className="pl-4 mt-2 space-y-1">
+            <li><Link to="/servicios/envios-y-garantias" onClick={handleMobileLinkClick}>Envíos y Garantías</Link></li>
+          </ul>
+        )}
+      </li>
 
-     {/* Servicios */}
-<li
-  className="relative cursor-pointer"
-  onMouseEnter={() => {
-    if (closeTimeout.current) {
-      clearTimeout(closeTimeout.current);
-      closeTimeout.current = null;
-    }
-    setDropdownOpen("servicios");
-  }}
-  onMouseLeave={() => {
-    closeTimeout.current = setTimeout(() => setDropdownOpen(null), 250);
-  }}
->
-  Servicios
-  <ul
-    className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded transition-opacity duration-200 ${
-      dropdownOpen === "servicios" ? "opacity-100 visible" : "opacity-0 invisible"
-    }`}
-  >
-    <li className="px-4 py-2 hover:bg-green-50">
-      <Link to="/servicios/envios-y-garantias" className="hover:text-green-600 cursor-pointer">
-        Envíos y Garantías
-      </Link>
-    </li>
-  </ul>
-</li>
+      {/* Contacto */}
+      <li><Link to="/contacto" onClick={handleMobileLinkClick}>Contacto</Link></li>
 
-      <li>Contacto</li>
-
-      {/* Mobile Carrito */} 
+      {/* Carrito */}
+      <li><Link to="/carrito" onClick={handleMobileLinkClick}>🛒 Carrito {cart.length > 0 ? `(${cart.length})` : ""}</Link></li>
       <li>
-        <Link to="/carrito" className="hover:text-green-600 cursor-pointer">
+        <Link to="/carrito" onClick={handleMobileLinkClick} className="block text-center w-full bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">
           🛒 Carrito {cart.length > 0 ? `(${cart.length})` : ""}
         </Link>
       </li>
-
-      {/* Mobile Carrito estilizado */}
-<li>
-  <Link
-    to="/carrito"
-    className="block text-center w-full bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition"
-  >
-    🛒 Carrito {cart.length > 0 ? `(${cart.length})` : ""}
-  </Link>
-</li>
     </ul>
   </div>
 )}
