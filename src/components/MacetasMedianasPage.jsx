@@ -1167,6 +1167,14 @@ function MacetasMedianasPage() {
   const [selectedColor, setSelectedColor] = useState(null);
   const { addToCart } = useContext(CartContext);
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const macetaSeleccionada = catalogoVisible ? catalogosData[catalogoVisible] : null;
   const varianteActual = macetaSeleccionada?.variantes
     ? macetaSeleccionada.variantes[varianteIndex]
@@ -1296,11 +1304,11 @@ function MacetasMedianasPage() {
             {/* === MODAL === */}
             <div
               style={{
-                display: "grid",
-                gridTemplateColumns: "minmax(0, 520px) 1fr",
-                gap: 24,
-                alignItems: "flex-start",
-                marginTop: 10,
+              display: "flex",
+              flexDirection: isMobile ? "column" : "row",
+              gap: "24px",
+              alignItems: "flex-start",
+              marginTop: 10,
               }}
             >
               {/* Columna Izquierda: Imagen + Detalles */}
