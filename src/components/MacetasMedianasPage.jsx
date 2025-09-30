@@ -1218,21 +1218,21 @@ function MacetasMedianasPage() {
       {catalogoVisible ? (
         <div
           style={{
-            position: "fixed",
-            top: "0%",
-            left: "50%",
-            transform: "translateX(-50%)",
-            maxHeight: "100vh",
-            width: "50vw",
-            backgroundColor: "rgba(0,0,0,0.3)",
-            zIndex: 1000,
-            padding: 5,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            paddingTop: 40,
-            borderRadius: 10,
-          }}
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100vw",
+  height: "100vh",
+  zIndex: 1000,
+  backgroundColor: "rgba(0,0,0,0.5)",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "20px 10px",
+  boxSizing: "border-box",
+  overflowY: "auto",
+}}
+
         >
           <div
             style={{
