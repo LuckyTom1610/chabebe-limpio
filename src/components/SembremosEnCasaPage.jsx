@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
+import { getImage } from "../utils/cloudinary";
 
 /* =========================
    Helpers
@@ -62,7 +63,7 @@ function getDisplayImage({ principal, varianteActual, selectedColor }) {
     }
   }
 
-  return { src: baseSrc, fallback: "/images/placeholder.jpg" };
+  return { src: baseSrc, fallback: getImage("placeholder.jpg") };
 }
 
 /* =========================
@@ -126,52 +127,52 @@ const macetasPrincipales = [
   {
   id: "BLOMA",
    modelo: "BLOMA",
-   imagen: "/images/macetas-grandes/Bloma.jpg",
+   imagen: getImage("Bloma.jpg"),
    },
   
     {
     id: "RESPANAPLANTERWOODHIGHSET",
    modelo: "RESPANA PLANTER WOOD HIGH SET",
-   imagen: "/images/macetas-grandes/Respana Planter Wood.jpg",
+   imagen: getImage("Respana Planter Wood.jpg"),
   },
   {
     id: "HOMEGROWER",
     modelo: "HOMEGROWER",
-    imagen: "/images/sembremos-en-casa/Botanic_DBOP780_S433_DEPO_2411U_aranz_02_m.jpg",
+    imagen: getImage("Botanic_DBOP780_S433_DEPO_2411U_aranz_02_m.jpg"),
   },
 
 {
     id: "TOMATOGROWER",
     modelo: "TOMATO GROWER",
-    imagen: "/images/sembremos-en-casa/Tomato_Grower_IPOM400_300_sadzonka_m.jpg",
+    imagen: getImage("Tomato_Grower_IPOM400_300_sadzonka_m.jpg"),
   },
 
   {
     id: "POTATOGROWER",
     modelo: "POTATO GROWER",
-    imagen: "/images/sembremos-en-casa/Potato_Grower_IZIE400_roslina.jpg",
+    imagen: getImage("Potato_Grower_IZIE400_roslina.jpg"),
   },
 
  {
     id: "FLOOSUPPORTS",
     modelo: "FLOO SUPPORTS IFLS1",
-    imagen: "/images/sembremos-en-casa/Floo_Supports_IFLS1_opak_folia_m.jpg",
+    imagen: getImage("Floo_Supports_IFLS1_opak_folia_m.jpg"),
   },
 
     {
    id: "COMBIOLIQ",
    modelo: "IBFT55",
-   imagen: "/images/Composteras/compost IBFT55.jpg",
+   imagen: getImage("compost IBFT55.jpg"),
 },
 {
   id: "COMBIOSOIL",
    modelo: "IKUGL",
-   imagen: "/images/Composteras/compost IKUGL.jpg",
+   imagen: getImage("compost IKUGL.jpg"),
    },
 {
   id: "COMPOGREEN",
    modelo: "IKST380C",
-   imagen: "/images/Composteras/compost IKST.jpg",
+   imagen: getImage("compost IKST.jpg"),
    },
 ];
 
@@ -182,12 +183,12 @@ const catalogosData = {
     Capacidad: "-",
     Disponibilidad: "8 und",
     Precio: 18,
-    imagenesCatalogo: ["/images/macetas-grandes/DBLO600.jpg"],
+    imagenesCatalogo: [getImage("DBLO600.jpg")],
     colores: [
       {
         nombre: "gris piedra",
         codigo: "405U",
-        imagen: "/images/colores-macetas/405U_szary_kamienny.jpg",
+        imagen: getImage("405U_szary_kamienny.jpg"),
       },
     ],
   },
@@ -197,12 +198,12 @@ const catalogosData = {
     Capacidad: "55",
     Disponibilidad: "35 und",
     Precio: 70.5,
-    imagenesCatalogo: ["/images/macetas-grandes/ISEW780H.jpg"],
+    imagenesCatalogo: [getImage("ISEW780H_2.jpg")],
     colores: [
       {
         nombre: "gris piedra",
         codigo: "405U",
-        imagen: "/images/colores-macetas/405U_szary_kamienny.jpg",
+        imagen: getImage("405U_szary_kamienny.jpg"),
       },
     ],
   },
@@ -213,23 +214,23 @@ const catalogosData = {
     Disponibilidad: "6 und",
     Precio: 23.25,
     imagenesCatalogo: [
-      "/images/sembremos-en-casa/Home_Grower_DEPO300_4665W_m.jpg",
+      getImage("Home_Grower_DEPO300_4665W_m.jpg"),
     ],
     colores: [
       {
         nombre: "natural ECO",
         codigo: "4665W",
-        imagen: "/images/colores-macetas/4665W_naturo_ECO.jpg",
+        imagen: getImage("4665W_naturo_ECO.jpg"),
       },
       {
         nombre: "pino verde",
         codigo: "2411U",
-        imagen: "/images/colores-macetas/2411U_zielona_pinia.jpg",
+        imagen: getImage("2411U_zielona_pinia.jpg"),
       },
       {
         nombre: "gris oscuro",
         codigo: "S433",
-        imagen: "/images/colores-macetas/S433_antracytowy.jpg",
+        imagen: getImage("S433_antracytowy.jpg"),
       },
     ],
   },
@@ -240,13 +241,13 @@ const catalogosData = {
     Disponibilidad: "25 und",
     Precio: 13.03,
     imagenesCatalogo: [
-      "/images/sembremos-en-casa/Tomato_Grower_IPOM350_rozl_S433_m.jpg",
+      getImage("Tomato_Grower_IPOM350_rozl_S433_m.jpg"),
     ],
     colores: [
       {
         nombre: "gris oscuro",
         codigo: "S433",
-        imagen: "/images/colores-macetas/S433_antracytowy.jpg",
+        imagen: getImage("S433_antracytowy.jpg"),
       },
     ],
   },
@@ -257,13 +258,13 @@ const catalogosData = {
     Disponibilidad: "25 und",
     Precio: 10.85,
     imagenesCatalogo: [
-      "/images/sembremos-en-casa/Potato_Grower_IZIE300_S433_wklad.jpg",
+      getImage("Potato_Grower_IZIE300_S433_wklad.jpg"),
     ],
     colores: [
       {
         nombre: "gris oscuro",
         codigo: "S433",
-        imagen: "/images/colores-macetas/S433_antracytowy.jpg",
+        imagen: getImage("S433_antracytowy.jpg"),
       },
     ],
   },
@@ -275,7 +276,7 @@ const catalogosData = {
         Disponibilidad: "100 und",
         Precio: 8.63,
         imagenesCatalogo: [
-          "/images/sembremos-en-casa/Floo_Supports_IFLS1_wariant_1.jpg",
+          getImage("Floo_Supports_IFLS1_wariant_1.jpg"),
         ],
       },
       {
@@ -284,7 +285,7 @@ const catalogosData = {
         Disponibilidad: "12 und",
         Precio: 8.63,
         imagenesCatalogo: [
-          "/images/sembremos-en-casa/Floo_Supports_IFLS5_fi_24_wariant_1.jpg",
+          getImage("Floo_Supports_IFLS5_fi_24_wariant_1.jpg"),
         ],
       },
       {
@@ -293,7 +294,7 @@ const catalogosData = {
         Disponibilidad: "15 und",
         Precio: 8.63,
         imagenesCatalogo: [
-          "/images/sembremos-en-casa/Floo_Supports_IFLS6_wariant_1.jpg",
+          getImage("Floo_Supports_IFLS6_wariant_1.jpg"),
         ],
       },
       {
@@ -302,7 +303,7 @@ const catalogosData = {
         Disponibilidad: "14 und",
         Precio: 9.95,
         imagenesCatalogo: [
-          "/images/sembremos-en-casa/Floo_Supports_IFLS7_wariant_1.jpg",
+          getImage("Floo_Supports_IFLS7_wariant_1.jpg"),
         ],
       },
     ],
@@ -310,7 +311,7 @@ const catalogosData = {
       {
         nombre: "verde bosque",
         codigo: "G851",
-        imagen: "/images/colores-macetas/G851_zielony_lesny.jpg",
+        imagen: getImage("G851_zielony_lesny.jpg"),
       },
     ],
   },
@@ -320,12 +321,12 @@ const catalogosData = {
     Capacidad: "55",
     Disponibilidad: "5 und",
     Precio: 34.33,
-    imagenesCatalogo: ["/images/Composteras/IBFT55.jpg"],
+    imagenesCatalogo: [getImage("IBFT55.jpg")],
     colores: [
       {
         nombre: "Negro",
         codigo: "S411",
-        imagen: "/images/colores-macetas/S411_czarny.jpg",
+        imagen: getImage("S411_czarny.jpg"),
       },
     ],
   },
@@ -335,12 +336,12 @@ const catalogosData = {
     Capacidad: "11",
     Disponibilidad: "45 und",
     Precio: 8.63,
-    imagenesCatalogo: ["/images/Composteras/IKUGL.jpg"],
+    imagenesCatalogo: [getImage("IKUGL.jpg")],
     colores: [
       {
         nombre: "Negro",
         codigo: "S411",
-        imagen: "/images/colores-macetas/S411_czarny.jpg",
+        imagen: getImage("S411_czarny.jpg"),
       },
     ],
 
@@ -351,12 +352,12 @@ const catalogosData = {
     Capacidad: "380",
     Disponibilidad: "50 und",
     Precio: 42.23,
-    imagenesCatalogo: ["/images/Composteras/IKST380C.jpg"],
+    imagenesCatalogo: [getImage("IKST380C.jpg")],
     colores: [
       {
         nombre: "Negro",
         codigo: "S411",
-        imagen: "/images/colores-macetas/S411_czarny.jpg",
+        imagen: getImage("S411_czarny.jpg"),
       },
     ],
   },
@@ -364,47 +365,47 @@ const catalogosData = {
 
 const macetaColorImages = {
   BLOMA: {
-    "405U": "/images/Macetas-con-Plantas/DBLO600.jpg",
+    "405U": getImage("DBLO600.jpg"),
   },
   RESPANAPLANTERWOODHIGHSET: {
-    "405U": "/images/Macetas-con-Plantas/ISEW780H.jpg",
+    "405U": getImage("ISEW780H.jpg"),
   },
   HOMEGROWER: {
-    S433: "/images/sembremos-en-casa/Home_Grower_DEPO300_S433.jpg",
-    "4665W": "/images/sembremos-en-casa/Home_Grower_DEPO300_4665W_m.jpg",
-    "2411U": "/images/sembremos-en-casa/Home_Grower_DEPO300_2411U.jpg",
+    S433: getImage("Home_Grower_DEPO300_S433.jpg"),
+    "4665W": getImage("Home_Grower_DEPO300_4665W_m.jpg"),
+    "2411U": getImage("Home_Grower_DEPO300_2411U.jpg"),
   },
   TOMATOGROWER: {
-    S433: "/images/sembremos-en-casa/Tomato_Grower_IPOM350_rozl_S433_m.jpg",
+    S433: getImage("Tomato_Grower_IPOM350_rozl_S433_m.jpg"),
   },
   POTATOGROWER: {
-    S433: "/images/sembremos-en-casa/Potato_Grower_IZIE300_S433_wklad.jpg",
+    S433: getImage("Potato_Grower_IZIE300_S433_wklad.jpg"),
   },
   FLOOSUPPORTS: {
     variantes: {
       "IFLS1": {
-        "G851": "/images/sembremos-en-casa/Floo_Supports_IFLS1_wariant_1.jpg",
+        "G851": getImage("Floo_Supports_IFLS1_wariant_1.jpg"),
       },
       "IFLS5": {
-        "G851": "/images/sembremos-en-casa/Floo_Supports_IFLS5_fi_24_wariant_1.jpg",
+        "G851": getImage("Floo_Supports_IFLS5_fi_24_wariant_1.jpg"),
       },
       "IFLS6": {
-        "G851": "/images/sembremos-en-casa/Floo_Supports_IFLS6_wariant_1.jpg",
+        "G851": getImage("Floo_Supports_IFLS6_wariant_1.jpg"),
       },
       "IFLS7": {
-        "G851": "/images/sembremos-en-casa/Floo_Supports_IFLS7_wariant_1.jpg",
+        "G851": getImage("Floo_Supports_IFLS7_wariant_1.jpg"),
       },
     },
   },
 
 COMBIOLIQ: {
-    "S411": "/images/sembremos-en-casa/IBFT55.jpg",
+    "S411": getImage("IBFT55.jpg"),
 },
 COMBIOSOIL: {
-    "S411": "/images/sembremos-en-casa/IKUGL.jpg",
+    "S411": getImage("IKUGL.jpg"),
 },
  COMPOGREEN: {
-    "S411": "/images/sembremos-en-casa/IKST380C.jpg",
+    "S411": getImage("IKST380C.jpg"),
 },
 };
 
