@@ -1193,19 +1193,7 @@ function MacetasMedianasPage() {
   useEffect(() => {
   const params = new URLSearchParams(location.search);
 
-  useEffect(() => {
-  if (catalogoVisible) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-  }
-
-  return () => {
-    document.body.style.overflow = "auto";
-  };
-}, [catalogoVisible]);
-
-  const openFromQuery = params.get("open");
+    const openFromQuery = params.get("open");
   const varianteFromQuery = params.get("variante");
 
   const open = openFromQuery ?? location.state?.open ?? null;
@@ -1232,6 +1220,18 @@ function MacetasMedianasPage() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }, [location.search, location.state]);
+
+useEffect(() => {
+  if (catalogoVisible) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [catalogoVisible]);
 
   return (
     <div style={{ maxWidth: "95vw", margin: "10px auto 0", textAlign: "center" }}>
