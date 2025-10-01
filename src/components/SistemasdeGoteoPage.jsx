@@ -180,32 +180,34 @@ const catalogosData = {
       {catalogoVisible ? (
           <div
           style={{
-  position: "fixed",
-  top: 0,
-  left: 0,
-  width: "100vw",
-  height: "100vh",
-  zIndex: 1000,
-  backgroundColor: "rgba(0,0,0,0.5)",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  padding: "20px 10px",
-  boxSizing: "border-box",
-  overflowY: "auto",
-}}
+    position: "fixed", // ✅ Puedes mantenerlo, pero hay que evitar height: 100vh
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0, // ✅ Esto permite scroll completo
+    zIndex: 1000,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    overflowY: "auto", // ✅ Para que puedas ver hasta abajo
+    overflowX: "hidden",
+    padding: "20px 10px",
+    boxSizing: "border-box",
+  }}
+
         >
           <div
             style={{
-              width: '100vw',
-              maxHeight: '93vh',
-              overflowY: 'auto',
-              background: '#fff',
-              borderRadius: 12,
-              padding: 20,
-              boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
-              textAlign: 'left',
-                          }}
+    background: "#fff",
+    borderRadius: 12,
+    padding: 20,
+    maxWidth: "95vw",
+    width: "100%",
+    boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+    display: "flex",
+    flexDirection: "column",
+    gap: 20,
+    minHeight: "100%",          // ✅ Asegura que siempre haya scroll si el contenido lo requiere
+    boxSizing: "border-box",
+  }}
           >
           <button
             onClick={() => setCatalogoVisible(null)}
