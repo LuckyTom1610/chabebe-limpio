@@ -309,7 +309,7 @@ const macetasPrincipales = [
 {
   id: "CORObowlhigh",
   modelo: "CORO BOWL HIGH",
-  imagen: getImage("Coro_Bowl_Hig.jpg"),
+  imagen: getImage("Coro_Bowl_High.png"),
 },
 {
   id: "EVOLIA",

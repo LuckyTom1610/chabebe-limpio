@@ -27,15 +27,15 @@ const macetaComboImages = {
     getImage("Beton_Bowl_DKB_370_422U_m.png"),  // variante 2
   ],
   GRACIASQUAREBETONEFFECT: getImage("Gracia_Square_Beton_Effect_DGQL400E_422U.png"),
-  GraciaLowBetonEffect: getImage("Gracia_Low_Beton Effect_DGRL400LE_422U.jpg"),
-  GraciaLow: getImage("Gracia_Low_DGRL400L_S433.jpg"),
-  GRACIALOWECOWOOD: getImage("Gracia_Low_ECO_Wood_DGRL400LW_4665W_naturo.jpg"),
-  GRACIATUBUSSLIMECOWOOD: getImage("Gracia_Tubus_Slim_ECO_Wood_DGTL240W_4665W.jpg"),
-  GRACIASQUAREECOWOOD: getImage("Gracia_Square_ECO_Wood_DGQL400W_4665W.jpg"),
+  GraciaLowBetonEffect: getImage("Gracia_Low_Beton Effect_DGRL400LE_422U.png"),
+  GraciaLow: getImage("Gracia_Low_DGRL400L_S433.png"),
+  GRACIALOWECOWOOD: getImage("Gracia_Low_ECO_Wood_DGRL400LW_4665W_naturo.png"),
+  GRACIATUBUSSLIMECOWOOD: getImage("Gracia_Tubus_Slim_ECO_Wood_DGTL240W_4665W.png"),
+  GRACIASQUAREECOWOOD: getImage("Gracia_Square_ECO_Wood_DGQL400W_4665W.png"),
 
   // TUBOPM tiene 3 variantes -> array
   TUBOPM: [
-    getImage("Tubo_PM_DPOD240_2411U.jpg"), // 0
+    getImage("Tubo_PM_DPOD240_2411U.png"), // 0
     getImage("Tubo_PM_DPOD350_2411U.png"), // 1 (ajústalo al nombre real si difiere)
     getImage("Tubo_PM_DPOD400_2411U.png"), // 2
   ],
@@ -52,7 +52,7 @@ const macetaComboImages = {
 
   SPLOFYBOWL: [
     getImage("DKSP180_7529U SPLOFY.png"), // 0
-    getImage("DKSP290_7529U SPLOFY.jpg"), // 1
+    getImage("DKSP290_7529U SPLOFY.png"), // 1
     getImage("DKSP370-7529U SPLOFY.png"), // 2
   ],
 
@@ -64,7 +64,7 @@ const macetaComboImages = {
   HEOS: [
     getImage("Heos_DLHEN400_S433.png"),
     getImage("Heos_DBHEN470_S433_m.png"),
-    getImage("Heos_DBHER_S433.jpg"),
+    getImage("Heos_DBHER_S433.png"),
     ],
 
   PLANTI: [
@@ -74,7 +74,7 @@ const macetaComboImages = {
   GROWER: [
     getImage("Grower_DOGR180_S449.png"),
     getImage("Grower_DOGR200_S449.png"),
-    getImage("Grower_DOGR240_S449.jpg"),
+    getImage("Grower_DOGR240_S449.png"),
     ],
 
   RESPANARALLING: getImage("DREB290_S433_RESPANA.png"),
@@ -82,17 +82,17 @@ const macetaComboImages = {
   ARIAOVAL: getImage("Aria_Oval_TAO60_101GR_sand_m.png"),
 
   CORObowl: [
-    getImage("Coro_Bowl_High_TCB40H_101GR.jpg"), // 0
-    getImage("Coro_Bowl_TCB48_101GR.jpg"),  // 1
+    getImage("Coro_Bowl_High_TCB40H_101GR.png"), // 0
+    getImage("Coro_Bowl_TCB48_101GR.png"),  // 1
   ],
 
   MOLTAsquarefoot: [
-     getImage("Molta_Square_Foot_TMSF40_101GR.jpg"),// 0
-     getImage("Molta_Square_Foot_TMSF48_101GR.jpg"), // 1
+     getImage("Molta_Square_Foot_TMSF40_101GR.png"),// 0
+     getImage("Molta_Square_Foot_TMSF48_101GR.png"), // 1
   ],
 
   DUALAroundslim: [
-    getImage("Duala_Round_Slim_TDR30S_107GR.jpg"), // 0
+    getImage("Duala_Round_Slim_TDR30S_107GR.png"), // 0
     getImage("Duala_Round_Slim_TDR40S_107GR_m.png"), // 1
   ],
 
@@ -102,19 +102,19 @@ const macetaComboImages = {
     getImage("Oro_DHOE600_443U_m.png"), // 1
   ],
   LEXOROUND: getImage("DLR_S449 LEXO.png"),
-  GRACIACASEBETONEFFECT: getImage("Gracia_Case_Beton_Effect_DGCL600E_422U.jpg"),
-  GRACIACASEECOWOOD: getImage("Gracia_Case_ECO_Wood_DGCL600W_4665W.jpg"),
+  GRACIACASEBETONEFFECT: getImage("Gracia_Case_Beton_Effect_DGCL600E_422U.png"),
+  GRACIACASEECOWOOD: getImage("Gracia_Case_ECO_Wood_DGCL600W_4665W.png"),
   GRACIACASE: getImage("Gracia_Case_DGCL400_443U_m.png"),
-  CASCADEGRADENWALL: getImage("Garden_Long_Wall_IO3W800_2 modulowy_S433.jpg"),
+  CASCADEGRADENWALL: getImage("Garden_Long_Wall_IO3W800_2 modulowy_S433.png"),
   BLOMA: getImage("DBLO600_1.png"),
   URBICASEBETOMEFFECT: getImage("Urbi_Case_Beton_Effect_DUC600TE_425U.png"),
   RESPANAPLANTERWOODHIGHSET: getImage("ISEW780H_1.png"),
   CORObowlhigh: [
-    getImage("Coro_Bowl_High_TCB40H_101GR.jpg"), // 0
-    getImage("Coro_Bowl_TCB48_101GR.jpg"),  // 1
+    getImage("Coro_Bowl_High_TCB40H_101GR.png"), // 0
+    getImage("Coro_Bowl_TCB48_101GR.png"),  // 1
   ],
 
-  EVOLIA: getImage("Evolia_TEV60_101GR_sand.jpg"),
+  EVOLIA: getImage("Evolia_TEV60_101GR_sand.png"),
   YEKE: getImage("Yeke_TY50_101GR_sand_m.png"),
   MOLTA: getImage("Molta_Round_Foot_TMRF60_101GR_m.png"),
 };
@@ -142,7 +142,7 @@ const plantas = [
 ];
 
 function safeSrc(path) {
-  if (!path) return getImage("images/placeholder.jpg");
+  if (!path) return getImage("placeholder.jpg");
   try {
     return encodeURI(path);
   } catch {
@@ -181,12 +181,12 @@ function getComboImageForVariant(item /* { id: 'key-index', imagen: fallback } *
 
   const override = macetaComboImages[baseKey];
   if (Array.isArray(override)) {
-    return override[varIndex] || item?.imagen || getImage("images/placeholder.jpg")
+    return override[varIndex] || item?.imagen || getImage("placeholder.jpg")
   }
   if (typeof override === "string") {
     return override;
   }
-  return item?.imagen || getImage("images/placeholder.jpg");
+  return item?.imagen || getImage("placeholder.jpg");
 }
 
 export default function MacetasconPlantasPage() {
@@ -708,7 +708,7 @@ if (macetaConfirmada && macetaSeleccionada?.id !== m.id) {
                       src={safeSrc(p.imagen)}
                       alt={p.nombre}
                       style={{ width: "100%", height: 120, objectFit: "contain" }}
-                      onError={(e) => (e.currentTarget.src = "/images/placeholder.jpg")}
+                      onError={(e) => (e.currentTarget.src = getImage("placeholder.jpg"))}
                     />
                     <div style={{ marginTop: 8, fontSize: 13, fontWeight: 700 }}>{p.nombre}</div>
                     <div style={{ color: "#16a34a", fontWeight: 800, fontSize: 13 }}>
