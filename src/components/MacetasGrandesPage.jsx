@@ -661,6 +661,18 @@ const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   }
 }, [location.search, location.state]);
 
+useEffect(() => {
+  if (catalogoVisible) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [catalogoVisible]);
+
   return (
     <div style={{ maxWidth: '95vw', margin: '10px auto 0', textAlign: 'center' }}>
       {catalogoVisible ? (

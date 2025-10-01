@@ -244,6 +244,18 @@ colores: [
   : macetaSeleccionada;
   const principal = macetasPrincipales.find(m => m.id === catalogoVisible);
 
+useEffect(() => {
+  if (catalogoVisible) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [catalogoVisible]);
+
   return (
     <div style={{ maxWidth: '95vw', margin: '10px auto 0', textAlign: 'center' }}>
       {catalogoVisible ? (

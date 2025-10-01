@@ -1251,20 +1251,23 @@ useEffect(() => {
   padding: "20px 10px",
   boxSizing: "border-box",
   overflowY: "auto",
+  overflowX: "hidden",
 }}
 
         >
           <div
             style={{
-  width: "100%",
-  maxHeight: "100vh",
-  overflowY: "auto",
-  background: "#fff",
-  borderRadius: 12,
-  padding: 20,
-  boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
-  textAlign: "left",
-}}
+    background: "#fff",
+    borderRadius: 12,
+    padding: 20,
+    maxWidth: "95vw",
+    width: "100%",
+    boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+    textAlign: "left",
+    display: "flex",
+    flexDirection: "column", // ✅ IMPORTANTE para forzar altura dinámica
+    gap: 20
+  }}
           >
             <button
               onClick={() => setCatalogoVisible(null)}
@@ -1465,6 +1468,13 @@ useEffect(() => {
 
               {/* Columna Derecha: Colores + Vista previa + Accesorios */}
               <div style={{ display: "grid", gap: 16 }}>
+                
+                style={{
+                display: "grid",
+                gap: 16,
+                paddingBottom: 80, // ✅ espacio extra para botón
+                }}
+                
                 {/* Colores */}
                 {macetaSeleccionada?.colores && (
                   <div
