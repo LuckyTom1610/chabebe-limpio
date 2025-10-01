@@ -1470,14 +1470,14 @@ useEffect(() => {
               </div>
 
               {/* Columna Derecha: Colores + Vista previa + Accesorios */}
-              <div style={{ display: "grid", gap: 16 }}>
-                
+              <div              
                 style={{
                 display: "grid",
                 gap: 16,
                 paddingBottom: 80, // ✅ espacio extra para botón
                 }}
-                
+                >
+                  
                 {/* Colores */}
                 {macetaSeleccionada?.colores && (
                   <div
