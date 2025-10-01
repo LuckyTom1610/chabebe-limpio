@@ -1474,10 +1474,10 @@ useEffect(() => {
                 style={{
                 display: "grid",
                 gap: 16,
-                paddingBottom: 80, // ✅ espacio extra para botón
+                paddingBottom: 100, // ✅ espacio extra para botón
                 }}
                 >
-                  
+
                 {/* Colores */}
                 {macetaSeleccionada?.colores && (
                   <div
@@ -1721,6 +1721,7 @@ useEffect(() => {
                 border: "none",
                 borderRadius: 6,
                 cursor: "pointer",
+                marginBottom: "40px",
               }}
             >
               Agregar al carrito
