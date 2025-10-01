@@ -1193,6 +1193,18 @@ function MacetasMedianasPage() {
   useEffect(() => {
   const params = new URLSearchParams(location.search);
 
+  useEffect(() => {
+  if (catalogoVisible) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [catalogoVisible]);
+
   const openFromQuery = params.get("open");
   const varianteFromQuery = params.get("variante");
 
@@ -1244,15 +1256,15 @@ function MacetasMedianasPage() {
         >
           <div
             style={{
-              width: "100vw",
-              maxHeight: "93vh",
-              overflowY: "auto",
-              background: "#fff",
-              borderRadius: 12,
-              padding: 20,
-              boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
-              textAlign: "left",
-            }}
+  width: "100%",
+  maxHeight: "100vh",
+  overflowY: "auto",
+  background: "#fff",
+  borderRadius: 12,
+  padding: 20,
+  boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+  textAlign: "left",
+}}
           >
             <button
               onClick={() => setCatalogoVisible(null)}

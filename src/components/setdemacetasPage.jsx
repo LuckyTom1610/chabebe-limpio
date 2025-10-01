@@ -742,6 +742,15 @@ colores: [
   const [varianteIndex, setVarianteIndex] = useState(0);
   const [selectedColor, setSelectedColor] = useState(null);
   const { addToCart } = useContext(CartContext);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const macetaSeleccionada = catalogoVisible ? catalogosData[catalogoVisible] : null;
   const varianteActual = macetaSeleccionada?.variantes
   ? macetaSeleccionada.variantes[varianteIndex]
@@ -752,22 +761,21 @@ colores: [
     <div style={{ maxWidth: '95vw', margin: '10px auto 0', textAlign: 'center' }}>
       {catalogoVisible ? (
           <div
-          style={{
-            position: 'fixed',
-            top: '0%',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            maxHeight: '100vh',
-            width: '50vw',
-            backgroundColor: 'rgba(0,0,0,0.3)',
-            zIndex: 1000,
-            padding: 5,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            paddingTop: 40,
-            borderRadius: 10,
-          }}
+         style={{
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100vw",
+  height: "100vh",
+  zIndex: 1000,
+  backgroundColor: "rgba(0,0,0,0.5)",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "20px 10px",
+  boxSizing: "border-box",
+  overflowY: "auto",
+}}
         >
           <div
             style={{
@@ -800,10 +808,10 @@ colores: [
 {/* === NUEVO DISEÑO DEL MODAL === */}
 <div
   style={{
-    display: 'grid',
-    gridTemplateColumns: 'minmax(0, 520px) 1fr',
-    gap: 24,
-    alignItems: 'flex-start',
+    display: "flex",
+    flexDirection: isMobile ? "column" : "row",
+    gap: "24px",
+    alignItems: "flex-start",
     marginTop: 10,
   }}
 >
