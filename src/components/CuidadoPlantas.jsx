@@ -3,13 +3,22 @@ import plantasInspiracion from "../data/plantasInspiracion";
 
 const cuidadosPlantas = {
   // === INTERIOR ===
-  "Calathea": {
+  "Calatea": {
     nombre: "Calathea (Calathea orbifolia / roseopicta)",
     cuidados: [
       "Luz: sombra total o luz muy filtrada (evita sol directo).",
       "Riego: mantener el sustrato húmedo, regar 2–3 veces por semana en clima seco.",
       "Ambiente: alta humedad, pulverizar hojas regularmente.",
       "Tip: hojas enrolladas indican falta de agua."
+    ],
+  },
+"Cheflera": {
+    nombre: "Schefflera arboricola (Cheflera)",
+    cuidados: [
+      "Luz: indirecta brillante o sol parcial.",
+      "Riego: cada 5–7 días, dejar secar capa superior.",
+      "Ambiente: adaptable, resistente.",
+      "Tip: se puede guiar como arbolito pequeño."
     ],
   },
   "Costilla de Adán": {
@@ -21,6 +30,24 @@ const cuidadosPlantas = {
       "Tip: usar tutor para guiar su crecimiento."
     ],
   },
+  "Drácena": {
+    nombre: "Drácena (D. marginata / fragrans)",
+    cuidados: [
+      "Luz: media a brillante indirecta.",
+      "Riego: moderado; deja secar 2–3 cm superiores.",
+      "Ambiente: evita corrientes y exceso de agua.",
+      "Tip: rota la maceta para crecimiento uniforme."
+    ],
+  },
+  "Ficus caucho": {
+    nombre: "Ficus elastica (Ficus caucho)",
+    cuidados: [
+      "Luz: brillante indirecta (tolera algo de sol suave).",
+      "Riego: moderado; buen drenaje.",
+      "Ambiente: sin cambios bruscos de temperatura.",
+      "Tip: limpia hojas para mantener brillo."
+    ],
+  },
   "Ficus lira o violín": {
     nombre: "Ficus lyrata (Ficus lira o violín)",
     cuidados: [
@@ -30,42 +57,51 @@ const cuidadosPlantas = {
       "Tip: limpiar hojas con paño húmedo para mantener brillo."
     ],
   },
-  "Lirio de Paz": {
-    nombre: "Spathiphyllum wallisii (Lirio de paz)",
+  "Filodendro hoja grande": {
+    nombre: "Philodendron selloum / bipinnatifidum",
     cuidados: [
-      "Luz: sombra parcial, tolera baja luz.",
-      "Riego: 2 veces por semana; no dejar que se seque completamente.",
-      "Ambiente: alta humedad, florece en interiores.",
-      "Tip: hojas caídas = falta de agua inmediata."
+      "Luz: brillante indirecta.",
+      "Riego: cuando la capa superior esté seca.",
+      "Ambiente: humedad media–alta.",
+      "Tip: tutor si crece pesado; evita encharque."
+  ],
+},
+  "Mini calatea": {
+    nombre: "Calathea spp. baby (Mini calatea)",
+    cuidados: [
+      "Luz: sombra/luz muy filtrada.",
+      "Riego: frecuente en pequeñas dosis; sustrato húmedo.",
+      "Ambiente: alta humedad.",
+      "Tip: agua sin mucha cal para evitar manchas."
     ],
   },
-  "ZZ Plant": {
-    nombre: "Zamioculca zamiifolia (ZZ Plant)",
+  "Peperomia": {
+    nombre: "Peperomia spp.",
     cuidados: [
-      "Luz: baja a media, muy adaptable.",
-      "Riego: escaso, cada 10–15 días.",
-      "Ambiente: tolera sequía y descuido.",
-      "Tip: perfecta para principiantes."
+      "Luz: media a brillante indirecta.",
+      "Riego: ligero; prefiere sustrato aireado.",
+      "Ambiente: tolera interior seco.",
+      "Tip: mejor quedarse corto que excederse en riego."
     ],
   },
-  "Lengua de Suegra": {
-    nombre: "Sansevieria trifasciata (Lengua de suegra)",
+  "Planta china del dinero": {
+    nombre: "Pilea peperomioides",
     cuidados: [
-      "Luz: desde baja hasta sol directo.",
-      "Riego: cada 15–20 días, muy poca agua.",
-      "Ambiente: extremadamente resistente.",
-      "Tip: evita exceso de riego para prevenir pudrición."
+      "Luz: brillante indirecta.",
+      "Riego: 1 vez/semana; drenar bien.",
+      "Ambiente: templado; rota la maceta para forma simétrica.",
+      "Tip: retira hijuelos para propagar."
     ],
   },
+    // === EXTERIOR ===
 
-  // === EXTERIOR ===
-  "Palma Areca": {
-    nombre: "Dypsis lutescens (Palma areca)",
+  "Clavelón--Marigold": {
+    nombre: "Tagetes erecta (Clavelón / Marigold)",
     cuidados: [
-      "Luz: brillante indirecta o sol parcial.",
-      "Riego: frecuente, mantener el sustrato húmedo.",
-      "Ambiente: cálido y húmedo.",
-      "Tip: abonar en verano para follaje denso."
+      "Luz: pleno sol.",
+      "Riego: 3–4 veces por semana, no encharcar.",
+      "Ambiente: muy resistente, repele insectos.",
+      "Tip: eliminar flores marchitas para alargar la floración."
     ],
   },
   "Croto": {
@@ -77,15 +113,6 @@ const cuidadosPlantas = {
       "Tip: podar hojas secas para estimular brotes nuevos."
     ],
   },
-  "Cheflera": {
-    nombre: "Schefflera arboricola (Cheflera)",
-    cuidados: [
-      "Luz: indirecta brillante o sol parcial.",
-      "Riego: cada 5–7 días, dejar secar capa superior.",
-      "Ambiente: adaptable, resistente.",
-      "Tip: se puede guiar como arbolito pequeño."
-    ],
-  },
   "Lavanda": {
     nombre: "Lavandula angustifolia (Lavanda)",
     cuidados: [
@@ -95,15 +122,27 @@ const cuidadosPlantas = {
       "Tip: podar flores secas para estimular floración continua."
     ],
   },
-  "Clavelón--Marigold": {
-    nombre: "Tagetes erecta (Clavelón / Marigold)",
+  "Palma cica": {
+    nombre: "Cycas revoluta (Palma cica)",
     cuidados: [
-      "Luz: pleno sol.",
-      "Riego: 3–4 veces por semana, no encharcar.",
-      "Ambiente: muy resistente, repele insectos.",
-      "Tip: eliminar flores marchitas para alargar la floración."
+      "Luz: sol parcial a pleno sol.",
+      "Riego: moderado; deja secar entre riegos.",
+      "Ambiente: muy buen drenaje; crecimiento lento.",
+      "Tip: abona en temporada cálida."
     ],
-  }
+  },
+  "Trébol morado": {
+    nombre: "Oxalis triangularis (Trébol morado)",
+    cuidados: [
+      "Luz: sol suave o brillante indirecta.",
+      "Riego: moderado; sustrato ligeramente húmedo.",
+      "Ambiente: puede entrar en reposo; reduce riego si amarillea.",
+      "Tip: se cierran las hojas por la noche; es normal."
+    ],
+  },
+  
+    
+  
 };
 
 export default function CuidadoPlantas() {
@@ -156,12 +195,12 @@ export default function CuidadoPlantas() {
               className="mx-auto mb-4 max-h-48 object-contain"
             />
             <ul className="list-disc list-inside text-gray-700 space-y-2 text-left">
-              {(cuidadosPlantas[plantaSeleccionada.nombre]?.cuidados || []).map(
-                (tip, i) => (
-                  <li key={i}>{tip}</li>
-                )
-              )}
-            </ul>
+  {(cuidadosPlantas[plantaSeleccionada.nombre]?.cuidados || [
+    "⚠️ Información de cuidados aún no disponible."
+  ]).map((tip, i) => (
+    <li key={i}>{tip}</li>
+  ))}
+</ul>
           </div>
         </div>
       )}
