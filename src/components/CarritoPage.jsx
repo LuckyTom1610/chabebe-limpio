@@ -40,7 +40,7 @@ const handleChange = (e) => {
     return;
   }
 
-    const numeroWhatsApp = "593982287640";
+    const numeroWhatsApp = "593988851695";
 
     let mensaje = `🛒 *Pedido Chabebe*\n\n`;
     mensaje += `*Datos del cliente:*\n`;
