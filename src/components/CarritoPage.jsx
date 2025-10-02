@@ -42,7 +42,7 @@ const handleChange = (e) => {
 
     const numeroWhatsApp = "593988851695";
 
-    let mensaje = `🛒 *Pedido Chabebe*\n\n`;
+    let mensaje = `🛒 *Pedido Chabeve*\n\n`;
     mensaje += `*Datos del cliente:*\n`;
     mensaje += `Nombre: ${clienteDatos.nombre}\n`;
     mensaje += `Cédula/RUC: ${clienteDatos.cedula}\n`;

@@ -9,7 +9,7 @@ import { datosBancarios } from "../data/datosBancarios"; // <- usa tu nombre de 
  */
 const TransferenciaBancaria = ({
   total = 0,
-  numeroWhatsApp = "593982287640",
+  numeroWhatsApp = "593988851695",
   cliente = {},
 }) => {
   const [monto, setMonto] = useState(Number(total) || 0);

@@ -26,7 +26,7 @@ export default function ContactoPage() {
         <p className="mb-2 text-lg">
           📧 <strong>Email:</strong>{" "}
           <a
-            href="mailto:chavebe@outlook.es"
+            href="mailto:chabeve@outlook.es"
             className="text-green-700 underline hover:text-green-900"
           >
             chavebe@outlook.es
