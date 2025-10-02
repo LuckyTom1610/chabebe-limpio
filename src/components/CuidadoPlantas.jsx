@@ -140,10 +140,7 @@ const cuidadosPlantas = {
       "Tip: se cierran las hojas por la noche; es normal."
     ],
   },
-  
-    
-  
-};
+  };
 
 export default function CuidadoPlantas() {
   const [plantaSeleccionada, setPlantaSeleccionada] = useState(null);
@@ -156,25 +153,25 @@ export default function CuidadoPlantas() {
 
       {/* Grid de plantas */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {plantasInspiracion.map((planta) => (
-          <div
-            key={planta.id}
-            className="cursor-pointer transform hover:scale-105 transition duration-300"
-            onClick={() => setPlantaSeleccionada(planta)}
-          >
-            <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
-              <img
-                src={planta.imagen}
-                alt={planta.nombre}
-                className="w-full h-40 object-contain p-2 bg-gray-50"
-              />
-              <h3 className="text-center py-2 text-lg font-medium text-gray-800">
-                {planta.nombre}
-              </h3>
-            </div>
-          </div>
-        ))}
+  {(Array.isArray(plantasInspiracion) ? plantasInspiracion : []).map((planta) => (
+    <div
+      key={planta.id}
+      className="cursor-pointer transform hover:scale-105 transition duration-300"
+      onClick={() => setPlantaSeleccionada(planta)}
+    >
+      <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <img
+          src={planta.imagen}
+          alt={planta.nombre}
+          className="w-full h-40 object-contain p-2 bg-gray-50"
+        />
+        <h3 className="text-center py-2 text-lg font-medium text-gray-800">
+          {planta.nombre}
+        </h3>
       </div>
+    </div>
+  ))}
+</div>
 
       {/* Modal de cuidados */}
       {plantaSeleccionada && (
@@ -194,7 +191,7 @@ export default function CuidadoPlantas() {
               alt={plantaSeleccionada.nombre}
               className="mx-auto mb-4 max-h-48 object-contain"
             />
-            <ul className="list-disc list-inside text-gray-700 space-y-2 text-left">
+           <ul className="list-disc list-inside text-gray-700 space-y-2 text-left">
   {(cuidadosPlantas[plantaSeleccionada.nombre]?.cuidados || [
     "⚠️ Información de cuidados aún no disponible."
   ]).map((tip, i) => (
