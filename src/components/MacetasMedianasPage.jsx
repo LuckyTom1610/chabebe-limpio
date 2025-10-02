@@ -260,7 +260,7 @@ const macetasPrincipales = [
 {
   id: "CORObowl",
    modelo: "CORObowl",
-   imagen: getImage("Coro_Bowl_Hig.png"),
+   imagen: getImage("Coro_Bowl_High.png"),
    },
 {
   id: "MOLTAsquarefoot",
