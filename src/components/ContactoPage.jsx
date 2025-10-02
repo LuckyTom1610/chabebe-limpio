@@ -14,22 +14,22 @@ export default function ContactoPage() {
         <p className="mb-2 text-lg">
           📱 <strong>Celular / WhatsApp:</strong>{" "}
           <a
-            href="https://wa.me/593982287640"
+            href="https://wa.me/593988851695"
             className="text-green-700 underline hover:text-green-900"
             target="_blank"
             rel="noopener noreferrer"
           >
-            +593 98 885 1695
+            +593988851695
           </a>
         </p>
 
         <p className="mb-2 text-lg">
           📧 <strong>Email:</strong>{" "}
           <a
-            href="mailto:j240484@gmail.com"
+            href="mailto:chavebe@outlook.es"
             className="text-green-700 underline hover:text-green-900"
           >
-            j240484@gmail.com
+            chavebe@outlook.es
           </a>
         </p>
       </div>
