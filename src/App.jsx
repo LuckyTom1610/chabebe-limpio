@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import CatalogoMacetas from "./components/CatalogoMacetas";
@@ -22,7 +23,8 @@ import CuidadoPlantas from "./components/CuidadoPlantas";
 
 function App() {
   return (
-     
+
+      <BrowserRouter>
       <CartProvider>
       <Navbar />
       <main style={{ paddingTop: "64px" }}>
@@ -40,13 +42,17 @@ function App() {
            <Route path="/Sobre-nosotros" element={<SobreNosotrosPage />} />
           <Route path="/servicios/envios-y-garantias" element={<EnviosYGarantiasPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
-          <Route path="/inspiracion/ideas-decoracion" element={<IdeasDecoracionPage />} />
-          <Route path="/inspiracion/cuidado-plantas" element={<CuidadoPlantas />} />
-
-        </Routes>
-      </main>
-      <WhatsAppButton /> {/* Siempre visible */}
-    </CartProvider>
-    );
+           <Route path="/inspiracion/ideas-decoracion" element={<IdeasDecoracionPage />} />
+            <Route path="/inspiracion/cuidado-plantas" element={<CuidadoPlantas />} />
+            {/* alias opcional por si alguien usa “cuidado-de-plantas” */}
+            <Route path="/inspiracion/cuidado-de-plantas" element={<Navigate to="/inspiracion/cuidado-plantas" replace />} />
+            {/* catch-all */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+        <WhatsAppButton />
+      </CartProvider>
+    </BrowserRouter>
+  );
 }
 export default App;
