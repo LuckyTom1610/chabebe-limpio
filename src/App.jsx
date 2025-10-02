@@ -38,9 +38,11 @@ export default function App() {
           <Route path="/servicios/envios-y-garantias" element={<EnviosYGarantiasPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
           <Route path="/inspiracion/ideas-decoracion" element={<IdeasDecoracionPage />} />
-          <Route path="/inspiracion/cuidado-plantas" element={<CuidadoPlantas />} />
-          {/* alias opcional */}
+           <Route path="/inspiracion/cuidado-plantas" element={<CuidadoPlantas />} />
+          {/* ALIAS útiles */}
+          <Route path="/inspiracion/cuidadoplantas" element={<Navigate to="/inspiracion/cuidado-plantas" replace />} />
           <Route path="/inspiracion/cuidadoPlantas" element={<Navigate to="/inspiracion/cuidado-plantas" replace />} />
+
           {/* catch-all */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
