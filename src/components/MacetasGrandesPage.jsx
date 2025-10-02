@@ -452,8 +452,8 @@ const catalogosData = {
   imagenesCatalogo: [getImage("DUC800TE.jpg")],
   Accesorios: [
     {
-      nombre: "estabilizadores plásticos",
-      imagen: [getImage("estabilizadores plásticos.jpg")],
+      nombre: "estabilizadores_plásticos",
+      imagen: [getImage("estabilizadores_plásticos.jpg")],
     }
   ],
   colores: [
