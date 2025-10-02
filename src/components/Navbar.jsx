@@ -123,6 +123,7 @@ export default function Navbar() {
     <Link to="/inspiracion/cuidado-plantas" className="hover:text-green-600">
       Cuidado de Plantas
     </Link>
+    
   </li>
 </ul>
           </li>
@@ -160,7 +161,20 @@ export default function Navbar() {
             Contacto
             </Link>
           </li> 
-          
+
+ {/* Barra de búsqueda (desktop) */}
+
+          <li className="flex items-center">
+  <div className="relative">
+    <input
+      type="text"
+      placeholder="Buscar..."
+      className="border rounded-full px-4 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+    />
+    <span className="absolute right-3 top-1.5 text-gray-400">🔍</span>
+  </div>
+</li>
+                    
           {/* Carrito estilizado */}
 <li>
   <Link
@@ -171,6 +185,8 @@ export default function Navbar() {
   </Link>
 </li>
         </ul>
+
+       
         
         {/* Mobile menu button */}
         <button 
@@ -246,8 +262,19 @@ export default function Navbar() {
       {/* Contacto */}
       <li><Link to="/contacto" onClick={handleMobileLinkClick}>Contacto</Link></li>
 
+      {/* Barra de búsqueda (movil) */}
+
+        <li>
+  <input
+    type="text"
+    placeholder="Buscar..."
+    className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+  />
+</li>
+
+
       {/* Carrito */}
-      <li><Link to="/carrito" onClick={handleMobileLinkClick}>🛒 Carrito {cart.length > 0 ? `(${cart.length})` : ""}</Link></li>
+      
       <li>
         <Link to="/carrito" onClick={handleMobileLinkClick} className="block text-center w-full bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">
           🛒 Carrito {cart.length > 0 ? `(${cart.length})` : ""}

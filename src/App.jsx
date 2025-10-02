@@ -18,6 +18,7 @@ import SobreNosotrosPage from "./components/SobreNosotrosPage";
 import EnviosYGarantiasPage from "./components/EnviosYGarantiasPage";
 import ContactoPage from "./components/ContactoPage";
 import IdeasDecoracionPage from "./components/IdeasDecoracionPage";
+import CuidadoPlantas from "./components/CuidadoPlantas";
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
           <Route path="/servicios/envios-y-garantias" element={<EnviosYGarantiasPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
           <Route path="/inspiracion/ideas-decoracion" element={<IdeasDecoracionPage />} />
-          
+          <Route path="/inspiracion/cuidado-plantas" element={<CuidadoPlantas />} />
+
         </Routes>
       </main>
       <WhatsAppButton /> {/* Siempre visible */}
