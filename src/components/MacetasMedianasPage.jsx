@@ -1038,9 +1038,9 @@ GraciaLowBetonEffect: {
          RATOLLARallingSquare: {
            variantes: {
               DRLB280: {
-            "7529U": getImage("DRLB280_7529U RATOLLA.png"),
-            "440U": getImage("DRLB280_440U RATOLLA.png"),
-            "S433": getImage("DRLB280_S433 RATOLLA.png"),
+            "7529U": getImage("DRLB280_7529U_RATOLLA.png"),
+            "440U": getImage("DRLB280_440U_RATOLLA.png"),
+            "S433": getImage("DRLB280_S433_RATOLLA.png"),
                   },
               DRLB400: {
             "7529U": getImage("DRLB400_7529U_RATOLLA.jpg"),
