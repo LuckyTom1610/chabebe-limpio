@@ -120,7 +120,7 @@ export default function Navbar() {
     </Link>
   </li>
   <li className="px-4 py-2 hover:bg-green-50">
-    <Link to="/inspiracion/cuidado-plantas" className="hover:text-green-600">
+    <Link to="/inspiracion/CuidadoPlantas" className="hover:text-green-600">
       Cuidado de Plantas
     </Link>
     
@@ -239,7 +239,7 @@ export default function Navbar() {
         {dropdownOpen === "inspiracion" && (
           <ul className="pl-4 mt-2 space-y-1">
             <li><Link to="/inspiracion/ideas-decoracion" onClick={handleMobileLinkClick}>Ideas de Decoración</Link></li>
-            <li><Link to="/inspiracion/cuidado-plantas" onClick={handleMobileLinkClick}>Cuidado de Plantas</Link></li>
+            <li><Link to="/inspiracion/CuidadoPlantas" onClick={handleMobileLinkClick}>Cuidado de Plantas</Link></li>
           </ul>
         )}
       </li>

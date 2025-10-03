@@ -39,9 +39,9 @@ function App() {
           <Route path="/servicios/envios-y-garantias" element={<EnviosYGarantiasPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
           <Route path="/inspiracion/ideas-decoracion" element={<IdeasDecoracionPage />} />
-          <Route path="/inspiracion/cuidado-plantas" element={<CuidadoPlantas />} />
-          <Route path="/inspiracion/cuidadoplantas" element={<Navigate to="/inspiracion/cuidado-plantas" replace />} />
-          <Route path="/inspiracion/cuidadoPlantas" element={<Navigate to="/inspiracion/cuidado-plantas" replace />} />
+          <Route path="/inspiracion/Cuidado-Plantas" element={<CuidadoPlantas />} />
+          <Route path="/inspiracion/CuidadoPlantas" element={<Navigate to="/inspiracion/CuidadoPlantas" replace />} />
+          <Route path="/inspiracion/CuidadoPlantas" element={<Navigate to="/inspiracion/CuidadoPlantas" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
        </Routes>
     </main>

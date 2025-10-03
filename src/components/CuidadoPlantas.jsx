@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import plantasInspiracion from "../data/plantasInspiracion"; 
 
-const cuidadosPlantas = {
+const cuidadoPlantas = {
   // === INTERIOR ===
   "Calatea": {
-    nombre: "Calathea (Calathea orbifolia / roseopicta)",
+    id: "planta-1",
+    nombre: "Calatea",
     cuidados: [
       "Luz: sombra total o luz muy filtrada (evita sol directo).",
       "Riego: mantener el sustrato húmedo, regar 2–3 veces por semana en clima seco.",
@@ -13,7 +14,8 @@ const cuidadosPlantas = {
     ],
   },
 "Cheflera": {
-    nombre: "Schefflera arboricola (Cheflera)",
+     id: "planta-2",
+    nombre: "Cheflera",
     cuidados: [
       "Luz: indirecta brillante o sol parcial.",
       "Riego: cada 5–7 días, dejar secar capa superior.",
@@ -22,7 +24,8 @@ const cuidadosPlantas = {
     ],
   },
   "Costilla de Adán": {
-    nombre: "Monstera deliciosa (Costilla de Adán)",
+    id: "planta-4",
+    nombre: "Costilla de Adán",
     cuidados: [
       "Luz: brillante indirecta, tolera media sombra.",
       "Riego: 1 vez por semana, dejando secar los 2–3 cm superiores del sustrato.",
@@ -31,7 +34,8 @@ const cuidadosPlantas = {
     ],
   },
   "Drácena": {
-    nombre: "Drácena (D. marginata / fragrans)",
+    id: "planta-6",
+    nombre: "Drácena",
     cuidados: [
       "Luz: media a brillante indirecta.",
       "Riego: moderado; deja secar 2–3 cm superiores.",
@@ -40,7 +44,8 @@ const cuidadosPlantas = {
     ],
   },
   "Ficus caucho": {
-    nombre: "Ficus elastica (Ficus caucho)",
+    id: "planta-7",
+    nombre: "Ficus caucho",
     cuidados: [
       "Luz: brillante indirecta (tolera algo de sol suave).",
       "Riego: moderado; buen drenaje.",
@@ -49,7 +54,8 @@ const cuidadosPlantas = {
     ],
   },
   "Ficus lira o violín": {
-    nombre: "Ficus lyrata (Ficus lira o violín)",
+    id: "planta-8",
+    nombre: "Ficus lira o violín",
     cuidados: [
       "Luz: muy brillante indirecta, cerca de ventanas.",
       "Riego: moderado, solo cuando la capa superior del sustrato esté seca.",
@@ -58,7 +64,8 @@ const cuidadosPlantas = {
     ],
   },
   "Filodendro hoja grande": {
-    nombre: "Philodendron selloum / bipinnatifidum",
+    id: "planta-9",
+    nombre: "Filodendro hoja grande",
     cuidados: [
       "Luz: brillante indirecta.",
       "Riego: cuando la capa superior esté seca.",
@@ -67,7 +74,8 @@ const cuidadosPlantas = {
   ],
 },
   "Mini calatea": {
-    nombre: "Calathea spp. baby (Mini calatea)",
+    id: "planta-11",
+    nombre: "Mini calatea",
     cuidados: [
       "Luz: sombra/luz muy filtrada.",
       "Riego: frecuente en pequeñas dosis; sustrato húmedo.",
@@ -76,7 +84,8 @@ const cuidadosPlantas = {
     ],
   },
   "Peperomia": {
-    nombre: "Peperomia spp.",
+    id: "planta-13",
+    nombre: "Peperomia",
     cuidados: [
       "Luz: media a brillante indirecta.",
       "Riego: ligero; prefiere sustrato aireado.",
@@ -85,7 +94,8 @@ const cuidadosPlantas = {
     ],
   },
   "Planta china del dinero": {
-    nombre: "Pilea peperomioides",
+    id: "planta-14",
+    nombre: "Planta china del dinero",
     cuidados: [
       "Luz: brillante indirecta.",
       "Riego: 1 vez/semana; drenar bien.",
@@ -96,7 +106,8 @@ const cuidadosPlantas = {
     // === EXTERIOR ===
 
   "Clavelón--Marigold": {
-    nombre: "Tagetes erecta (Clavelón / Marigold)",
+    id: "planta-3",
+    nombre: "Clavelón--Marigold",
     cuidados: [
       "Luz: pleno sol.",
       "Riego: 3–4 veces por semana, no encharcar.",
@@ -105,7 +116,8 @@ const cuidadosPlantas = {
     ],
   },
   "Croto": {
-    nombre: "Codiaeum variegatum (Croto)",
+    id: "planta-5",
+    nombre: "Croto",
     cuidados: [
       "Luz: requiere sol directo para mantener colores vivos.",
       "Riego: moderado, 1–2 veces por semana.",
@@ -114,7 +126,8 @@ const cuidadosPlantas = {
     ],
   },
   "Lavanda": {
-    nombre: "Lavandula angustifolia (Lavanda)",
+    id: "planta-10",
+    nombre: "Lavanda",
     cuidados: [
       "Luz: pleno sol (6+ horas diarias).",
       "Riego: moderado, suelo seco entre riegos.",
@@ -123,7 +136,8 @@ const cuidadosPlantas = {
     ],
   },
   "Palma cica": {
-    nombre: "Cycas revoluta (Palma cica)",
+    id: "planta-12",
+    nombre: "Palma cica",
     cuidados: [
       "Luz: sol parcial a pleno sol.",
       "Riego: moderado; deja secar entre riegos.",
@@ -132,7 +146,8 @@ const cuidadosPlantas = {
     ],
   },
   "Trébol morado": {
-    nombre: "Oxalis triangularis (Trébol morado)",
+    id: "planta-15",
+    nombre: "Trébol morado",
     cuidados: [
       "Luz: sol suave o brillante indirecta.",
       "Riego: moderado; sustrato ligeramente húmedo.",
@@ -192,7 +207,7 @@ export default function CuidadoPlantas() {
               className="mx-auto mb-4 max-h-48 object-contain"
             />
            <ul className="list-disc list-inside text-gray-700 space-y-2 text-left">
-  {(cuidadosPlantas[plantaSeleccionada.nombre]?.cuidados || [
+  {(cuidadoPlantas[plantaSeleccionada.nombre]?.cuidados || [
     "⚠️ Información de cuidados aún no disponible."
   ]).map((tip, i) => (
     <li key={i}>{tip}</li>
