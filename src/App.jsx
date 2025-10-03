@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 import Navbar from "./components/Navbar";
 import MacetasMedianasPage from "./components/MacetasMedianasPage";
 import MacetasGrandesPage from "./components/MacetasGrandesPage";
@@ -18,12 +18,13 @@ import ContactoPage from "./components/ContactoPage";
 import IdeasDecoracionPage from "./components/IdeasDecoracionPage";
 import CuidadoPlantas from "./components/CuidadoPlantas";
 
-export default function App() {
+function App() {
   return (
-    <>
-      <Navbar />
-      <main style={{ paddingTop: "64px" }}>
-        <Routes>
+    <Router>
+  <CartProvider>
+    <Navbar />
+    <main style={{ paddingTop: "64px" }}>
+      <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalogos/macetas-medianas" element={<MacetasMedianasPage />} />
           <Route path="/catalogos/macetas-grandes" element={<MacetasGrandesPage />} />
@@ -38,16 +39,15 @@ export default function App() {
           <Route path="/servicios/envios-y-garantias" element={<EnviosYGarantiasPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
           <Route path="/inspiracion/ideas-decoracion" element={<IdeasDecoracionPage />} />
-           <Route path="/inspiracion/cuidado-plantas" element={<CuidadoPlantas />} />
-          {/* ALIAS útiles */}
+          <Route path="/inspiracion/cuidado-plantas" element={<CuidadoPlantas />} />
           <Route path="/inspiracion/cuidadoplantas" element={<Navigate to="/inspiracion/cuidado-plantas" replace />} />
           <Route path="/inspiracion/cuidadoPlantas" element={<Navigate to="/inspiracion/cuidado-plantas" replace />} />
-
-          {/* catch-all */}
           <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </main>
-      <WhatsAppButton />
-    </>
-  );
+       </Routes>
+    </main>
+    <WhatsAppButton />
+  </CartProvider>
+</Router>
+    );
 }
+export default App;
