@@ -932,19 +932,10 @@ if (macetaConfirmada && macetaSeleccionada?.id !== m.id) {
       setMacetaConfirmada(false);
       setMacetaWidth(240);
           }}
-    style={{
-      marginTop: 8,
-      padding: "8px 16px",
-      background: "#ef4444",
-      color: "white",
-      border: "none",
-      borderRadius: 8,
-      cursor: "pointer",
-      fontWeight: 600,
-    }}
-  >
-    Reiniciar todo
-  </button>
+  className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition font-semibold"
+>
+  🗑️ Reiniciar todo
+</button>
 )}
       </div>
     </div>
