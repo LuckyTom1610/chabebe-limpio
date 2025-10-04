@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { CartProvider } from './context/CartContext';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import CatalogoMacetas from "./components/CatalogoMacetas";
 import MacetasMedianasPage from "./components/MacetasMedianasPage";
 import MacetasGrandesPage from "./components/MacetasGrandesPage";
 import SetdemacetasPage from "./components/setdemacetasPage";
@@ -10,8 +11,9 @@ import AccesoriosPage from "./components/AccesoriosPage";
 import MacetasconPlantasPage from "./components/MacetasconPlantasPage";
 import Home from "./components/Home";
 import CarritoPage from "./components/CarritoPage";
+import { CartProvider } from "./context/CartContext";
 import WhatsAppButton from "./components/WhatsAppButton";
-import SembremosEnCasaPage from "./components/SembremosEnCasaPage";
+import SembremosEnCasaPage from "./components/SembremosEnCasaPage"; // 👈 NUEVO
 import SobreNosotrosPage from "./components/SobreNosotrosPage";
 import EnviosYGarantiasPage from "./components/EnviosYGarantiasPage";
 import ContactoPage from "./components/ContactoPage";
@@ -20,11 +22,11 @@ import CuidadoPlantas from "./components/CuidadoPlantas";
 
 function App() {
   return (
-    <Router>
-  <CartProvider>
-    <Navbar />
-    <main style={{ paddingTop: "64px" }}>
-      <Routes>
+     
+      <CartProvider>
+      <Navbar />
+      <main style={{ paddingTop: "64px" }}>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalogos/macetas-medianas" element={<MacetasMedianasPage />} />
           <Route path="/catalogos/macetas-grandes" element={<MacetasGrandesPage />} />
@@ -34,20 +36,16 @@ function App() {
           <Route path="/catalogos/Accesorios" element={<AccesoriosPage />} />
           <Route path="/catalogos/Macetas con Plantas" element={<MacetasconPlantasPage />} />
           <Route path="/carrito" element={<CarritoPage />} />
-          <Route path="/Sembremos-en-Casa" element={<SembremosEnCasaPage />} />
-          <Route path="/Sobre-nosotros" element={<SobreNosotrosPage />} />
+           <Route path="/Sembremos-en-Casa" element={<SembremosEnCasaPage />} /> {/* 👈 NUEVA RUTA */}
+           <Route path="/Sobre-nosotros" element={<SobreNosotrosPage />} />
           <Route path="/servicios/envios-y-garantias" element={<EnviosYGarantiasPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
           <Route path="/inspiracion/ideas-decoracion" element={<IdeasDecoracionPage />} />
-          <Route path="/inspiracion/Cuidado-Plantas" element={<CuidadoPlantas />} />
-          <Route path="/inspiracion/CuidadoPlantas" element={<Navigate to="/inspiracion/CuidadoPlantas" replace />} />
-          <Route path="/inspiracion/CuidadoPlantas" element={<Navigate to="/inspiracion/CuidadoPlantas" replace />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-       </Routes>
-    </main>
-    <WhatsAppButton />
-  </CartProvider>
-</Router>
+           <Route path="/inspiracion/cuidado-plantas" element={<CuidadoPlantas />} />
+        </Routes>
+      </main>
+      <WhatsAppButton /> {/* Siempre visible */}
+    </CartProvider>
     );
 }
 export default App;
