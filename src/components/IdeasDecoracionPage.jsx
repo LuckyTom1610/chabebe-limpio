@@ -137,20 +137,22 @@ const handleAddPlanta = (planta) => {
 
           {/* BOTONES */}
           <div className="flex gap-4 mb-6">
-            <button
-              onClick={clearCanvas}
-              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-            >
-              Limpiar todo
-            </button>
+  {/* Botón Limpiar */}
+  <button
+    onClick={clearCanvas}
+    className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
+  >
+    🗑️ Limpiar todo
+  </button>
 
-            <button
-              onClick={saveImage}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              Guardar diseño
-            </button>
-          </div>
+  {/* Botón Guardar */}
+  <button
+    onClick={saveImage}
+    className="flex items-center gap-2 bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition"
+  >
+    💾 Guardar diseño
+  </button>
+</div>
 
           {/* 🎯 Macetas para elegir */}
           <div className="bg-white py-4 px-2 rounded shadow-inner overflow-x-auto flex gap-4">
