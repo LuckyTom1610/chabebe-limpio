@@ -13,7 +13,7 @@ export default function Home() {
           alt="Logo Chabeve"
           className="h-40 object-contain mb-6 mx-auto"
         />
-        <h1 className="text-4xl font-bold text-amber-700 mb-4">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg mb-4">
           Bienvenido a Chabeve
         </h1>
         <p className="text-lg text-white">Donde las macetas hablan por ti 🌱</p>
