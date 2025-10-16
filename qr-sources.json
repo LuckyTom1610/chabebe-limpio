@@ -1,0 +1,32 @@
+[
+  {
+    "id": "accesorios",
+    "route": "/catalogos/Accesorios"
+  },
+  {
+    "id": "macetas-grandes",
+    "route": "/catalogos/Macetas%20Grandes"
+  },
+  {
+    "id": "macetas-medianas",
+    "route": "/catalogos/Macetas%20Medianas"
+  },
+  {
+    "id": "set-de-macetas",
+    "route": "/catalogos/Set%20de%20Macetas"
+  },
+  {
+    "id": "sistemas-de-goteo",
+    "route": "/catalogos/Sistemas%20de%20Goteo"
+  },
+  {
+    "id": "gracia-case",
+    "route": "/catalogos/Macetas%20Grandes",
+    "params": { "open": "GRACIACASE" }
+  },
+  {
+    "id": "oro",
+    "route": "/catalogos/Macetas%20Grandes",
+    "params": { "open": "ORO" }
+  }
+]

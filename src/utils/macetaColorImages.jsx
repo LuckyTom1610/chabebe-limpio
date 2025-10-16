@@ -342,6 +342,5 @@ GraciaLowBetonEffect: {
         "443U": getImage("Molta_Round_Foot_TMRF60_105GR.png"),
         "405U": getImage("Molta_Round_Foot_TMRF60_107GR.png"),
             },
-
-
   };
+  export default macetaColorImages;

@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import CatalogoMacetas from "./components/CatalogoMacetas";
 import MacetasMedianasPage from "./components/MacetasMedianasPage";
 import MacetasGrandesPage from "./components/MacetasGrandesPage";
 import SetdemacetasPage from "./components/setdemacetasPage";
@@ -19,6 +18,7 @@ import EnviosYGarantiasPage from "./components/EnviosYGarantiasPage";
 import ContactoPage from "./components/ContactoPage";
 import IdeasDecoracionPage from "./components/IdeasDecoracionPage";
 import CuidadoPlantas from "./components/CuidadoPlantas";
+import BuscarPage from "./components/BuscarPage";
 
 function App() {
   return (
@@ -42,6 +42,7 @@ function App() {
           <Route path="/contacto" element={<ContactoPage />} />
           <Route path="/inspiracion/ideas-decoracion" element={<IdeasDecoracionPage />} />
            <Route path="/inspiracion/cuidado-plantas" element={<CuidadoPlantas />} />
+           <Route path="/buscar" element={<BuscarPage />} />
         </Routes>
       </main>
       <WhatsAppButton /> {/* Siempre visible */}

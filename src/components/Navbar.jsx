@@ -1,12 +1,24 @@
 import React, { useState, useRef, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
+
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const closeTimeout = useRef(null);
   const { cart } = useContext(CartContext);
+
+  const navigate = useNavigate();
+  const [search, setSearch] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (search.trim() !== "") {
+      navigate(`/buscar?q=${encodeURIComponent(search)}`);
+      setSearch(""); // limpia el input
+    }
+  };
 
   const handleMobileLinkClick = () => {
     setMobileMenuOpen(false);
@@ -149,15 +161,20 @@ export default function Navbar() {
         </ul>
 
         {/* Bloque derecho - buscador y carrito */}
+       
+
+       
         <div className="hidden md:flex items-center space-x-4 justify-end">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Buscar..."
-              className="border rounded-full px-4 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-            />
-            <span className="absolute right-3 top-1.5 text-gray-400">🔍</span>
-          </div>
+          <form onSubmit={handleSearch} className="relative">
+  <input
+    type="text"
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    placeholder="Buscar..."
+    className="border rounded-full px-4 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+  />
+  <span className="absolute right-3 top-1.5 text-gray-400">🔍</span>
+</form>
 
           <Link
             to="/carrito"

@@ -1028,7 +1028,7 @@ GraciaLowBetonEffect: {
             "S433": getImage("DKSP290_S433 SPLOFY.jpg"),
                   },
               DKSP370: {  
-            "7529U": getImage("DKSP370-7529U  SPLOFY.jpg"),
+            "7529U": getImage("DKSP370-7529U SPLOFY.jpg"),
             "S449": getImage("DKSP370_S449 SPLOFY.jpg"),
             "S433": getImage("DKSP370_S433 SPLOFY.jpg"),
 
