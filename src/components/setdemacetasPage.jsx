@@ -757,22 +757,13 @@ colores: [
   : macetaSeleccionada;
   const principal = macetasPrincipales.find(m => m.id === catalogoVisible);
 
-  const { src: displayImg, fallback: displayFallback } = getDisplayImage({
-  principal,
-  varianteActual,
-  selectedColor,
-});
- 
-const location = useLocation();
+  const location = useLocation();
 
 useEffect(() => {
   const params = new URLSearchParams(location.search);
   
   const openFromQuery = params.get("open");
   const varianteFromQuery = params.get("variante");
-
-  const open = openFromQuery ?? location.state?.open ?? null;
-  const varianteIdxRaw = varianteFromQuery ?? location.state?.variante ?? 0;
 
   if (openFromQuery && catalogosData[openFromQuery]) {
     setCatalogoVisible(openFromQuery);
@@ -797,8 +788,7 @@ useEffect(() => {
     // Sube al inicio
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-}, [location.search, location.state]);
-
+}, [location.search]);
 
   return (
     <div style={{ maxWidth: '95vw', margin: '10px auto 0', textAlign: 'center' }}>
