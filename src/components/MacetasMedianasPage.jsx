@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import CatalogoMacetas from "./CatalogoMacetas";
 import { CartContext } from "../context/CartContext";
 import { getImage } from "../utils/cloudinary";
 
