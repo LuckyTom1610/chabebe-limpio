@@ -5,13 +5,16 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CartProvider } from "./context/CartContext";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-     <CartProvider>
-      <App />
+      <CartProvider>
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
       </CartProvider>
     </BrowserRouter>
   </React.StrictMode>

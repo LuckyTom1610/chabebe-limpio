@@ -1,7 +1,7 @@
 [
   {
-    "id": "accesorios",
-    "route": "/catalogos/Accesorios"
+    "id": "Accesorios",
+    "url": "https://chabebe-limpio.vercel.app/catalogos/Accesorios"
   },
   {
     "id": "macetas-grandes",
