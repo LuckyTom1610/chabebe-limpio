@@ -8,39 +8,7 @@ const MacetaCard = ({ maceta, onClick }) => {
 
   if (!maceta) return null; // 
   
-  const location = useLocation();
-
-useEffect(() => {
-  const params = new URLSearchParams(location.search);
-  const openFromQuery = params.get("open");
-  const varianteFromQuery = params.get("variante");
-
-  if (openFromQuery && catalogosData[openFromQuery]) {
-    setCatalogoVisible(openFromQuery);
-
-    const totalVariantes = Array.isArray(catalogosData[openFromQuery].variantes)
-      ? catalogosData[openFromQuery].variantes.length
-      : 0;
-
-    if (totalVariantes > 0) {
-      const idx = Number.parseInt(varianteFromQuery ?? 0, 10);
-      const safeIdx = Number.isFinite(idx)
-        ? Math.max(0, Math.min(idx, totalVariantes - 1))
-        : 0;
-      setVarianteIndex(safeIdx);
-    } else {
-      setVarianteIndex(0);
-    }
-
-    // Resetea el color seleccionado
-    setSelectedColor(null);
-
-    // Sube al inicio
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-}, [location.search]);
-
-  return (
+    return (
     <div
       className="maceta-card" 
       onClick={onClick}
@@ -788,6 +756,49 @@ colores: [
   ? macetaSeleccionada.variantes[varianteIndex]
   : macetaSeleccionada;
   const principal = macetasPrincipales.find(m => m.id === catalogoVisible);
+
+  const { src: displayImg, fallback: displayFallback } = getDisplayImage({
+  principal,
+  varianteActual,
+  selectedColor,
+});
+ 
+const location = useLocation();
+
+useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  
+  const openFromQuery = params.get("open");
+  const varianteFromQuery = params.get("variante");
+
+  const open = openFromQuery ?? location.state?.open ?? null;
+  const varianteIdxRaw = varianteFromQuery ?? location.state?.variante ?? 0;
+
+  if (openFromQuery && catalogosData[openFromQuery]) {
+    setCatalogoVisible(openFromQuery);
+
+    const totalVariantes = Array.isArray(catalogosData[openFromQuery].variantes)
+      ? catalogosData[openFromQuery].variantes.length
+      : 0;
+
+    if (totalVariantes > 0) {
+      const idx = Number.parseInt(varianteFromQuery ?? 0, 10);
+      const safeIdx = Number.isFinite(idx)
+        ? Math.max(0, Math.min(idx, totalVariantes - 1))
+        : 0;
+      setVarianteIndex(safeIdx);
+    } else {
+      setVarianteIndex(0);
+    }
+
+    // Resetea el color seleccionado
+    setSelectedColor(null);
+
+    // Sube al inicio
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}, [location.search, location.state]);
+
 
   return (
     <div style={{ maxWidth: '95vw', margin: '10px auto 0', textAlign: 'center' }}>
