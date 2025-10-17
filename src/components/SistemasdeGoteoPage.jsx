@@ -199,9 +199,6 @@ useEffect(() => {
       setVarianteIndex(0);
     }
 
-    // Resetea el color seleccionado
-    setSelectedColor(null);
-
     // Sube al inicio
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
