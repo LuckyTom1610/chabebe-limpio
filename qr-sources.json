@@ -282,8 +282,67 @@
  
   { "id": "SET-MOLTA-TMRF60", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMOLTA&variante=0" },
  
-  { "id": "SET-DUALA-ROUND-SLIM-TDS30", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETDUALAROUNDSLIM&variante=0" }
- ]
+  { "id": "SET-DUALA-ROUND-SLIM-TDS30", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETDUALAROUNDSLIM&variante=0" },
+ 
+  {
+    "id": "SG-WR-WR1",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WR&variante=0"
+  },
+  {
+    "id": "SG-WR-WR2",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WR&variante=1"
+  },
+  {
+    "id": "SG-WR-WR3",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WR&variante=2"
+  },
+  {
+    "id": "SG-WR-WR4",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WR&variante=3"
+  },
+  {
+    "id": "SG-WR-WR5",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WR&variante=4"
+  },
+  {
+    "id": "SG-WR-WR6",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WR&variante=5"
+  },
+  {
+    "id": "SG-WR-WR7",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WR&variante=6"
+  },
+  {
+    "id": "SG-WR-WR8",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WR&variante=7"
+  },
+
+  {
+    "id": "SG-WS-WS3",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WS&variante=0"
+  },
+  {
+    "id": "SG-WS-WS4",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WS&variante=1"
+  },
+  {
+    "id": "SG-WS-WS6",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Sistemas-de-Goteo?open=WS&variante=2"
+  },
+   {
+    "id": "Composteras-COMBIOLIQ",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Composteras?open=COMBIOLIQ"
+  },
+  {
+    "id": "Composteras-COMBIOSOIL",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Composteras?open=COMBIOSOIL"
+  },
+  {
+    "id": "Composteras-COMPOGREEN",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Composteras?open=COMPOGREEN"
+  }
+
+]
   
 
 
