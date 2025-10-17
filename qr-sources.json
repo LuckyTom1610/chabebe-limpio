@@ -251,65 +251,39 @@
     "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=MOLTA"
   },
 { "id": "SET-ORO-DBOE600", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETORO&variante=0" },
-  { "id": "SET-ORO-DHOE600", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETORO&variante=1" },
-
+  
   { "id": "SET-BETONBOWL-DKB240", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETBETONBOWL&variante=0" },
-  { "id": "SET-BETONBOWL-DKB290", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETBETONBOWL&variante=1" },
-  { "id": "SET-BETONBOWL-DKB370", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETBETONBOWL&variante=2" },
-
+  
   { "id": "SET-GRACIA-BETON-EFFECT-DGQL400E", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIABETONEFFECT&variante=0" },
-  { "id": "SET-GRACIA-BETON-EFFECT-DGCL600E", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIABETONEFFECT&variante=1" },
-  { "id": "SET-GRACIA-BETON-EFFECT-DGRL400LE", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIABETONEFFECT&variante=2" },
-
+ 
   { "id": "SET-GRACIA-ECO-WOOD-DGQL400W", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIAECOWOOD&variante=0" },
-  { "id": "SET-GRACIA-ECO-WOOD-DGCL600W", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIAECOWOOD&variante=1" },
-
+ 
   { "id": "SET-TUBOPM-DPOD240", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETTUBOPM&variante=0" },
-  { "id": "SET-TUBOPM-DPOD350", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETTUBOPM&variante=1" },
-  { "id": "SET-TUBOPM-DPOD400", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETTUBOPM&variante=2" },
-
+  
   { "id": "SET-GRACIA-DGQL400", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIA&variante=0" },
-  { "id": "SET-GRACIA-DGCL600", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIA&variante=1" },
-  { "id": "SET-GRACIA-DGTL240", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIA&variante=2" },
-
+  
   { "id": "SET-GRACIA-TUBUS-ECO-WOOD-DGRL400LW", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIATUBUSECOWOOD&variante=0" },
-  { "id": "SET-GRACIA-TUBUS-ECO-WOOD-DGTL240W", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIATUBUSECOWOOD&variante=1" },
-
+  
   { "id": "SET-MILLY-ROUND-DMIG190", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMILLYROUND&variante=0" },
-  { "id": "SET-MILLY-ROUND-DMIL220", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMILLYROUND&variante=1" },
-  { "id": "SET-MILLY-ROUND-DMIN200", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMILLYROUND&variante=2" },
-
+ 
   { "id": "SET-SPLOFY-BOWL-DKSP240", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETSPLOFYBOWL&variante=0" },
-  { "id": "SET-SPLOFY-BOWL-DKSP290", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETSPLOFYBOWL&variante=1" },
-  { "id": "SET-SPLOFY-BOWL-DKSP370", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETSPLOFYBOWL&variante=2" },
-
+  
   { "id": "SET-RATOLLA-RAILING-SQUARE-DRLB280", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETRATOLLARALLINGSQUARE&variante=0" },
-  { "id": "SET-RATOLLA-RAILING-SQUARE-DRLB400", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETRATOLLARALLINGSQUARE&variante=1" },
-
+  
   { "id": "SET-HEOS-DLHEN470", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETHEOS&variante=0" },
-  { "id": "SET-HEOS-DBHEN470", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETHEOS&variante=1" },
-  { "id": "SET-HEOS-DBHER470", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETHEOS&variante=2" },
-
+ 
   { "id": "SET-PLANTI-DMLR190", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETPLANTI&variante=0" },
-  { "id": "SET-PLANTI-DMLR230", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETPLANTI&variante=1" },
-
+ 
   { "id": "SET-GROWER-DOGR180", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGROWER&variante=0" },
-  { "id": "SET-GROWER-DOGR200", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGROWER&variante=1" },
-  { "id": "SET-GROWER-DOGR240", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGROWER&variante=2" },
-
+ 
   { "id": "SET-ARIA-OVAL-TAO40", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETARIAOVAL&variante=0" },
-  { "id": "SET-ARIA-OVAL-TAO60", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETARIAOVAL&variante=1" },
 
   { "id": "SET-CORO-BOWL-TCB40H", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETCOROBOWL&variante=0" },
-  { "id": "SET-CORO-BOWL-TCB48", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETCOROBOWL&variante=1" },
-
+ 
   { "id": "SET-MOLTA-TMRF60", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMOLTA&variante=0" },
-  { "id": "SET-MOLTA-TMSF40", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMOLTA&variante=1" },
-  { "id": "SET-MOLTA-TMSF48", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMOLTA&variante=2" },
-
-  { "id": "SET-DUALA-ROUND-SLIM-TDS30", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETDUALAROUNDSLIM&variante=0" },
-  { "id": "SET-DUALA-ROUND-SLIM-TDS40", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETDUALAROUNDSLIM&variante=1" }
-]
+ 
+  { "id": "SET-DUALA-ROUND-SLIM-TDS30", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETDUALAROUNDSLIM&variante=0" }
+ ]
   
 
 
