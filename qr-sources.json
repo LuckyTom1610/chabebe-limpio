@@ -1,32 +1,315 @@
 [
   {
+    "id": "Macetas_Medianas",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas"
+  },
+  {
+    "id": "Macetas_Grandes",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes"
+  },
+  {
+    "id": "Set_de_Macetas",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas"
+  },
+  {
+    "id": "Macetas_con_Plantas",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Macetas%20con%20Plantas"
+  },
+  {
+    "id": "Sistemas_de_Goteo",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/sistemas-de-goteo"
+  },
+  {
+    "id": "Composteras",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/composteras"
+  },
+   {
     "id": "Accesorios",
-    "url": "https://chabebe-limpio.vercel.app/catalogos/Accesorios"
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios"
+  },
+ {
+    "id": "Sembremos_en_Casa",
+    "url": "https://chabebe-limpio.vercel.app/#/sembremos-en-casa"
   },
   {
-    "id": "macetas-grandes",
-    "route": "/catalogos/Macetas%20Grandes"
+    "id": "Ideas_de_Decoración",
+    "url": "https://chabebe-limpio.vercel.app/#/inspiracion/ideas-decoracion"
   },
   {
-    "id": "macetas-medianas",
-    "route": "/catalogos/Macetas%20Medianas"
+    "id": "Cuidado_de_Plantas",
+    "url": "https://chabebe-limpio.vercel.app/#/inspiracion/cuidado-plantas"
   },
   {
-    "id": "set-de-macetas",
-    "route": "/catalogos/Set%20de%20Macetas"
+    "id": "Contacto",
+    "url": "https://chabebe-limpio.vercel.app/#/Contacto"
+  },
+  
+  
+  
+  {
+    "id": "MM-BetonBowl-DKB240",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=betonBowl&variante=0"
   },
   {
-    "id": "sistemas-de-goteo",
-    "route": "/catalogos/Sistemas%20de%20Goteo"
+    "id": "MM-BetonBowl-DKB290",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=betonBowl&variante=1"
+      },
+  {
+    "id": "MM-BetonBowl-DKB370",
+     "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=betonBowl&variante=2"
+  },
+
+
+ { "id": "MM-GraciaSquareBetonEffect",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GRACIASQUAREBETONEFFECT" },
+
+  { "id": "MM-GraciaLowBetonEffect",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GraciaLowBetonEffect" },
+
+  { "id": "MM-GraciaLow",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GraciaLow" },
+
+  { "id": "MM-GraciaLowEcoWood",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GRACIALOWECOWOOD" },
+
+  { "id": "MM-GraciaTubusSlimEcoWood",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GRACIATUBUSSLIMECOWOOD" },
+
+  { "id": "MM-GraciaSquareEcoWood",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GRACIASQUAREECOWOOD" },
+
+  { "id": "MM-TuboPM-240",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=TUBOPM&variante=0" },
+  { "id": "MM-TuboPM-350",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=TUBOPM&variante=1" },
+  { "id": "MM-TuboPM-400",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=TUBOPM&variante=2" },
+
+  { "id": "MM-GraciaSquare",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GRACIASQUARE" },
+
+  { "id": "MM-GraciaTubusSlim",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GRACIATUBUSSLIM" },
+
+  { "id": "MM-MillyRoundA",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=MILLYROUNDA" },
+
+  { "id": "MM-MillyRound-DMIL220",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=MILLYROUND&variante=0" },
+  { "id": "MM-MillyRound-DMIN200",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=MILLYROUND&variante=1" },
+
+  { "id": "MM-SplofyBowl-240",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=SPLOFYBOWL&variante=0" },
+  { "id": "MM-SplofyBowl-290",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=SPLOFYBOWL&variante=1" },
+  { "id": "MM-SplofyBowl-370",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=SPLOFYBOWL&variante=2" },
+
+  { "id": "MM-RatollaRailingSquare-280",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=RATOLLARallingSquare&variante=0" },
+  { "id": "MM-RatollaRailingSquare-400",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=RATOLLARallingSquare&variante=1" },
+
+  { "id": "MM-Heos-DLHEN470",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=HEOS&variante=0" },
+  { "id": "MM-Heos-DBHEN470",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=HEOS&variante=1" },
+  { "id": "MM-Heos-DBHER470",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=HEOS&variante=2" },
+
+  { "id": "MM-Planti-DMLR190",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=PLANTI&variante=0" },
+  { "id": "MM-Planti-DMLR230",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=PLANTI&variante=1" },
+
+  { "id": "MM-Grower-DOGR180",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GROWER&variante=0" },
+  { "id": "MM-Grower-DOGR200",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GROWER&variante=1" },
+  { "id": "MM-Grower-DOGR240",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=GROWER&variante=2" },
+
+  { "id": "MM-RespanaRailing",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=RESPANARALLING" },
+
+  { "id": "MM-MillyWall",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=MillyWall" },
+
+  { "id": "MM-AriaOval",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=ARIAOVAL" },
+
+  { "id": "MM-CoroBowl-40H",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=CORObowl&variante=0" },
+  { "id": "MM-CoroBowl-48",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=CORObowl&variante=1" },
+
+  { "id": "MM-MoltaSquareFoot-40",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=MOLTAsquarefoot&variante=0" },
+  { "id": "MM-MoltaSquareFoot-48",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=MOLTAsquarefoot&variante=1" },
+
+  { "id": "MM-DualaRoundSlim-30",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=DUALAroundslim&variante=0" },
+  { "id": "MM-DualaRoundSlim-40",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-medianas?open=DUALAroundslim&variante=1" },
+
+
+
+    {
+    "id": "MG-Oro-DBOE600",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=ORO&variante=0"
   },
   {
-    "id": "gracia-case",
-    "route": "/catalogos/Macetas%20Grandes",
-    "params": { "open": "GRACIACASE" }
+    "id": "MG-Oro-DHOE600",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=ORO&variante=1"
+  },
+
+  {
+    "id": "MG-LexoRound-DLR1000",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=LEXOROUND"
+  },
+
+  {
+    "id": "MG-GraciaCaseBetonEffect-DGCL600E",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=GRACIACASEBETONEFFECT"
+  },
+  
+  
+  {
+    "id": "MG-GraciaCaseECOWood-DGCL600W",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=GRACIACASEECOWOOD"
   },
   {
-    "id": "oro",
-    "route": "/catalogos/Macetas%20Grandes",
-    "params": { "open": "ORO" }
-  }
+    "id": "MG-GraciaCase-DGCL600",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=GRACIACASE"
+  },
+
+  {
+    "id": "MG-CascadeGardenWall-IO3W800",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=CASCADEGRADENWALL"
+  },
+
+  {
+    "id": "MG-Bloma-DBLO600",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=BLOMA"
+  },
+
+  {
+    "id": "MG-UrbiCaseBetonEffect-DUC800TE",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=URBICASEBETOMEFFECT"
+  },
+
+  {
+    "id": "MG-Heos-DLHEN470",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=HEOS&variante=0"
+  },
+  {
+    "id": "MG-Heos-DBHEN470",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=HEOS&variante=1"
+  },
+  {
+    "id": "MG-Heos-DBHER470",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=HEOS&variante=2"
+  },
+
+  {
+    "id": "MG-RespanaPlanterWoodHighSet-ISEW780H",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=RESPANAPLANTERWOODHIGHSET"
+  },
+
+  {
+    "id": "MG-AriaOval-TAO40",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=ARIAOVAL&variante=0"
+  },
+  {
+    "id": "MG-AriaOval-TAO60",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=ARIAOVAL&variante=1"
+  },
+
+  {
+    "id": "MG-CoroBowlHigh-TCB40H",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=CORObowlhigh&variante=0"
+  },
+  {
+    "id": "MG-CoroBowlHigh-TCB48",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=CORObowlhigh&variante=1"
+  },
+
+  {
+    "id": "MG-Evolia-TEV60",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=EVOLIA"
+  },
+
+  {
+    "id": "MG-Yeke-TY50",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=YEKE"
+  },
+
+  {
+    "id": "MG-Molta-TMRF60",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/macetas-grandes?open=MOLTA"
+  },
+{ "id": "SET-ORO-DBOE600", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETORO&variante=0" },
+  { "id": "SET-ORO-DHOE600", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETORO&variante=1" },
+
+  { "id": "SET-BETONBOWL-DKB240", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETBETONBOWL&variante=0" },
+  { "id": "SET-BETONBOWL-DKB290", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETBETONBOWL&variante=1" },
+  { "id": "SET-BETONBOWL-DKB370", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETBETONBOWL&variante=2" },
+
+  { "id": "SET-GRACIA-BETON-EFFECT-DGQL400E", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIABETONEFFECT&variante=0" },
+  { "id": "SET-GRACIA-BETON-EFFECT-DGCL600E", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIABETONEFFECT&variante=1" },
+  { "id": "SET-GRACIA-BETON-EFFECT-DGRL400LE", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIABETONEFFECT&variante=2" },
+
+  { "id": "SET-GRACIA-ECO-WOOD-DGQL400W", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIAECOWOOD&variante=0" },
+  { "id": "SET-GRACIA-ECO-WOOD-DGCL600W", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIAECOWOOD&variante=1" },
+
+  { "id": "SET-TUBOPM-DPOD240", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETTUBOPM&variante=0" },
+  { "id": "SET-TUBOPM-DPOD350", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETTUBOPM&variante=1" },
+  { "id": "SET-TUBOPM-DPOD400", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETTUBOPM&variante=2" },
+
+  { "id": "SET-GRACIA-DGQL400", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIA&variante=0" },
+  { "id": "SET-GRACIA-DGCL600", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIA&variante=1" },
+  { "id": "SET-GRACIA-DGTL240", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIA&variante=2" },
+
+  { "id": "SET-GRACIA-TUBUS-ECO-WOOD-DGRL400LW", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIATUBUSECOWOOD&variante=0" },
+  { "id": "SET-GRACIA-TUBUS-ECO-WOOD-DGTL240W", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGRACIATUBUSECOWOOD&variante=1" },
+
+  { "id": "SET-MILLY-ROUND-DMIG190", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMILLYROUND&variante=0" },
+  { "id": "SET-MILLY-ROUND-DMIL220", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMILLYROUND&variante=1" },
+  { "id": "SET-MILLY-ROUND-DMIN200", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMILLYROUND&variante=2" },
+
+  { "id": "SET-SPLOFY-BOWL-DKSP240", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETSPLOFYBOWL&variante=0" },
+  { "id": "SET-SPLOFY-BOWL-DKSP290", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETSPLOFYBOWL&variante=1" },
+  { "id": "SET-SPLOFY-BOWL-DKSP370", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETSPLOFYBOWL&variante=2" },
+
+  { "id": "SET-RATOLLA-RAILING-SQUARE-DRLB280", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETRATOLLARALLINGSQUARE&variante=0" },
+  { "id": "SET-RATOLLA-RAILING-SQUARE-DRLB400", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETRATOLLARALLINGSQUARE&variante=1" },
+
+  { "id": "SET-HEOS-DLHEN470", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETHEOS&variante=0" },
+  { "id": "SET-HEOS-DBHEN470", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETHEOS&variante=1" },
+  { "id": "SET-HEOS-DBHER470", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETHEOS&variante=2" },
+
+  { "id": "SET-PLANTI-DMLR190", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETPLANTI&variante=0" },
+  { "id": "SET-PLANTI-DMLR230", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETPLANTI&variante=1" },
+
+  { "id": "SET-GROWER-DOGR180", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGROWER&variante=0" },
+  { "id": "SET-GROWER-DOGR200", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGROWER&variante=1" },
+  { "id": "SET-GROWER-DOGR240", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETGROWER&variante=2" },
+
+  { "id": "SET-ARIA-OVAL-TAO40", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETARIAOVAL&variante=0" },
+  { "id": "SET-ARIA-OVAL-TAO60", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETARIAOVAL&variante=1" },
+
+  { "id": "SET-CORO-BOWL-TCB40H", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETCOROBOWL&variante=0" },
+  { "id": "SET-CORO-BOWL-TCB48", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETCOROBOWL&variante=1" },
+
+  { "id": "SET-MOLTA-TMRF60", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMOLTA&variante=0" },
+  { "id": "SET-MOLTA-TMSF40", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMOLTA&variante=1" },
+  { "id": "SET-MOLTA-TMSF48", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETMOLTA&variante=2" },
+
+  { "id": "SET-DUALA-ROUND-SLIM-TDS30", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETDUALAROUNDSLIM&variante=0" },
+  { "id": "SET-DUALA-ROUND-SLIM-TDS40", "url": "https://chabebe-limpio.vercel.app/#/catalogos/set-de-macetas?open=SETDUALAROUNDSLIM&variante=1" }
 ]
+  
+
+
