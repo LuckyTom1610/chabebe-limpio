@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 import { getImage } from "../utils/cloudinary";
+import { useLocation } from "react-router-dom";
 
 const MacetaCard = ({ maceta, onClick }) => {
   const { addToCart } = useContext(CartContext);
@@ -242,6 +243,35 @@ colores: [
   ? macetaSeleccionada.variantes[varianteIndex]
   : macetaSeleccionada;
   const principal = macetasPrincipales.find(m => m.id === catalogoVisible);
+
+  const location = useLocation();
+
+useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const openFromQuery = params.get("open");
+  const varianteFromQuery = params.get("variante");
+
+  if (openFromQuery && catalogosData[openFromQuery]) {
+    setCatalogoVisible(openFromQuery);
+
+    const totalVariantes = Array.isArray(catalogosData[openFromQuery].variantes)
+      ? catalogosData[openFromQuery].variantes.length
+      : 0;
+
+    if (totalVariantes > 0) {
+      const idx = Number.parseInt(varianteFromQuery ?? 0, 10);
+      const safeIdx = Number.isFinite(idx)
+        ? Math.max(0, Math.min(idx, totalVariantes - 1))
+        : 0;
+      setVarianteIndex(safeIdx);
+    } else {
+      setVarianteIndex(0);
+    }
+
+    // Sube al inicio
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}, [location.search]);
 
 useEffect(() => {
   if (catalogoVisible) {
