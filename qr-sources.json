@@ -340,8 +340,55 @@
   {
     "id": "Composteras-COMPOGREEN",
     "url": "https://chabebe-limpio.vercel.app/#/catalogos/Composteras?open=COMPOGREEN"
-  }
+  },
 
+  {
+    "id": "ACC-MAZECAP",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=MAZECAP"
+  },
+  {
+    "id": "ACC-GIRAFFE",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=GIRAFFE"
+  },
+  {
+    "id": "ACC-BASEWOODY",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=BASEWOODY"
+  },
+  {
+    "id": "ACC-BIRDYFEED_SQUARE",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=BIRDYFEEDSQUARE"
+  },
+  {
+    "id": "ACC-BIRDYFEED_ROUND",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=BIRDYFEEDROUND"
+  },
+  {
+    "id": "ACC-METAL_HANGER",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=METALHANGER"
+  },
+
+  {
+    "id": "ACC-WHEELS-TSW4",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=WHEELS&variante=0"
+  },
+  {
+    "id": "ACC-WHEELS-TSW6",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=WHEELS&variante=1"
+  },
+
+ 
+  {
+    "id": "ACC-INSERT-IWKO325",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=INSERT&variante=0"
+  },
+  {
+    "id": "ACC-INSERT-IWKO355",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=INSERT&variante=1"
+  },
+  {
+    "id": "ACC-INSERT-IWKO460",
+    "url": "https://chabebe-limpio.vercel.app/#/catalogos/Accesorios?open=INSERT&variante=2"
+  }
 ]
   
 
